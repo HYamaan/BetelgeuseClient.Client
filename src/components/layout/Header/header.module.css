@@ -74,8 +74,8 @@
 .navShoppingBasketDropDownCounter {
     color: var(--color-white-3);
     position: absolute;
-    top: 1rem;
-    right: 1.4rem;
+    top: .8rem;
+    right: .4rem;
     padding:.04rem .5rem;
     border-radius: 50%;
     background-color: var(--color--saphireBlue);
