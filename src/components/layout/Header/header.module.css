@@ -1,0 +1,198 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    height: 5rem;
+    padding: 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+    z-index: 500;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navLogo{
+    gap:0.5rem;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    flex-grow: 0.8;
+    text-align: center;
+    cursor: pointer;
+}
+.navCategoriesTop{
+    flex-grow: 1.2;
+}
+.navCategories{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.navSearch {
+    flex-grow: 8;
+    position: relative;
+}
+.navSearchIcon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-left: 0.875rem;
+    pointer-events: none;
+}
+.navSearchIcon i{
+    font-size: 1.5rem;
+    color: var(--color-grey-1);
+}
+.navSearchBar{
+}
+.navEbookTop{
+    flex-grow: 1.2;
+}
+.navEbook{
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+.navFindTutor{
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+.navShoppingBasket{
+    flex-grow: 1;
+    cursor: pointer;
+}
+.navShoppingBasket  svg{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navLogin{
+    flex-grow: 0.5;
+    text-align: center;
+}
+.navSignUp{
+    flex-grow: 0.5;
+    text-align: center;
+    background-color: black;
+    color: var(--color-white-1);
+}
+.navLogin:hover{
+    background-color: var(--color-white-3);
+}
+.navSignUp:hover{
+    background-color: var(--color--black-2);
+}
+.navLogoSun{
+    color: chocolate;
+}
+.navLanguage{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+
+    /*padding:.3rem;*/
+    position: relative;
+    cursor: pointer;
+    font-size:1.7rem;
+}
+.navLanguage p{
+    border:var(--color--black-2) 1px solid;
+}
+.navLanguage p:hover{
+    background-color: var(--color-white-3);
+}
+.button{
+    margin-right: 0.6rem;
+    display: inline-block;
+    border:black 0.15rem solid;
+    padding: 0.20rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.categoryList{
+    position: absolute;
+    display: flex;
+    left: 2rem;
+    top: 5.5rem;
+    background-color: var(--color-white-1);
+    z-index: 1000;
+}
+.categoryListCategory{
+    width: 20rem;
+    border: var(--color-grey-2) 1px solid;
+    border-top: 0;
+    padding: 1.5rem;
+}
+.categoryListSubCategory{
+    width: 20rem;
+    border-right: var(--color-grey-2) 1px solid;
+    border-bottom: var(--color-grey-2) 1px solid;
+
+    padding: 1.5rem;
+}
+.categoryListTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+.categoryListTitle:hover{
+    background-color: rgb(243 244 246);
+}
+.categoryListTitleHover{
+    background-color: rgb(243 244 246);
+}
+
+.categoryListPopularTopic{
+    width: 20rem;
+    border-right: var(--color-grey-2) 1px solid;
+    border-bottom: var(--color-grey-2) 1px solid;
+    padding: 1.5rem;
+}
+.categoryListPopularTopicTitle{
+    padding:0.5rem;
+    cursor: pointer;
+    text-align: left;
+}
+.categoryListPopularTopicTitle:hover{
+    background-color: rgb(243 244 246);
+}
+
+.categoryBookList{
+    position: absolute;
+    display: flex;
+    left: -10rem;
+    top: 5.5rem;
+    background-color: var(--color-white-1);
+    z-index: 1000;
+}
+
+.languageComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    border: var(--color-grey-2) 1px solid;
+    right: 50%;
+    transform: translateX(50%);
+    top: 4rem;
+    font-size: 1.25rem;
+    background-color: var(--color-white-1);
+}
+.languageComponentTr{
+    border-bottom: var(--color--black-2) 1px solid;
+}
+.languageComponent div{
+    padding: 0.25rem 2rem;
+}
+.languageComponent div:hover{
+    background-color: var(--color-white-3);
+}
