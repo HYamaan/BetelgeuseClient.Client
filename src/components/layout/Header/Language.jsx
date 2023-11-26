@@ -2,7 +2,8 @@ import React from 'react';
 import classes from './header.module.css';
 const LanguageComponent = () => {
     return <>
-        <div className={classes.languageComponent}>
+        <div className={classes.languageComponent}
+        >
             <div
                 className={classes.languageComponentTr}
                 onClick={() => handleLanguageClick('tr')}
