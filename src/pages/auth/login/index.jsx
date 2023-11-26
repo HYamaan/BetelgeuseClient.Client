@@ -41,10 +41,11 @@ const LoginPage = () => {
     }];
     return <>
             <div className="container mx-auto flex items-center justify-center gap-6 mt-20">
-                <div className="flex-1">
+                <div className="flex-1 self-start">
                     <Image
                         src={loginPic}
                         alt="Picture of the author"
+                        className="align-middle scale-110 z-10"
                     />
                 </div>
                     <div className="flex-1">
@@ -64,12 +65,10 @@ const LoginPage = () => {
                                 <input type="submit" value="Login"  className="w-full bg-sapphireBlue text-xl rounded-2xl p-4 text-[#fff] cursor-pointer"/>
                             </form>
                             <p className="text-right mt-2 text-lg cursor-pointer">Forgot password?</p>
-                            <p className="self-center text-2xl  mt-10">Don't have an account? <span className="m-5 text-sapphireBlue cursor-pointer">Sign Up</span></p>
+                            <p className="self-center text-2xl  mt-10">Dont have an account? <span className="m-5 text-sapphireBlue cursor-pointer">Sign Up</span></p>
                         </div>
-
                     </div>
             </div>
-
     </>
 
 
