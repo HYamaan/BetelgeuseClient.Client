@@ -17,9 +17,11 @@
     --color-white-3:#EBEBEB;
     --color-white-4:#EBEBEB;
     --color--black-2:#333333;
+    --color--saphireBlue:#754FFE;
   }
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: var(--color-white-1);
 }

@@ -2,8 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.1rem;
-    height: 5rem;
+    font-size: .8rem;
+    height:3.5rem;
     padding: 0 2rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
     z-index: 500;
@@ -14,13 +14,17 @@
     align-items: center;
 }
 .navLogo{
-    gap:0.5rem;
+    gap:0.2rem;
     font-family: 'Kaushan Script', cursive;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     flex-grow: 0.8;
     text-align: center;
     cursor: pointer;
+}
+.navLogoSun{
+    font-size: 2.7rem;
+    color: chocolate;
 }
 .navCategoriesTop{
     flex-grow: 1.2;
@@ -31,7 +35,7 @@
     position: relative;
 }
 .navSearch {
-    flex-grow: 8;
+    flex-grow:8;
     position: relative;
 }
 .navSearchIcon{
@@ -43,11 +47,10 @@
     pointer-events: none;
 }
 .navSearchIcon i{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-grey-1);
 }
-.navSearchBar{
-}
+
 .navEbookTop{
     flex-grow: 1.2;
 }
@@ -61,12 +64,28 @@
     text-align: center;
     cursor: pointer;
 }
-.navShoppingBasket{
+.navShoppingBasketTop {
     flex-grow: 1;
-    cursor: pointer;
 }
-.navShoppingBasket  svg{
-    font-size: 1.5rem;
+
+.navShoppingBasket {
+    cursor: pointer;
+    position: relative;
+    padding: 1.7rem 0;
+}
+
+.navShoppingBasketDropDownCounter {
+    color: var(--color-white-3);
+    position: absolute;
+    top: 1.18rem;
+    right: 1.1rem;
+    padding:0 .36rem;
+    border-radius: 50%;
+    background-color: var(--color--saphireBlue);
+}
+
+.navShoppingBasket svg {
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -86,9 +105,7 @@
 .navSignUp:hover{
     background-color: var(--color--black-2);
 }
-.navLogoSun{
-    color: chocolate;
-}
+
 .navLanguage{
     display: flex;
     height: 100%;
@@ -99,7 +116,7 @@
     /*padding:.3rem;*/
     position: relative;
     cursor: pointer;
-    font-size:1.7rem;
+    font-size:1.5rem;
 }
 .navLanguage p{
     border:var(--color--black-2) 1px solid;
@@ -111,29 +128,28 @@
     margin-right: 0.6rem;
     display: inline-block;
     border:black 0.15rem solid;
-    padding: 0.20rem;
+    padding: 0.05rem;
     border-radius: 1rem;
     cursor: pointer;
 }
 .categoryList{
     position: absolute;
     display: flex;
-    left: 2rem;
-    top: 5.5rem;
+    left: 1.2rem;
+    top: 4.5rem;
     background-color: var(--color-white-1);
     z-index: 1000;
 }
 .categoryListCategory{
-    width: 20rem;
+    width: 15.5rem;
     border: var(--color-grey-2) 1px solid;
     border-top: 0;
     padding: 1.5rem;
 }
 .categoryListSubCategory{
-    width: 20rem;
+    width: 15.5rem;
     border-right: var(--color-grey-2) 1px solid;
     border-bottom: var(--color-grey-2) 1px solid;
-
     padding: 1.5rem;
 }
 .categoryListTitle{
@@ -149,9 +165,8 @@
 .categoryListTitleHover{
     background-color: rgb(243 244 246);
 }
-
 .categoryListPopularTopic{
-    width: 20rem;
+    width: 15.5rem;
     border-right: var(--color-grey-2) 1px solid;
     border-bottom: var(--color-grey-2) 1px solid;
     padding: 1.5rem;
@@ -168,12 +183,11 @@
 .categoryBookList{
     position: absolute;
     display: flex;
-    left: -10rem;
-    top: 5.5rem;
+    left: -3rem;
+    top: 4.7rem;
     background-color: var(--color-white-1);
     z-index: 1000;
 }
-
 .languageComponent{
     display: flex;
     flex-direction: column;
@@ -183,15 +197,15 @@
     border: var(--color-grey-2) 1px solid;
     right: 50%;
     transform: translateX(50%);
-    top: 4rem;
-    font-size: 1.25rem;
+    top: 3.6rem;
+    font-size: 1rem;
     background-color: var(--color-white-1);
 }
 .languageComponentTr{
     border-bottom: var(--color--black-2) 1px solid;
 }
 .languageComponent div{
-    padding: 0.25rem 2rem;
+    padding: 0.20rem 1.6rem;
 }
 .languageComponent div:hover{
     background-color: var(--color-white-3);
