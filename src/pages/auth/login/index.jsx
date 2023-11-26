@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image'
-import loginPic from "../../../assets/gif/login-security.gif"
+import loginPic from "../../../../public/assets/gif/login-security.gif"
 import AuthActionButton from "@/components/ui/Button/AuthActionButton";
 import {FaUserAlt} from "react-icons/fa";
 import {BiSolidLockAlt} from "react-icons/bi";

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from "next/image";
-import loginPic from "@/assets/gif/login-security.gif";
+import loginPic from "../../../../public/assets/gif/login-security.gif";
 import AuthActionButton from "@/components/ui/Button/AuthActionButton";
 import {registerSchema} from "@/schema/registerSchema";
 import {FaRegEnvelope, FaUserAlt} from "react-icons/fa";

@@ -30,7 +30,10 @@ module.exports = {
       'fogGray' :'#676c7d',
       'sapphireBlue' :'#754FFE',
       'white': '#ffffff',
+      'white-3':'#F5F5F5',
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

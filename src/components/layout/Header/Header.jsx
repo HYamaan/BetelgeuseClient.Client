@@ -8,12 +8,15 @@ import Ebook from "@/components/layout/Header/Ebook";
 import {useRouter} from "next/router";
 import {MdLanguage} from "react-icons/md";
 import LanguageComponent from "@/components/layout/Header/Language";
+import ShoppingBasketComponent from "@/components/layout/Header/ShoppingBasket";
+
+
 const Header = () => {
     const router = useRouter()
     const [categoriesHover,setCategoriesHover]=useState(null);
     const [ebookHover,setEbookHover]=useState(null);
+    const [shoppingBasketHover,setShoppingBasketHover]=useState(null);
     const [languageHover,setLanguageHover]=useState(null);
-
     return <>
     <nav className={classes.nav}>
         <div
@@ -50,9 +53,16 @@ const Header = () => {
             </div>
         </div>
         <div className={classes.navFindTutor}>Find Tutor</div>
-        <div className={`${classes.navShoppingBasket} ${classes.flex}`}>
+        <div className={`${classes.navShoppingBasketTop}`}
+             onMouseLeave={() => { setShoppingBasketHover(null) }}
+             onMouseEnter={() => { setShoppingBasketHover(true) }}>
+            <div className={`${classes.navShoppingBasket} ${classes.flex}`}>
+                <span className={classes.navShoppingBasketDropDownCounter}>3</span>
                 <LuShoppingCart />
+                {shoppingBasketHover && <ShoppingBasketComponent setShoppingBasketHover={setShoppingBasketHover} />}
+            </div>
         </div>
+
         <div onClick={() => router.push('/auth/login')}
             className={`${classes.navLogin} ${classes.button}`}>Login
         </div>

@@ -61,12 +61,28 @@
     text-align: center;
     cursor: pointer;
 }
-.navShoppingBasket{
+.navShoppingBasketTop {
     flex-grow: 1;
-    cursor: pointer;
 }
-.navShoppingBasket  svg{
-    font-size: 1.5rem;
+
+.navShoppingBasket {
+    cursor: pointer;
+    position: relative;
+    padding: 1.7rem 0;
+}
+
+.navShoppingBasketDropDownCounter {
+    color: var(--color-white-3);
+    position: absolute;
+    top: 1rem;
+    right: 1.4rem;
+    padding:.04rem .5rem;
+    border-radius: 50%;
+    background-color: var(--color--saphireBlue);
+}
+
+.navShoppingBasket svg {
+    font-size: 1.7rem;
     font-weight: bold;
 }
 
@@ -173,7 +189,6 @@
     background-color: var(--color-white-1);
     z-index: 1000;
 }
-
 .languageComponent{
     display: flex;
     flex-direction: column;
