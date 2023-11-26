@@ -40,7 +40,7 @@ const Header = () => {
             <input
                 type="text"
                 placeholder="Search for anything"
-                className=" border  rounded-full text-gray-900 text-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2 outline-none"
+                className=" border  rounded-full text-gray-900  focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2 outline-none"
             />
         </div>
         <div className={classes.navEbookTop}
@@ -59,6 +59,7 @@ const Header = () => {
             <div className={`${classes.navShoppingBasket} ${classes.flex}`}>
                 <span className={classes.navShoppingBasketDropDownCounter}>3</span>
                 <LuShoppingCart />
+
                 {shoppingBasketHover && <ShoppingBasketComponent setShoppingBasketHover={setShoppingBasketHover} />}
             </div>
         </div>
