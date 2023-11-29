@@ -1,5 +1,5 @@
 "use client"
-
+import styles from "./../authPage.module.css"
 import React from 'react';
 import Image from 'next/image'
 import loginPic from "../../../../public/assets/gif/login-security.gif"
@@ -40,18 +40,18 @@ const LoginPage = () => {
         title:"Password"
     }];
     return <>
-            <div className="container mx-auto flex items-center justify-center gap-6 mt-20">
-                <div className="flex-1 self-start">
+            <div className={styles.authContainer}>
+                <div className={styles.authContainer_Image}>
                     <Image
                         src={loginPic}
                         alt="Picture of the author"
-                        className="align-middle scale-110 z-10"
+                        className={styles.authContainer_Image_Styles}
                     />
                 </div>
-                    <div className="flex-1">
-                        <div className="flex flex-col">
-                            <p className="text-5xl font-semibold text-fogGray">Log in<span className="text-sapphireBlue">!</span></p>
-                            <p className="mt-7 mb-10 text-lg text-fogGray">Explore, learn, and grow with us. enjoy a seamless and enriching educational journey. lets begin!</p>
+                    <div className={styles.authContainer_Input_Boxes}>
+                        <div className={styles.authContainer_Input_Boxes_Child}>
+                            <p className={styles.login_title}>Log in<span className={styles.login_title_marker}>!</span></p>
+                            <p className={styles.login_description}>Explore, learn, and grow with us. enjoy a seamless and enriching educational journey. lets begin!</p>
 
                             <form onSubmit={LoginFormik.handleSubmit}>
                                 {LoginInput.map((input) => {
@@ -62,10 +62,10 @@ const LoginPage = () => {
                                         onBlur={LoginFormik.handleBlur}
                                     />
                                 })}
-                                <input type="submit" value="Login"  className="w-full bg-sapphireBlue text-xl rounded-2xl p-4 text-[#fff] cursor-pointer"/>
+                                <input type="submit" value="Login"  className={styles.button}/>
                             </form>
-                            <p className="text-right mt-2 text-lg cursor-pointer">Forgot password?</p>
-                            <p className="self-center text-2xl  mt-10">Dont have an account? <span className="m-5 text-sapphireBlue cursor-pointer">Sign Up</span></p>
+                            <p className={styles.forgot_password}>Forgot password?</p>
+                            <p className={styles.dont_have_account}>Dont have an account? <span className={styles.login_page_signup}>Sign Up</span></p>
                         </div>
                     </div>
             </div>

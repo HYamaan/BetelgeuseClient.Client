@@ -1,13 +1,23 @@
-import styles from "./header.module.css";
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import CategoriesJson from '../../../data/Categories.json';
-import { FaAngleRight } from "react-icons/fa6";
+import {FaAngleRight} from "react-icons/fa6";
+import {MdArrowBackIos} from "react-icons/md";
+import styles from "./header.module.css";
+import styless from "@/components/layout/Header/header.module.css";
 
-const CategoriesComponent = () => {
+const CategoriesComponent = (props) => {
+    const {versionNavigation} = props;
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
+    // MOBILE START
+    const [categoryParent, setCategoryParent] = useState(true);
+    const [categorySubChild, setCategorySubChild] = useState(true);
+    const [backMenu, setBackMenu] = useState(false);
+    // MOBILE END
+
     const handleCategoryHover = (categoryName) => {
+
         setSelectedCategory(categoryName);
         setSelectedSubcategory(null);
     };
@@ -17,86 +27,135 @@ const CategoriesComponent = () => {
     };
 
     const handleCategoryClick = (categoryName) => {
-        console.log(`Category clicked: ${categoryName}`);
+        setSelectedCategory(categoryName);
+        setSelectedSubcategory(null)
+        if (!versionNavigation) {
+            setCategoryParent(false);
+            props?.setShowSubCategoriesForCss(true);
+        }
     };
 
     const handleSubcategoryClick = (subcategoryName) => {
-        console.log(`Subcategory clicked: ${subcategoryName}`);
+        setSelectedSubcategory(subcategoryName);
+        if (!versionNavigation) {
+            setCategorySubChild(false);
+        }
     };
+
 
     const handleTopicClick = (topic) => {
         console.log(`Topic clicked: ${topic}`);
     };
 
-    // Json Error Control
-    const selectedCategoryData = CategoriesJson.categories.find(
-        (category) => category.name === selectedCategory
+    const handleBackMenu = () => {
+        if (!versionNavigation) {
+            setCategoryParent(true);
+            props?.setShowSubCategoriesForCss(false);
+            setBackMenu(true);
+        }
+    };
+
+    useEffect(() => {
+        if (props?.closeIcon) {
+            setCategoryParent(true);
+            setCategorySubChild(true);
+            props?.setShowSubCategoriesForCss(false);
+        }
+    }, [props?.closeIcon]);
+
+    const renderCategories = () => (
+        <div className={`${styles.categoryListCategory}`}>
+            {CategoriesJson.categories.map((category) => (
+                <div
+                    key={category.name}
+                    className={`
+                    ${styles.categoryListTitle} ${selectedCategory === category.name ? `${styles.categoryListTitleHover}` : ''}
+      
+                    `}
+                    {...(versionNavigation
+                        ? {
+                            onMouseEnter: () => handleCategoryHover(category.name),
+                            onClick: () => handleCategoryClick(category.name)
+                        }
+                        : {onClick: () => handleCategoryClick(category.name)})}
+                >
+                    <div className="flex items-center justify-between w-full">
+                        <p>{category.name}</p>
+                        <FaAngleRight/>
+                    </div>
+                </div>
+            ))}
+        </div>
     );
 
-    const selectedSubcategoryData =
-        selectedCategoryData?.subcategories?.find(
-            (subcategory) => subcategory.name === selectedSubcategory
-        );
+    const renderSubcategories = () => {
+        if (!selectedCategory) return null;
 
+        const selectedCategoryData = CategoriesJson.categories.find((category) => category.name === selectedCategory);
 
-    return (
-
-            <div className={styles.categoryList}>
-                {/* Categories */}
-                <div className={`${styles.categoryListCategory}`}>
-                    {CategoriesJson.categories.map((category) => (
+        return (
+            <div className={`
+      ${props.showSubCategoriesForCss && styles.mobile_nav_module_highlighted}
+      ${!versionNavigation && categoryParent && "hidden "}
+      ${props.showSubCategoriesForCss && styless.mobile_nav_module_category}
+  
+    `}>
+                <div className={styles.categorySubListCategory}>
+                    {!versionNavigation && (
                         <div
-                            key={category.name}
-                            className={`${styles.categoryListTitle} ${
-                                selectedCategory === category.name
-                                    ? `${styles.categoryListTitleHover}`
-                                    : ''
-                            }`}
-                            onMouseEnter={() => handleCategoryHover(category.name)}
-                            onClick={() => handleCategoryClick(category.name)}
+                            className="flex items-center justify-start gap-5 mb-4"
+                            onClick={handleBackMenu}
                         >
-                            <p>{category.name}</p>
-                            <FaAngleRight />
+                            <MdArrowBackIos/> Menu
+                        </div>
+                    )}
+
+                    {selectedCategoryData?.subcategories.map((subcategory) => (
+                        <div
+                            key={subcategory.name}
+                            className={`${styles.categoryListTitle} ${selectedSubcategory === subcategory.name ? styles.categoryListTitleHover : ''}`}
+                            onMouseEnter={() => handleSubcategoryHover(subcategory.name)}
+                            onClick={() => handleSubcategoryClick(subcategory.name)}
+                        >
+                            <p>{subcategory.name}</p>
+                            {versionNavigation && <FaAngleRight/>}
                         </div>
                     ))}
                 </div>
-
-                {/* Subcategories */}
-                {selectedCategoryData && (
-                    <div className={`${styles.categoryListSubCategory}`}>
-                        {selectedCategoryData?.subcategories.map((subcategory) => (
-                            <div
-                                key={subcategory.name}
-                                className={`${styles.categoryListTitle} ${
-                                    selectedSubcategory === subcategory.name
-                                        ? `${styles.categoryListTitleHover}`
-                                        : ''
-                                }`}
-                                onMouseEnter={() => handleSubcategoryHover(subcategory.name)}
-                                onClick={() => handleSubcategoryClick(subcategory.name)}
-                            >
-                                <p>{subcategory.name}</p>
-                                <FaAngleRight />
-                            </div>
-                        ))}
-                    </div>
-                )}
-
-                {/* Topics */}
-                {selectedSubcategoryData && (
-                    <div className={`${styles.categoryListPopularTopic}`}>
-                        {selectedSubcategoryData.topics.map((topic) => (
-                            <div
-                                key={topic}
-                                className={styles.categoryListPopularTopicTitle}
-                                onClick={() => handleTopicClick(topic)}
-                            >
-                                {topic}
-                            </div>
-                        ))}
-                    </div>
-                )}
             </div>
+        );
+    };
+
+
+    const renderTopics = () => {
+        if (!selectedSubcategory || !versionNavigation) return null;
+        const selectedCategoryData = CategoriesJson.categories.find((category) => category.name === selectedCategory);
+        const selectedSubcategoryData = selectedCategoryData?.subcategories?.find((subcategory) => subcategory.name === selectedSubcategory);
+
+        return <>
+            <div className={`
+            ${!categorySubChild && styles.mobile_nav_module_highlighted} 
+            ${styles.categoryTopListCategory} 
+            ${!versionNavigation && categoryParent && "hidden"} 
+            `}>
+                {selectedSubcategoryData?.topics.map((topic) => (
+                    <div
+                        key={topic}
+                        className={styles.categoryListPopularTopicTitle}
+                        onClick={() => handleTopicClick(topic)}
+                    >
+                        {topic}
+                    </div>
+                ))}
+            </div>
+        </>
+    };
+    return (
+        <div className={styles.categoryList}>
+            {renderCategories()}
+            {renderSubcategories()}
+            {renderTopics()}
+        </div>
     );
 };
 

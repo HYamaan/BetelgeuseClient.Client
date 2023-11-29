@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "fonts.css";
+@import "/src/styles/fonts.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -13,14 +13,20 @@
   :root {
     --color-grey-1: #6b7280;
     --color-grey-2: #C7CBD1;
+    --color-grey-3: #676c7d;
     --color-white-1:#ffff;
+    --color-white-2:#F5F5F5;
     --color-white-3:#EBEBEB;
     --color-white-4:#EBEBEB;
     --color--black-2:#333333;
     --color--saphireBlue:#754FFE;
   }
 }
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--color-white-1);

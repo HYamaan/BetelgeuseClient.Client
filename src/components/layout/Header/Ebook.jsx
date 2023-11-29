@@ -44,7 +44,7 @@ const EbookComponent = () => {
 
             {/* Books */}
             {selectedBookData && (
-                <div className={`${styles.categoryListPopularTopic}`}>
+                <div className={`${styles.categoryBookListPopularTopic}`}>
                     {selectedBookData.subcategories.map((topic) => (
                         <div
                             key={topic}

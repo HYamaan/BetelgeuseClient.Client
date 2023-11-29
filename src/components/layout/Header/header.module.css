@@ -1,44 +1,56 @@
-.nav{
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: .8rem;
-    height:3.5rem;
+    height: 3.5rem;
     padding: 0 2rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
     z-index: 500;
 }
-.flex{
+
+
+.flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.navLogo{
-    gap:0.2rem;
+
+.navLogo {
+    gap: 0.2rem;
     font-family: 'Kaushan Script', cursive;
     font-weight: 700;
     font-size: 1.5rem;
     flex-grow: 0.8;
     text-align: center;
     cursor: pointer;
+    order: 1;
 }
-.navLogoSun{
+
+.navLogoSun {
     font-size: 2.7rem;
     color: chocolate;
 }
-.navCategoriesTop{
+
+.navCategoriesTop {
     flex-grow: 1.2;
+    order: 2;
 }
-.navCategories{
+
+.navCategories {
     text-align: center;
     cursor: pointer;
     position: relative;
+
 }
+
 .navSearch {
-    flex-grow:8;
+    flex-grow: 8;
     position: relative;
+    order: 3
 }
-.navSearchIcon{
+
+.navSearchIcon {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,32 +58,41 @@
     padding-left: 0.875rem;
     pointer-events: none;
 }
-.navSearchIcon i{
+
+.navSearchIcon i {
     font-size: 1.2rem;
     color: var(--color-grey-1);
 }
 
-.navEbookTop{
+.navEbookTop {
     flex-grow: 1.2;
+    order: 4;
 }
-.navEbook{
+
+.navEbook {
     text-align: center;
     cursor: pointer;
     position: relative;
+
 }
-.navFindTutor{
+
+.navFindTutor {
     flex-grow: 1;
     text-align: center;
     cursor: pointer;
+    order: 5
 }
+
 .navShoppingBasketTop {
     flex-grow: 1;
+    order: 6
 }
 
 .navShoppingBasket {
     cursor: pointer;
     position: relative;
     padding: 1.7rem 0;
+    order: 7;
 }
 
 .navShoppingBasketDropDownCounter {
@@ -79,7 +100,7 @@
     position: absolute;
     top: 1.18rem;
     right: 1.1rem;
-    padding:0 .36rem;
+    padding: 0 .36rem;
     border-radius: 50%;
     background-color: var(--color--saphireBlue);
 }
@@ -89,50 +110,62 @@
     font-weight: bold;
 }
 
-.navLogin{
+.navLogin {
     flex-grow: 0.5;
     text-align: center;
+    order: 8;
 }
-.navSignUp{
+
+.navSignUp {
     flex-grow: 0.5;
     text-align: center;
     background-color: black;
     color: var(--color-white-1);
+    order: 9;
 }
-.navLogin:hover{
+
+.navLogin:hover {
     background-color: var(--color-white-3);
 }
-.navSignUp:hover{
+
+.navSignUp:hover {
     background-color: var(--color--black-2);
 }
 
-.navLanguage{
+.navLanguageTop {
+    order: 10;
+}
+
+.navLanguage {
     display: flex;
     height: 100%;
     justify-content: center;
     align-items: center;
     align-self: center;
-
-    /*padding:.3rem;*/
     position: relative;
     cursor: pointer;
-    font-size:1.5rem;
+    font-size: 1.5rem;
+    padding:1.7rem 0;
 }
-.navLanguage p{
-    border:var(--color--black-2) 1px solid;
+
+.navLanguage p {
+    border: var(--color--black-2) 1px solid;
 }
-.navLanguage p:hover{
+
+.navLanguage p:hover {
     background-color: var(--color-white-3);
 }
-.button{
+
+.button {
     margin-right: 0.6rem;
     display: inline-block;
-    border:black 0.15rem solid;
+    border: black 0.15rem solid;
     padding: 0.05rem;
     border-radius: 1rem;
     cursor: pointer;
 }
-.categoryList{
+
+.categoryList {
     position: absolute;
     display: flex;
     left: 1.2rem;
@@ -140,47 +173,53 @@
     background-color: var(--color-white-1);
     z-index: 1000;
 }
-.categoryListCategory{
-    width: 15.5rem;
+
+.categoryListCategory {
+    min-width: 15rem;
     border: var(--color-grey-2) 1px solid;
     border-top: 0;
     padding: 1.5rem;
 }
-.categoryListSubCategory{
-    width: 15.5rem;
-    border-right: var(--color-grey-2) 1px solid;
-    border-bottom: var(--color-grey-2) 1px solid;
+.categorySubListCategory {
+    min-width: 15rem;
+    height: 100%;
+    border: var(--color-grey-2) 1px solid;
+    border-top: 0;
     padding: 1.5rem;
 }
-.categoryListTitle{
+.categoryTopListCategory {
+    min-width: 15rem;
+    border: var(--color-grey-2) 1px solid;
+    border-top: 0;
+    padding: 1.5rem;
+}
+.categoryListTitle {
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
     padding: 0.5rem;
 }
-.categoryListTitle:hover{
-    background-color: rgb(243 244 246);
-}
-.categoryListTitleHover{
-    background-color: rgb(243 244 246);
-}
-.categoryListPopularTopic{
-    width: 15.5rem;
-    border-right: var(--color-grey-2) 1px solid;
-    border-bottom: var(--color-grey-2) 1px solid;
-    padding: 1.5rem;
-}
-.categoryListPopularTopicTitle{
-    padding:0.5rem;
-    cursor: pointer;
-    text-align: left;
-}
-.categoryListPopularTopicTitle:hover{
+
+.categoryListTitle:hover {
     background-color: rgb(243 244 246);
 }
 
-.categoryBookList{
+.categoryListTitleHover {
+    background-color: rgb(243 244 246);
+}
+
+.categoryListPopularTopicTitle {
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.categoryListPopularTopicTitle:hover {
+    background-color: rgb(243 244 246);
+}
+
+.categoryBookList {
     position: absolute;
     display: flex;
     left: -3rem;
@@ -188,7 +227,15 @@
     background-color: var(--color-white-1);
     z-index: 1000;
 }
-.languageComponent{
+.categoryBookListPopularTopic{
+    min-width: 15rem;
+    border: var(--color-grey-2) 1px solid;
+    border-top: 0;
+    padding: 1.5rem;
+}
+
+
+.languageComponent {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -197,16 +244,281 @@
     border: var(--color-grey-2) 1px solid;
     right: 50%;
     transform: translateX(50%);
-    top: 3.6rem;
+    top: 4.6rem;
     font-size: 1rem;
     background-color: var(--color-white-1);
 }
-.languageComponentTr{
+
+.languageComponentTr {
     border-bottom: var(--color--black-2) 1px solid;
 }
-.languageComponent div{
+
+.languageComponent div {
     padding: 0.20rem 1.6rem;
 }
-.languageComponent div:hover{
+
+.languageComponent div:hover {
     background-color: var(--color-white-3);
 }
+
+.navListIcon {
+    display: none;
+}
+
+.mobile_nav_search_icon {
+    display: none;
+}
+
+.nav_list_component {
+    display: none;
+
+}
+.full_page_overlay_module{
+    display: block;
+    background:rgba(45,47,49,.8);
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms linear, transform 0ms linear 100ms;
+    animation: fadeIn 300ms forwards;
+    z-index: 1030;
+}
+.nav_list{
+
+    justify-content: space-between;
+    position: absolute;
+    width: 15.8rem;
+
+}
+.nav_list_close{
+    position: relative;
+    height: max-content;
+    top: 1rem;
+    left: .3rem;
+    padding:.7rem .8rem;
+    border-radius: 50%;
+    background-color: var(--color-white-1);
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
+    z-index: 1030;
+}
+.icon_close{
+    width: .8rem;
+    height: .8rem;
+}
+/*.nav_list_close:hover {*/
+/*    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0 inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;*/
+/*}*/
+.nav_list_menu {
+    width: 12.5rem;
+    height: 100vh;
+    background-color: var(--color-white-2);
+    overflow: auto;
+    font-size: .86rem;
+    font-weight: 400;
+    z-index: 1030;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
+}
+
+.nav_list_sub{
+    padding:0.8rem 1rem;
+    font-size:.66rem;
+    z-index: 1030;
+}
+
+@media (max-width: 1400px) {
+    .navShoppingBasketDropDownCounter {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navShoppingBasketDropDownCounter {
+        right: 0.3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav {
+        font-size: 1.2rem;
+        padding: 0 .5rem;
+    }
+
+    .navLogo {
+        font-weight: 600;
+        flex-grow: 5;
+        order: 2;
+    }
+
+    .navLogo span::first-letter {
+        font-size: 1.6rem;
+    }
+
+    .navLogoSun {
+        font-size: 2rem;
+    }
+
+    .navListIcon {
+        display: block;
+        padding: 0 1.2rem;
+        order: 1;
+    }
+    .categoryListTitleHover {
+        background-color:inherit;
+    }
+    .mobile_nav_search_icon {
+        display: block;
+        justify-content: right;
+        padding: 0 1.2rem;
+        order: 3;
+    }
+
+    .navShoppingBasketTop {
+        order: 4;
+        flex-grow: 0.3;
+    }
+
+    .navShoppingBasketDropDownCounter {
+        font-size: .8rem;
+        top: 1.18rem;
+        right: 0.6rem;
+        padding: 0 .36rem;
+        border-radius: 50%;
+        background-color: var(--color--saphireBlue);
+    }
+
+    .nav_list_component {
+        display: block;
+        background-color: var(--color-white-3);
+    }
+    .categoryList{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top:0;
+        left: 0;
+        background-color: inherit;
+    }
+    .categoryListCategory{
+        width: auto;
+        min-width: 100%;
+        border: none;
+        padding: 0 0 0 1rem;
+        position: relative;
+    }
+    .categorySubListCategory{
+        width: auto;
+        min-width: auto;
+        border: none;
+
+    }
+    .categoryTopListCategory{
+        width: auto;
+        min-width: auto;
+        border: none;
+
+    }
+    .categoryListTitle{
+        padding: 0.5rem 0;
+    }
+    .categoryListTitle:hover {
+        background-color: transparent;
+    }
+    .categoryListPopularTopicTitle{
+        padding: 0.5rem 0;
+    }
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+
+    .mobile_nav_module_highlighted {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: chocolate;
+        top: 0;
+        animation: slideInFromLeft 0.5s ease;
+        z-index: 1030;
+    }
+    .mobile_nav_module_highlighted_2 {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: yellow;
+        top: 0;
+        animation: slideInFromRight 0.5s ease;
+        z-index: 1030;
+    }
+    .mobile_nav_module_category{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+    }
+
+
+    .navSignUp {
+        display: none;
+    }
+
+    .navLogin {
+        display: none;
+    }
+
+    .navLanguageTop {
+        display: none;
+    }
+
+    .navFindTutor {
+        display: none;
+    }
+
+    .navEbookTop {
+        display: none;
+    }
+
+    .navSearch {
+        display: none;
+    }
+
+    .navCategoriesTop {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .navShoppingBasketDropDownCounter {
+        right: 0.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navShoppingBasketDropDownCounter {
+        right: -0.3rem;
+    }
+
+}
+@media (max-width: 376px) {
+    .navShoppingBasketDropDownCounter {
+        right: -.4rem;
+    }
+
+}
+
