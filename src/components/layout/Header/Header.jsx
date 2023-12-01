@@ -6,7 +6,7 @@ import MainNav from "@/components/layout/Header/MainNav";
 
 const Header = () => {
 const [versionNavigation,setVersionNavigation]=useState(false);
-    const [closeIcon,setCloseIcon]=useState(false);
+    const [closeIcon,setCloseIcon]=useState(true);
     return <>
         <div className={classes.nav_list_component}>
             <MobilMenu versionNavigation={versionNavigation} closeIcon={closeIcon} setCloseIcon={setCloseIcon}/>
