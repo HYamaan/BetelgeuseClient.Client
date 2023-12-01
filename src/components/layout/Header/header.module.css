@@ -6,7 +6,7 @@
     height: 3.5rem;
     padding: 0 2rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
-    z-index: 500;
+    z-index: 1000;
 }
 
 
@@ -344,6 +344,8 @@
     .nav {
         font-size: 1.2rem;
         padding: 0 .5rem;
+        position: sticky;
+        z-index: 500;
     }
 
     .navLogo {
@@ -446,8 +448,6 @@
             transform: translateX(0);
         }
     }
-
-
     .mobile_nav_module_highlighted {
         position: absolute;
         width: 100%;
