@@ -24,6 +24,7 @@
   --color--black:	#000000;
   --color--black-2:#333333;
   --color--saphireBlue:#754FFE;
+  --color--lavender:#F0EDFD;
   --color-card:#1E293B;
 
 }
@@ -31,7 +32,7 @@
   :root {
     --bs-yellow:#ffc107;
   }
-  
+
 }
 @media (prefers-color-scheme: light) {
   :root {
