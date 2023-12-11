@@ -3,7 +3,6 @@ import CategoriesJson from '../../../data/Categories.json';
 import {FaAngleRight} from "react-icons/fa6";
 import {MdArrowBackIos} from "react-icons/md";
 import styles from "./header.module.css";
-import styless from "@/components/layout/Header/header.module.css";
 
 const CategoriesComponent = (props) => {
     const { closeIcon, setShowSubCategoriesForCss ,versionNavigation} = props || {};
@@ -97,7 +96,7 @@ const CategoriesComponent = (props) => {
             <div className={`
       ${props.showSubCategoriesForCss && styles.mobile_nav_module_highlighted}
       ${!versionNavigation && categoryParent && "hidden "}
-      ${props.showSubCategoriesForCss && styless.mobile_nav_module_category}
+      ${props.showSubCategoriesForCss && styles.mobile_nav_module_category}
   
     `}>
                 <div className={styles.categorySubListCategory}>

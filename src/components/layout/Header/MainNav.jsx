@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import classes from "@/components/layout/Header/header.module.css";
+import classes from "./header.module.css";
 import {GiStripedSun} from "react-icons/gi";
-import CategoryList from "@/components/layout/Header/Categories";
+import CategoryList from "./Categories";
 import {IoMdSearch} from "react-icons/io";
-import Ebook from "@/components/layout/Header/Ebook";
+import Ebook from "./Ebook";
 import {LuShoppingCart} from "react-icons/lu";
-import ShoppingBasketComponent from "@/components/layout/Header/ShoppingBasket";
+import ShoppingBasketComponent from "./ShoppingBasket";
 import {MdLanguage} from "react-icons/md";
-import LanguageComponent from "@/components/layout/Header/Language";
+import LanguageComponent from "./Language";
 import {BsList} from "react-icons/bs";
 import {useRouter} from "next/router";
 

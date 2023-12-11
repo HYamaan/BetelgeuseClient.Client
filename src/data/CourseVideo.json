@@ -8,25 +8,29 @@
           "guid": "1a234567-89ab-cdef-0123-456789abcdef",
           "title": "Introduction to Machine Learning",
           "duration": "10:15",
-          "preview": true
+          "preview": true,
+          "videoUrl": "/assets/video/trailer.mp4"
         },
         {
           "guid": "2b345678-9abc-def0-1234-56789abcdef1",
           "title": "Supervised Learning Techniques",
           "duration": "15:45",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/supervised-learning.mp4"
         },
         {
           "guid": "3c456789-abcd-ef01-2345-6789abcdef12",
           "title": "Unsupervised Learning Methods",
           "duration": "12:30",
-          "preview": true
+          "preview": true,
+          "videoUrl": "/assets/video/trailer.mp4"
         },
         {
           "guid": "4d567890-bcde-f012-3456-789abcdef123",
           "title": "Model Evaluation and Metrics",
           "duration": "18:00",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/model-evaluation.mp4"
         }
       ],
       "totalDuration": "56:30",
@@ -40,19 +44,22 @@
           "guid": "5e678901-cdef-0123-4567-89abcdef0123",
           "title": "HTML5 Introduction",
           "duration": "08:20",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/html5-intro.mp4"
         },
         {
           "guid": "6f789012-def0-1234-5678-9abcdef01234",
           "title": "CSS3 Styling Techniques",
           "duration": "12:35",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/css3-styling.mp4"
         },
         {
           "guid": "7a890123-ef01-2345-6789-abcdef012345",
           "title": "JavaScript Fundamentals",
           "duration": "15:45",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/js-fundamentals.mp4"
         }
       ],
       "totalDuration": "36:40",
@@ -66,19 +73,22 @@
           "guid": "bc345678-9cde-f012-3456-789abcdef012",
           "title": "Getting Started with Python",
           "duration": "10:00",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/getting-started-python.mp4"
         },
         {
           "guid": "cd456789-abcd-ef01-2345-6789abcdef123",
           "title": "Python Functions and Modules",
           "duration": "14:25",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/python-functions-modules.mp4"
         },
         {
           "guid": "de567890-bcde-f012-3456-789abcdef234",
           "title": "Data Structures in Python",
           "duration": "20:30",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/data-structures-python.mp4"
         }
       ],
       "totalDuration": "44:55",
@@ -92,19 +102,22 @@
           "guid": "f7890123-4567-89ab-cdef-0123456789ab",
           "title": "Introduction to Graphic Design",
           "duration": "12:15",
-          "preview": true
+          "preview": true,
+          "videoUrl": "/assets/video/trailer.mp4"
         },
         {
           "guid": "89a01234-5678-9abc-def0-123456789abc",
           "title": "Color Theory in Design",
           "duration": "16:45",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/color-theory-design.mp4"
         },
         {
           "guid": "9ab12345-6789-abcd-ef01-23456789abcdef",
           "title": "Typography Fundamentals",
           "duration": "14:20",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/typography-fundamentals.mp4"
         }
       ],
       "totalDuration": "43:20",
@@ -118,26 +131,31 @@
           "guid": "bcd34567-89ab-cdef-0123-456789abcdef1",
           "title": "Overview of Mobile App Development",
           "duration": "11:30",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/mobile-app-overview.mp4"
         },
         {
           "guid": "cde45678-9abc-def0-1234-56789abcdef12",
           "title": "Building User Interfaces",
           "duration": "17:10",
-          "preview": false
+          "preview": false,
+          "videoUrl": "https://example.com/videos/building-ui-mobile-app.mp4"
         },
         {
           "guid": "def56789-abcd-ef01-2345-6789abcdef123",
           "title": "App Deployment and Testing",
           "duration": "22:40",
-          "preview": true
+          "preview": true,
+          "videoUrl": "https://example.com/videos/app-deployment-testing.mp4"
         }
       ],
       "totalDuration": "51:20",
       "totalLessons": 3
     }
   ],
-  "willLearnJson": [
+
+
+"willLearnJson": [
     { "guid": "1", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction" },
     { "guid": "2", "willLearnTitle": "Handle specific topics like Reinforcement Learning best" },
     { "guid": "3", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem" },

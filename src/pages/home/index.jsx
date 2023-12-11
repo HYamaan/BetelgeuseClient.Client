@@ -2,8 +2,8 @@ import React from 'react';
 import styless from './home.module.css';
 import Image from 'next/image';
 import {AiOutlinePlus} from "react-icons/ai";
-import CourseCardList from "@/components/courseCard/CourseCardList";
 
+import CourseCardList from "./../../components/courseCard/CourseCardList";
 const HomePage = () => {
 
 

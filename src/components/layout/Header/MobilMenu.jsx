@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styless from './header.module.css';
-import Categories from '@/components/layout/Header/Categories';
+import Categories from './Categories';
 
 const MobilMenu = (props) => {
     const { versionNavigation, setCloseIcon, closeIcon } = props;

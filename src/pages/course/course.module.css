@@ -493,6 +493,7 @@
     z-index: 10000;
 }
 
+
 .all_reviews_rating {
     display: flex;
     justify-content: flex-start;
@@ -629,7 +630,74 @@ background-color: var(--color--saphireBlue);
 .debit_card_icon{
     font-size: 1.2rem;
 }
+.video_preview{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90%;
+    width: 40%;
+    background: var(--color--black-2);
+    color: var(--color-white-2);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    border-radius: 5px;
+    z-index: 10000;
+    cursor: pointer;
+    overflow-y: scroll;
+}
 
+.video_preview h6{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding: 0 2rem;
+}
+.video_preview h5   {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 0 2rem;
+}
+.video_preview h3{
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+}
+.video_preview .video{
+    width: 100%;
+    margin:1rem 0 3rem 0;
+    padding: 0 2rem;
+}
+.video_other{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    margin:0 2rem;
+}
+.video_other_parent{
+    background-color: inherit;
+    padding: .6rem 0;
+}
+.video_other_parent:hover{
+    background-color: var(--secondary-color);
+}
+.video_other_video{
+    width: 5rem;
+}
+.video_other_video_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+.video_other_video_title svg{
+    font-size: 1.3rem;
+}
+.video_other_video_p{
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: auto !important;
+}
 @keyframes pulse {
     0% {
         box-shadow: 0 0 0 0 #fff6;

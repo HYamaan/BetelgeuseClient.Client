@@ -9,11 +9,17 @@ export const OutsideClickHandler = ({ children, onOutsideClick }) => {
                 onOutsideClick();
             }
         };
-
+        const handleKeyDown = (event) => {
+            if (event.key === "Escape") {
+                onOutsideClick();
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
         document.addEventListener('mousedown', handleClickOutside);
 
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
+            document.addEventListener("keydown", handleKeyDown);
         };
     }, [onOutsideClick]);
 
