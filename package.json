@@ -16,7 +16,6 @@
     "@svgr/webpack": "^8.1.0",
     "eslint": "^8.54.0",
     "formik": "^2.4.5",
-    "hls.js": "^1.5.0-beta.2.0.canary.9802",
     "i18next": "^23.7.6",
     "i18next-http-backend": "^2.4.2",
     "next": "13.5.5",
