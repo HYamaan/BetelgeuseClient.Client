@@ -5,7 +5,9 @@ import ShoppingCard from './../../../data/shoppingBasketProudct.json';
 const ShoppingBasketComponent = ({ setShoppingBasketHover }) => {
     const [chooseCourse, setChooseCourse] = useState(null);
     const handleChooseCourseClick = (id) => {
-        console.log('id', id);
+
+        setChooseCourse(id);
+        console.log('id', chooseCourse);
     };
 
     return (

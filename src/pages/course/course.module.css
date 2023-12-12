@@ -723,13 +723,18 @@ background-color: var(--color--saphireBlue);
     .course_left {
         flex: 0 0 100%;
         max-width: 100%;
-        order: 1;
+        order: 2;
     }
 
     .course_right {
         flex: 0 0 100%;
         max-width: 100%;
-        order: 2;
+        order: 1;
+        margin-top:10rem;
+        margin-bottom:-10rem
+    }
+    .video_preview{
+        width: calc(100% - 15rem);
     }
 }
 
@@ -742,7 +747,9 @@ background-color: var(--color--saphireBlue);
 
 @media (max-width: 576px) {
 
-
+    .video_preview{
+        width: calc(100% - 4rem);
+    }
 }
 
 @media (max-width: 376px) {

@@ -38,7 +38,6 @@ const Course = () => {
 
             </div>
         </section>
-
     </div>
 };
 

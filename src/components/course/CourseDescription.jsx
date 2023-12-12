@@ -8,22 +8,22 @@ import {LazyLoadImage} from "react-lazy-load-image-component";
 import {FaCheck, FaPlayCircle, FaStar} from "react-icons/fa";
 import {TbCertificate} from "react-icons/tb";
 import {HiUsers} from "react-icons/hi";
-import {Avatar, Rating} from "@mui/material";
-import {deepPurple} from "@mui/material/colors";
-import {OutsideClickHandler} from "./../../hooks/boxOutSideClick";
-import {calculateStarsRatio} from "./../../hooks/calculate";
+import { Rating} from "@mui/material";
+import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
+import {calculateStarsRatio} from "@/hooks/calculate";
+import UserReviewInfo from "@/components/course/UserReviewInfo";
 
 const CourseDescription = (props) => {
     const{courseReviews,courseHeader,courseWillLearnJson,allStudentReview,setAllStudentReview}=props;
-    const starsRatio = calculateStarsRatio(courseReviews.studentReviews);
+    const starsRatio = calculateStarsRatio(courseReviews["studentReviews"]);
     const [activeAccordion, setActiveAccordion] = useState(null);
     const totalItems = courseWillLearnJson.length;
     const halfLength = totalItems / 2;
 
     const renderItems = (start, end) => courseWillLearnJson.slice(start, end).map(value => (
-        <div className={styles.course_learn_text} key={value.guid}>
+        <div className={styles.course_learn_text} key={value["guid"]}>
             <FaCheck className={styles.course_learn_text_icon}/>
-            {value.willLearnTitle}
+            {value["willLearnTitle"]}
         </div>));
     const handleOutsideClick = () => {
         setAllStudentReview(false);
@@ -66,7 +66,7 @@ const CourseDescription = (props) => {
                             </h2>
                             {activeAccordion === index && (value.videos.map(videoValue => (<div
                                 className={`${styles.accordion_body} ${activeAccordion === index ? styles.open : ''}`}
-                                key={videoValue.guid}>
+                                key={videoValue["guid"]}>
                                 <div
                                     className={styles.accordion_lecture + (videoValue.preview ? ` ${styles.accordion_lecture_hover}` : '')}>
                                     <div className={styles.accordion_lecture_left}>
@@ -87,46 +87,46 @@ const CourseDescription = (props) => {
             </>
             <div>
                 <h2 className={styles.course_content_title}>Requirements</h2>
-                {courseHeader.courseRequirements.map((requirement, key) => (
+                {courseHeader["courseRequirements"].map((requirement, key) => (
                     <div key={key} className={styles.requirement_detail}>
                         <GoDotFill/> <span>{requirement}</span>
                     </div>))}
             </div>
             <div>
                 <h2 className={styles.course_content_title}>Description</h2>
-                <p className={styles.course_general_description}>{courseHeader.CourseGeneralDescription}</p>
+                <p className={styles.course_general_description}>{courseHeader["CourseGeneralDescription"]}</p>
             </div>
             <div className={styles.instructor_section}>
                 <h2 className={styles.course_content_title}>Instructor</h2>
                 <div className={styles.instructor_section_info}>
-                    <LazyLoadImage src={`assets/image/instructor/${courseHeader.instructor.image}`}
-                                   alt={courseHeader.instructor.image}
+                    <LazyLoadImage src={`assets/image/instructor/${courseHeader["instructor"].image}`}
+                                   alt={courseHeader["instructor"].image}
                                    className={`${styles.instructor_image} `}
                     />
                     <div>
-                        <p className={styles.instructor_name}>{courseHeader.instructor.name}</p>
-                        <p className={styles.instructor_specializations}>{courseHeader.instructor.specializations}</p>
+                        <p className={styles.instructor_name}>{courseHeader["instructor"].name}</p>
+                        <p className={styles.instructor_specializations}>{courseHeader["instructor"]["specializations"]}</p>
                         <div className={styles.instructor_info}>
                             <p>
                                 <FaStar/>
-                                <span>{courseHeader.instructor.rating} Instructor Rating</span>
+                                <span>{courseHeader["instructor"]["rating"]} Instructor Rating</span>
                             </p>
                             <p>
                                 <TbCertificate/>
-                                <span>{courseHeader.instructor.reviews} Reviews</span>
+                                <span>{courseHeader["instructor"]["reviews"]} Reviews</span>
                             </p>
                             <p>
                                 <HiUsers/>
-                                <span>{courseHeader.instructor.students} Students</span>
+                                <span>{courseHeader["instructor"]["students"]} Students</span>
                             </p>
                             <p>
                                 <FaPlayCircle/>
-                                <span>{courseHeader.instructor.courses} Courses</span>
+                                <span>{courseHeader["instructor"].courses} Courses</span>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className={styles.instructor_biography}>{courseHeader.instructor.biography}</div>
+                <div className={styles.instructor_biography}>{courseHeader["instructor"]["biography"]}</div>
             </div>
             <div className={styles.review_section}>
                 <h2 className={styles.review_section_title}>
@@ -134,25 +134,9 @@ const CourseDescription = (props) => {
                     <span><GoDotFill/> {courseReviews["totalReviews"]} ratings</span>
                 </h2>
                 <div className={styles.student_review}>
-                    {courseReviews.studentReviews.slice(0, 4).map(reviewsValue => (
+                    {courseReviews["studentReviews"].slice(0, 4).map(reviewsValue => (
                         <div className="flex-[45%]" key={reviewsValue["guid"]}>
-                            <div className={styles.review_user_info}>
-                                <Avatar
-                                    alt={reviewsValue["name"]}
-                                    src={reviewsValue["image"]}
-                                    sx={{bgcolor: deepPurple.A700}}
-                                />
-                                <div>
-                                    <h4>{reviewsValue["name"].split(' ')[0]} {reviewsValue["name"].split(' ')[1][0]}.</h4>
-                                    <div className={styles.review_star}>
-                                        <Rating name="half-rating-read"
-                                                defaultValue={reviewsValue["stars"]}
-                                                precision={0.5}
-                                                readOnly/>
-                                        <p>{reviewsValue["date"]}</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <UserReviewInfo reviewsValue={reviewsValue}/>
                             <div className={styles.review_user_comment}>
                                 {reviewsValue["comment"]}
                             </div>
@@ -196,26 +180,10 @@ const CourseDescription = (props) => {
                                 </div>
                                 <div className="flex-[50%] h-full ">
                                     <div className=" h-full overflow-y-scroll">
-                                        {courseReviews.studentReviews.map(reviewsValue => (
+                                        {courseReviews["studentReviews"].map(reviewsValue => (
                                             <div className="flex-[45%]"
                                                  key={reviewsValue["guid"]}>
-                                                <div className={styles.review_user_info}>
-                                                    <Avatar
-                                                        alt={reviewsValue["name"]}
-                                                        src={reviewsValue["image"]}
-                                                        sx={{bgcolor: deepPurple.A700}}
-                                                    />
-                                                    <div>
-                                                        <h4>{reviewsValue["name"].split(' ')[0]} {reviewsValue["name"].split(' ')[1][0]}.</h4>
-                                                        <div className={styles.review_star}>
-                                                            <Rating name="half-rating-read"
-                                                                    defaultValue={reviewsValue["stars"]}
-                                                                    precision={0.5}
-                                                                    readOnly/>
-                                                            <p>{reviewsValue["date"]}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <UserReviewInfo reviewsValue={reviewsValue}/>
                                                 <div className={styles.review_user_comment_all}>
                                                     {reviewsValue["comment"]}
                                                 </div>

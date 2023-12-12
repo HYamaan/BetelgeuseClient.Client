@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import styles from "./../../pages/course/course.module.css"
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import {FaCirclePlay} from "react-icons/fa6";
@@ -7,24 +7,27 @@ import {GiLevelEndFlag, GiTrophyCup} from "react-icons/gi";
 import {PiInfinity} from "react-icons/pi";
 import {FaMinus, FaPlus} from "react-icons/fa";
 import {CiCreditCard1} from "react-icons/ci";
-import {OutsideClickHandler} from "./../../hooks/boxOutSideClick";
-
-function CourseReviewVideo() {
-    return null;
-}
+import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
+import CourseReviewVideo from "@/components/course/CourseReviewVideo";
 
 const CourseVideo = (props) => {
     const {courseHeader, openVideo, setOpenVideo, courses} = props;
     const [cardAddToBasket, setAddToBasket] = useState(false);
+    const [mainVideo, setMainVideo] = useState({});
     const previewVideos = courses.flatMap(course => (course.videos.filter(video => video.preview)));
-    console.log("previewVideos", previewVideos)
+    //console.log("previewVideos", previewVideos)
     const handleOutsideClick = () => {
         setOpenVideo(false);
     };
+    useEffect(() => {
+        if (previewVideos.length >= 0) {
+            setMainVideo(previewVideos[0]);
+        }
+    }, [previewVideos]);
+    console.log("mainVideo", mainVideo)
     return (<div className={styles.course_right_section}>
-        <div className={styles.course_card} onClick={() => {
-            setOpenVideo(true)
-        }}>
+        <div className={styles.course_card}
+             onClick={() => {setOpenVideo(true)}}>
             <div className={styles.card_img}>
                 <div className={styles.course_img}>
                     <LazyLoadImage src={`assets/image/video1.jpg`}
@@ -44,35 +47,35 @@ const CourseVideo = (props) => {
                     <MdOutlineLibraryBooks style={{"color": "#FF5C5C"}}/>
                     Lectures
                 </div>
-                <h5>{courseHeader.courseDetails.lectures}</h5>
+                <h5>{courseHeader["courseDetails"]["lectures"]}</h5>
             </div>
             <div className={styles.enrol}>
                 <div className={styles.icon}>
                     <MdOutlineQuiz style={{"color": "#8F85FF"}}/>
                     Quizzes
                 </div>
-                <h5>{courseHeader.courseDetails.quizzes}</h5>
+                <h5>{courseHeader["courseDetails"]["quizzes"]}</h5>
             </div>
             <div className={styles.enrol}>
                 <div className={styles.icon}>
                     <GiLevelEndFlag style={{"color": "#0FFAA4"}}/>
                     Skill level
                 </div>
-                <h5>{courseHeader.courseDetails.skillLevel}</h5>
+                <h5>{courseHeader["courseDetails"]["skillLevel"]}</h5>
             </div>
             <div className={styles.enrol}>
                 <div className={styles.icon}>
                     <PiInfinity className="" style={{"color": "#FF4433"}}/>
                     Expiry period
                 </div>
-                <h5>{courseHeader.courseDetails.expiryPeriod}</h5>
+                <h5>{courseHeader["courseDetails"]["expiryPeriod"]}</h5>
             </div>
             <div className={styles.enrol}>
                 <div className={styles.icon}>
                     <GiTrophyCup/>
                     Certificate
                 </div>
-                <h5>{courseHeader.courseDetails.certificate ? "Yes" : "No"}</h5>
+                <h5>{courseHeader["courseDetails"].certificate ? "Yes" : "No"}</h5>
             </div>
             {cardAddToBasket ? (<div className={styles.btn} onClick={() => {
                 setAddToBasket(false)
@@ -97,18 +100,22 @@ const CourseVideo = (props) => {
                 <div className={styles.video_preview}>
                     <h6>Course Preview</h6>
                     <h3>{courseHeader.title}</h3>
-                <CourseReviewVideo videoId={"13123"} videoUrl="/assets/video/trailer.mp4"  className={styles.video}/>
+                    <CourseReviewVideo
+                        videoId={mainVideo["guid"]}
+                        videoUrl={mainVideo.videoUrl}
+                        videoJPG={mainVideo["videoJpg"]}
+                        className={styles.video}/>
                     <h5>Free Sample Videos:</h5>
 
                     {previewVideos.map(video => (
-                        <div className={styles.video_other_parent} key={video["guid"]}>
-                        <div  className={styles.video_other}>
+                        <div className={styles.video_other_parent} key={video["guid"]} onClick={()=>{setMainVideo(video)}}>
+                            <div className={styles.video_other}>
 
-                            <LazyLoadImage src={`assets/image/video1.jpg`}
-                                           alt={video["videoUrl"].split('/')[-1]}
-                                           className={styles.video_other_video}
-                            />
-                            <span className={styles.video_other_video_title}>
+                                <LazyLoadImage src={video["videoJpg"]}
+                                               alt={video["videoUrl"].split('/')[-1]}
+                                               className={styles.video_other_video}
+                                />
+                                <span className={styles.video_other_video_title}>
                             <FaCirclePlay/>
                              <p className={styles.video_other_video_p}>
                                   {video["title"]}
@@ -117,8 +124,9 @@ const CourseVideo = (props) => {
                                 {video["duration"]}
 
                             </span>
+                            </div>
                         </div>
-                    </div>))}
+                    ))}
 
                 </div>
             </OutsideClickHandler>

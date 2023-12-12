@@ -95,13 +95,6 @@ display: none;
 }
 
 /* Video list global styles */
-.video-list {
-  height: 100%;
-  width: 50vw;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
 
 .video-item {
   list-style: none;

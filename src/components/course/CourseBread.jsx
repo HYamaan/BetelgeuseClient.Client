@@ -14,12 +14,12 @@ const CourseBread = (props) => {
                     <div className={styles.bread_subtitle}>{courseHeader.description}</div>
                     <div className={styles.course_heading_info}>
                         <div className={styles.info_tag}>
-                            <LazyLoadImage src={`assets/image/instructor/${courseHeader.instructor.image}`}
-                                           alt={courseHeader.instructor.image}
+                            <LazyLoadImage src={`assets/image/instructor/${courseHeader["instructor"].image}`}
+                                           alt={courseHeader["instructor"].image}
                                            className={`${styles.info_tag_image} mb-1`}
                             />
                             <p className={styles.info_created_text}>Created by</p>
-                            <p className={styles.info_created_instructor}>{courseHeader.instructor.name}</p>
+                            <p className={styles.info_created_instructor}>{courseHeader["instructor"].name}</p>
                         </div>
                         <div className={styles.info_tag}>
                             <FaRegClock className={styles.info_tag_clock}/>
@@ -27,16 +27,16 @@ const CourseBread = (props) => {
                         </div>
                         <div className={styles.info_tag}>
                             <FaRegUser className={styles.info_user_number_icon}/>
-                            <span className={styles.info_user_number}>{courseHeader.enrolled}</span>
+                            <span className={styles.info_user_number}>{courseHeader["enrolled"]}</span>
                             <span className={styles.info_user_number}>Enrolled</span>
                         </div>
                         <div className={styles.info_tag}>
                             <div className={styles.icon}>
-                                <Rating name="half-rating-read" defaultValue={courseHeader.stars} precision={0.5}
+                                <Rating name="half-rating-read" defaultValue={courseHeader["stars"]} precision={0.5}
                                         readOnly/>
                             </div>
                             <span className={styles.icon_text}>
-                            ({courseHeader.reviews.count} Reviews)
+                            ({courseHeader["reviews"].count} Reviews)
                           </span>
                         </div>
                     </div>

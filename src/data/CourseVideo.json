@@ -9,7 +9,8 @@
           "title": "Introduction to Machine Learning",
           "duration": "10:15",
           "preview": true,
-          "videoUrl": "/assets/video/trailer.mp4"
+          "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+          "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
         },
         {
           "guid": "2b345678-9abc-def0-1234-56789abcdef1",
@@ -23,7 +24,8 @@
           "title": "Unsupervised Learning Methods",
           "duration": "12:30",
           "preview": true,
-          "videoUrl": "/assets/video/trailer.mp4"
+          "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+          "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
         },
         {
           "guid": "4d567890-bcde-f012-3456-789abcdef123",
@@ -45,7 +47,8 @@
           "title": "HTML5 Introduction",
           "duration": "08:20",
           "preview": true,
-          "videoUrl": "https://example.com/videos/html5-intro.mp4"
+          "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+          "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"
         },
         {
           "guid": "6f789012-def0-1234-5678-9abcdef01234",
@@ -59,7 +62,8 @@
           "title": "JavaScript Fundamentals",
           "duration": "15:45",
           "preview": true,
-          "videoUrl": "https://example.com/videos/js-fundamentals.mp4"
+          "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+          "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
         }
       ],
       "totalDuration": "36:40",
@@ -73,7 +77,7 @@
           "guid": "bc345678-9cde-f012-3456-789abcdef012",
           "title": "Getting Started with Python",
           "duration": "10:00",
-          "preview": true,
+          "preview": false,
           "videoUrl": "https://example.com/videos/getting-started-python.mp4"
         },
         {
@@ -87,7 +91,7 @@
           "guid": "de567890-bcde-f012-3456-789abcdef234",
           "title": "Data Structures in Python",
           "duration": "20:30",
-          "preview": true,
+          "preview": false,
           "videoUrl": "https://example.com/videos/data-structures-python.mp4"
         }
       ],
@@ -102,7 +106,7 @@
           "guid": "f7890123-4567-89ab-cdef-0123456789ab",
           "title": "Introduction to Graphic Design",
           "duration": "12:15",
-          "preview": true,
+          "preview": false,
           "videoUrl": "/assets/video/trailer.mp4"
         },
         {
@@ -116,7 +120,7 @@
           "guid": "9ab12345-6789-abcd-ef01-23456789abcdef",
           "title": "Typography Fundamentals",
           "duration": "14:20",
-          "preview": true,
+          "preview": false,
           "videoUrl": "https://example.com/videos/typography-fundamentals.mp4"
         }
       ],
@@ -131,7 +135,7 @@
           "guid": "bcd34567-89ab-cdef-0123-456789abcdef1",
           "title": "Overview of Mobile App Development",
           "duration": "11:30",
-          "preview": true,
+          "preview": false,
           "videoUrl": "https://example.com/videos/mobile-app-overview.mp4"
         },
         {
@@ -145,7 +149,7 @@
           "guid": "def56789-abcd-ef01-2345-6789abcdef123",
           "title": "App Deployment and Testing",
           "duration": "22:40",
-          "preview": true,
+          "preview": false,
           "videoUrl": "https://example.com/videos/app-deployment-testing.mp4"
         }
       ],
@@ -215,7 +219,7 @@
       {
         "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b1a",
         "name": "Alice Johnson",
-        "image": "https://your-azure-storage-url/alice_johnson.jpg",
+        "image": " ",
         "stars": 5,
         "date": "2023-08-15",
         "comment": "This course exceeded my expectations! Dr. Jane Smith's teaching style is excellent, and the content is very practical and hands-on."

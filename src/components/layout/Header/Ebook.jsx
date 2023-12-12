@@ -10,11 +10,11 @@ const EbookComponent = () => {
         setSelectedCategory(categoryName);
     };
     const handleCategoryClick = (categoryName) => {
-        console.log(`Category clicked: ${categoryName}`);
+        //console.log(`Category clicked: ${categoryName}`);
     };
 
     const handleSubcategoryClick = (subcategoryName) => {
-        console.log(`Subcategory clicked: ${subcategoryName}`);
+        //console.log(`Subcategory clicked: ${subcategoryName}`);
     };
 
     const selectedBookData = EbookJson.bookCategories.find(

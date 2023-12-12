@@ -43,7 +43,7 @@ const CategoriesComponent = (props) => {
 
 
     const handleTopicClick = (topic) => {
-        console.log(`Topic clicked: ${topic}`);
+        //console.log(`Topic clicked: ${topic}`);
     };
 
     const handleBackMenu = () => {
