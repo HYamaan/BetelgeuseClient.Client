@@ -3,10 +3,9 @@ import CategoriesJson from '../../../data/Categories.json';
 import {FaAngleRight} from "react-icons/fa6";
 import {MdArrowBackIos} from "react-icons/md";
 import styles from "./header.module.css";
-import styless from "@/components/layout/Header/header.module.css";
 
 const CategoriesComponent = (props) => {
-    const {versionNavigation} = props;
+    const { closeIcon, setShowSubCategoriesForCss ,versionNavigation} = props || {};
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
@@ -31,7 +30,7 @@ const CategoriesComponent = (props) => {
         setSelectedSubcategory(null)
         if (!versionNavigation) {
             setCategoryParent(false);
-            props?.setShowSubCategoriesForCss(true);
+            setShowSubCategoriesForCss(true);
         }
     };
 
@@ -44,24 +43,24 @@ const CategoriesComponent = (props) => {
 
 
     const handleTopicClick = (topic) => {
-        console.log(`Topic clicked: ${topic}`);
+        //console.log(`Topic clicked: ${topic}`);
     };
 
     const handleBackMenu = () => {
         if (!versionNavigation) {
             setCategoryParent(true);
-            props?.setShowSubCategoriesForCss(false);
+            setShowSubCategoriesForCss(false);
             setBackMenu(true);
         }
     };
 
     useEffect(() => {
-        if (props?.closeIcon) {
+        if (closeIcon) {
             setCategoryParent(true);
             setCategorySubChild(true);
-            props?.setShowSubCategoriesForCss(false);
+            setShowSubCategoriesForCss(false);
         }
-    }, [props?.closeIcon]);
+    }, [closeIcon,setShowSubCategoriesForCss]);
 
     const renderCategories = () => (
         <div className={`${styles.categoryListCategory}`}>
@@ -97,7 +96,7 @@ const CategoriesComponent = (props) => {
             <div className={`
       ${props.showSubCategoriesForCss && styles.mobile_nav_module_highlighted}
       ${!versionNavigation && categoryParent && "hidden "}
-      ${props.showSubCategoriesForCss && styless.mobile_nav_module_category}
+      ${props.showSubCategoriesForCss && styles.mobile_nav_module_category}
   
     `}>
                 <div className={styles.categorySubListCategory}>

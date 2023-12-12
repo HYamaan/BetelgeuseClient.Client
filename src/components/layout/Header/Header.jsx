@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import classes from './header.module.css'
-import MobilMenu from "@/components/layout/Header/MobilMenu";
-import MainNav from "@/components/layout/Header/MainNav";
+import MobilMenu from "./MobilMenu";
+import MainNav from "./MainNav";
+
 
 
 const Header = () => {
