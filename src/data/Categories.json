@@ -2,6 +2,7 @@
 {
   "categories": [
     {
+      "guid": "8b901234-5678-9abc-def0-123456789abd",
       "name": "Development",
       "subcategories": [
         {
@@ -67,6 +68,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789ab1",
       "name": "Business",
       "subcategories": [
         {
@@ -132,6 +134,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789ab2",
       "name": "Finance & Accounting",
       "subcategories": [
         {
@@ -197,6 +200,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789ab3",
       "name": "IT & Software",
       "subcategories": [
         {
@@ -262,6 +266,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789ab4",
       "name": "Office Productivity",
       "subcategories": [
         {
@@ -326,7 +331,7 @@
         }
       ]
     },
-    {
+    { "guid": "8b901234-5678-9abc-def0-123456789ab6",
       "name": "Personal Development",
       "subcategories": [
         {
@@ -382,6 +387,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa1",
       "name": "Design",
       "subcategories": [
         {
@@ -447,6 +453,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa2",
       "name": "Marketing",
       "subcategories": [
         {
@@ -512,6 +519,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa3",
       "name": "Lifestyle",
       "subcategories": [
         {
@@ -577,6 +585,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa4",
       "name": "Photography & Video",
       "subcategories": [
         {
@@ -642,6 +651,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa5",
       "name": "Health & Fitness",
       "subcategories": [
         {
@@ -707,6 +717,7 @@
       ]
     },
     {
+      "guid": "8b901234-5678-9abc-def0-123456789aa7",
       "name": "Music",
       "subcategories": [
         {
@@ -771,5 +782,11 @@
         }
       ]
     }
-  ]
+  ],
+  "price": ["All", "Free", "Paid"],
+  "level": ["All","Beginner","Intermediate","Advanced"],
+  "language": ["All","Turkish","English"],
+  "duration": ["0-1 Saat","1-3 Saat","3-5 Saat","5+ Saat"],
+  "ratings": ["4.5","4","3.5","3"]
+
 }

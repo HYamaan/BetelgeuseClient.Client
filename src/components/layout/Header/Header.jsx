@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import classes from './header.module.css'
-import MobilMenu from "./MobilMenu";
-import MainNav from "./MainNav";
+import dynamic from "next/dynamic";
 
-
+const MainNav = dynamic(()=> import  ("./MainNav"),{ssr:true});
+const MobilMenu = dynamic(()=> import  ("./MobilMenu"),{ssr:true});
 
 const Header = () => {
-const [versionNavigation,setVersionNavigation]=useState(false);
+const versionNavigation= false;
     const [closeIcon,setCloseIcon]=useState(true);
     return <>
         <div className={classes.nav_list_component}>

@@ -1,5 +1,5 @@
 .nav {
-    position: relative;
+    position: static;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -98,9 +98,14 @@
 .navShoppingBasketDropDownCounter {
     color: var(--color-white-3);
     position: absolute;
-    top: 1.18rem;
+    top: 1.38rem;
     right: 1.1rem;
-    padding: 0 .36rem;
+    max-width: 25%;
+    min-width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7rem;
     border-radius: 50%;
     background-color: var(--color--saphireBlue);
 }
@@ -177,7 +182,7 @@
     left: 1.2rem;
     top: 4.5rem;
     background-color: var(--color-white-1);
-    z-index: 1000;
+    z-index: 20000;
 }
 
 .categoryListCategory {
@@ -229,9 +234,10 @@
     position: absolute;
     display: flex;
     left: -3rem;
-    top: 4.7rem;
+    top: 4.5rem;
     background-color: var(--color-white-1);
-    z-index: 1000;
+    z-index: 10000;
+    opacity: 0;
 }
 .categoryBookListPopularTopic{
     min-width: 15rem;
@@ -393,7 +399,8 @@
         font-size: .8rem;
         top: 1.18rem;
         right: 0.6rem;
-        padding: 0 .36rem;
+        max-width: 25%;
+        min-width: 25%;
         border-radius: 50%;
         background-color: var(--color--saphireBlue);
     }

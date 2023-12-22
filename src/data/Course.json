@@ -1,0 +1,768 @@
+{
+  "course": [
+    {
+      "guid": "2a1f6a41-7b73-4b89-9c42-4d3df30a5623",
+      "url": "the-data-science-course",
+      "courses": [
+        {
+          "guid": "8b901234-5678-9abc-def0-123456789abc",
+          "title": "Machine Learning Fundamentals",
+          "videos": [
+            {
+              "guid": "1a234567-89ab-cdef-0123-456789abcdef",
+              "title": "Introduction to Machine Learning",
+              "duration": "10:15",
+              "preview": true,
+              "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+            },
+            {
+              "guid": "2b345678-9abc-def0-1234-56789abcdef1",
+              "title": "Supervised Learning Techniques",
+              "duration": "15:45",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/supervised-learning.mp4"
+            },
+            {
+              "guid": "3c456789-abcd-ef01-2345-6789abcdef12",
+              "title": "Unsupervised Learning Methods",
+              "duration": "12:30",
+              "preview": true,
+              "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+            },
+            {
+              "guid": "4d567890-bcde-f012-3456-789abcdef123",
+              "title": "Model Evaluation and Metrics",
+              "duration": "18:00",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/model-evaluation.mp4"
+            }
+          ],
+          "totalDuration": "56:30",
+          "totalLessons": 4
+        },
+        {
+          "guid": "9c012345-6789-abcd-ef01-23456789abcd",
+          "title": "Web Development Basics",
+          "videos": [
+            {
+              "guid": "5e678901-cdef-0123-4567-89abcdef0123",
+              "title": "HTML5 Introduction",
+              "duration": "08:20",
+              "preview": true,
+              "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"
+            },
+            {
+              "guid": "6f789012-def0-1234-5678-9abcdef01234",
+              "title": "CSS3 Styling Techniques",
+              "duration": "12:35",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/css3-styling.mp4"
+            },
+            {
+              "guid": "7a890123-ef01-2345-6789-abcdef012345",
+              "title": "JavaScript Fundamentals",
+              "duration": "15:45",
+              "preview": true,
+              "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
+            }
+          ],
+          "totalDuration": "36:40",
+          "totalLessons": 3
+        },
+        {
+          "guid": "ab234567-89cd-ef01-2345-6789abcdef01",
+          "title": "Python Programming",
+          "videos": [
+            {
+              "guid": "bc345678-9cde-f012-3456-789abcdef012",
+              "title": "Getting Started with Python",
+              "duration": "10:00",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/getting-started-python.mp4"
+            },
+            {
+              "guid": "cd456789-abcd-ef01-2345-6789abcdef123",
+              "title": "Python Functions and Modules",
+              "duration": "14:25",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/python-functions-modules.mp4"
+            },
+            {
+              "guid": "de567890-bcde-f012-3456-789abcdef234",
+              "title": "Data Structures in Python",
+              "duration": "20:30",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/data-structures-python.mp4"
+            }
+          ],
+          "totalDuration": "44:55",
+          "totalLessons": 3
+        },
+        {
+          "guid": "ef678901-2345-6789-abcd-ef0123456789",
+          "title": "Graphic Design Essentials",
+          "videos": [
+            {
+              "guid": "f7890123-4567-89ab-cdef-0123456789ab",
+              "title": "Introduction to Graphic Design",
+              "duration": "12:15",
+              "preview": false,
+              "videoUrl": "/assets/video/trailer.mp4"
+            },
+            {
+              "guid": "89a01234-5678-9abc-def0-123456789abc",
+              "title": "Color Theory in Design",
+              "duration": "16:45",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/color-theory-design.mp4"
+            },
+            {
+              "guid": "9ab12345-6789-abcd-ef01-23456789abcdef",
+              "title": "Typography Fundamentals",
+              "duration": "14:20",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/typography-fundamentals.mp4"
+            }
+          ],
+          "totalDuration": "43:20",
+          "totalLessons": 3
+        },
+        {
+          "guid": "abc23456-789a-bcde-f012-3456789abcde",
+          "title": "Mobile App Development",
+          "videos": [
+            {
+              "guid": "bcd34567-89ab-cdef-0123-456789abcdef1",
+              "title": "Overview of Mobile App Development",
+              "duration": "11:30",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/mobile-app-overview.mp4"
+            },
+            {
+              "guid": "cde45678-9abc-def0-1234-56789abcdef12",
+              "title": "Building User Interfaces",
+              "duration": "17:10",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/building-ui-mobile-app.mp4"
+            },
+            {
+              "guid": "def56789-abcd-ef01-2345-6789abcdef123",
+              "title": "App Deployment and Testing",
+              "duration": "22:40",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/app-deployment-testing.mp4"
+            }
+          ],
+          "totalDuration": "51:20",
+          "totalLessons": 3
+        }
+      ],
+      "willLearnJson": [
+        { "guid": "1", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction" },
+        { "guid": "2", "willLearnTitle": "Handle specific topics like Reinforcement Learning best" },
+        { "guid": "3", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem" },
+        { "guid": "4", "willLearnTitle": "Reinforcement learning upper confidence bound Thompson sampling" },
+        { "guid": "5", "willLearnTitle": "Model Selection and Boosting fold cross validation parameter" },
+        { "guid": "6", "willLearnTitle": "Use Machine Learning for personal purpose of machine" },
+        { "guid": "7", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction-1" },
+        { "guid": "8", "willLearnTitle": "Handle specific topics like Reinforcement Learning best-1" },
+        { "guid": "9", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem-1" },
+        { "guid": "10", "willLearnTitle": "Reinforcement learning upper confidence bound Thompson sampling-1" },
+        { "guid": "11", "willLearnTitle": "Model Selection and Boosting fold cross validation parameter-1" },
+        { "guid": "12", "willLearnTitle": "Use Machine Learning for personal purpose of machine-1" }
+      ],
+      "courseHeader": {
+        "title": "The Data Science Course: Complete Data Science",
+        "description": "Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth, practical, easy-to-follow course!",
+        "CourseGeneralDescription": "Bu derinlemesine Python ve Veri Bilimi kursu, katılımcılara programlamaya dair herhangi bir deneyimi olmayanlardan başlayarak, veri bilimi alanında uzmanlaşmak isteyenlere kadar geniş bir yelpazede yönlendirme sunmaktadır. Kurs, Python programlama dilinin temellerinden başlayarak, Numpy, Pandas, Matplotlib, TensorFlow ve Keras gibi önemli kütüphaneleri kullanmayı içermektedir. Öğrenciler, gerçek dünya veri setleri üzerinde çalışarak teorik bilgilerini pekiştirecek ve bitirme projesi aracılığıyla kapsamlı bir veri analizi ve modelleme deneyimi yaşayacaklardır.\n\nKursun benzersiz yapısı, her bir konuyu pratik projelerle destekleyerek öğrencilere uygulamalı bir öğrenme deneyimi sunmaktadır. Ayrıca, kurs boyunca sürekli destek sağlanan Slack topluluğu sayesinde öğrenciler, öğrenme süreçlerinde karşılaştıkları zorlukları paylaşabilir ve çözümler bulabilirler. Kursu başarıyla tamamlayan katılımcılara verilecek sertifika, edindikleri bilgileri kanıtlamanın bir yolu olacaktır. Dr. Ayşe Yılmaz'ın rehberliğinde, bu kurs veri bilimi ve yapay zeka alanında derinlemesine bir keşif sunmaktadır.",
+        "price": "200",
+        "discountedPrice": "160",
+        "instructor": {
+          "name": "Jane Smith",
+          "image": "demo_instructor.jpg",
+          "specializations": "Data Visualization Expert",
+          "rating": 4.7,
+          "reviews": 57.821,
+          "students": 278912,
+          "courses": 18,
+          "biography": "Dr. Jane Smith is a renowned expert in the fields of data science and graphic design, bringing a wealth of knowledge and experience to her students. With a Ph.D. in Computer Science from XYZ University, Jane has dedicated her career to pushing the boundaries of creativity and innovation. As an Adobe Certified Instructor and Expert, she has not only mastered the intricacies of graphic design but has also shared her expertise with thousands of eager learners around the world.\n\nBeyond her academic achievements, Jane is a seasoned UI/UX Researcher, ensuring that her design principles are grounded in user-centric practices. Her commitment to excellence is further exemplified by her certifications as a Microsoft Certified Trainer (MCT) and a Project Management Professional (PMP). With over a decade of industry experience, Jane has cultivated a reputation for delivering engaging and comprehensive courses that empower her students to excel in their creative endeavors. Join Dr. Jane Smith on a transformative learning journey as she demystifies the world of data science and graphic design."
+        },
+        "duration": "01:31:12 Hours",
+        "enrolled": 1,
+        "reviews": {
+          "count": 3
+        },
+        "stars": 4.6,
+        "language": "English",
+        "lastUpdated": "Thu, 13-Jul-2023",
+        "courseDetails": {
+          "lectures": 22,
+          "quizzes": 4,
+          "skillLevel": "Intermediate",
+          "expiryPeriod": "Lifetime",
+          "certificate": true
+        },
+        "courseRequirements": [
+          "Öğrencilerin kursa katılabilmeleri için özel bir teknik donanım veya programlama bilgisine ihtiyaçları yoktur.",
+          "Kurs, öğrencilere özel bir programlama bilgisi veya deneyimi gerektirmemektedir. ",
+          "Öğrencilerden, kurs materyallerini düzenli olarak takip etmeleri ve öğrenme aktivitelerine katılmaları beklenir. ",
+          "Kurs, öğrencilerin etkileşimli içeriklere katılmalarını teşvik eder.",
+          "Öğrencilere, ihtiyaç duydukları takdirde destek alabilecekleri bir iletişim kanalı sağlanır."
+        ],
+        "courseImage": "/assets/image/video1.jpg"
+      },
+      "reviews": {
+        "totalReviews": 20,
+        "averageRating": 4.6,
+        "studentReviews": [
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b1a",
+            "name": "Alice Johnson",
+            "image": " ",
+            "stars": 5,
+            "date": "2023-08-15",
+            "comment": "This course exceeded my expectations! Dr. Jane Smith's teaching style is excellent, and the content is very practical and hands-on."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2a",
+            "name": "Bob Anderson",
+            "image": "https://your-azure-storage-url/bob_anderson.jpg",
+            "stars": 4,
+            "date": "2023-08-12",
+            "comment": "Great course! I learned a lot about graphic design, and the data science modules were comprehensive. Would recommend to others."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b3a",
+            "name": "Eva Martinez",
+            "image": "https://your-azure-storage-url/eva_martinez.jpg",
+            "stars": 4.5,
+            "date": "2023-08-03",
+            "comment": "The instructor is knowledgeable, and the course materials are well-organized. I wish there were more real-world examples, but overall, it's a solid course."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4b",
+            "name": "David Brown",
+            "image": "https://your-azure-storage-url/david_brown.jpg",
+            "stars": 4.2,
+            "date": "2023-07-28",
+            "comment": "The content is great, but the pacing is a bit fast. It would be helpful to have more practice exercises. Nonetheless, I'm satisfied with what I've learned."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b6c",
+            "name": "Sophia Miller",
+            "image": "https://your-azure-storage-url/sophia_miller.jpg",
+            "stars": 5,
+            "date": "2023-07-22",
+            "comment": "I absolutely loved the course! Dr. Jane Smith is an amazing instructor. The blend of theory and practical examples made it easy to grasp complex concepts."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b7q",
+            "name": "Michael Davis",
+            "image": "https://your-azure-storage-url/michael_davis.jpg",
+            "stars": 4.8,
+            "date": "2023-07-18",
+            "comment": "Well-structured course with clear explanations. The hands-on projects were challenging but rewarding. I feel more confident in my graphic design skills now."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b0t",
+            "name": "Emma Wilson",
+            "image": "https://your-azure-storage-url/emma_wilson.jpg",
+            "stars": 3.5,
+            "date": "2023-07-15",
+            "comment": "The course content is good, but the video quality could be improved. Some parts were a bit blurry. Otherwise, it's a valuable resource for learning."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2h",
+            "name": "Jackson Taylor",
+            "image": "https://your-azure-storage-url/jackson_taylor.jpg",
+            "stars": 4.5,
+            "date": "2023-07-10",
+            "comment": "Excellent course! I appreciate the real-world applications of data science concepts. The instructor's passion for the subject shines through in the lectures."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5g",
+            "name": "Olivia White",
+            "image": "https://your-azure-storage-url/olivia_white.jpg",
+            "stars": 4.2,
+            "date": "2023-07-05",
+            "comment": "The course covers a wide range of topics, but I would have liked more in-depth coverage of certain concepts. Overall, it's a good starting point for beginners."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8k",
+            "name": "Matthew Turner",
+            "image": "https://your-azure-storage-url/matthew_turner.jpg",
+            "stars": 4.7,
+            "date": "2023-07-01",
+            "comment": "The instructor is fantastic! The course strikes a good balance between theory and practice. The assignments were challenging but rewarding."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b6n",
+            "name": "Ava Harris",
+            "image": "https://your-azure-storage-url/ava_harris.jpg",
+            "stars": 4.5,
+            "date": "2023-06-25",
+            "comment": "I enjoyed the course content, especially the graphic design section. The instructor's expertise is evident, and the course materials are well-structured."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2m",
+            "name": "Daniel Carter",
+            "image": "https://your-azure-storage-url/daniel_carter.jpg",
+            "stars": 4,
+            "date": "2023-06-20",
+            "comment": "The course provides a solid foundation in both data science and graphic design. I appreciate the instructor's clear explanations and real-world examples."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8c",
+            "name": "Isabella Lee",
+            "image": "https://your-azure-storage-url/isabella_lee.jpg",
+            "stars": 4.8,
+            "date": "2023-06-15",
+            "comment": "One of the best online courses I've taken! Dr. Jane Smith's teaching style is engaging, and the course content is relevant and practical. Highly recommended!"
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5h",
+            "name": "Lucas Garcia",
+            "image": "https://your-azure-storage-url/lucas_garcia.jpg",
+            "stars": 4.5,
+            "date": "2023-06-10",
+            "comment": "The course is comprehensive, covering key topics in data science and graphic design. The practical projects helped solidify my understanding of the concepts."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6x2b",
+            "name": "Grace Robinson",
+            "image": "https://your-azure-storage-url/grace_robinson.jpg",
+            "stars": 4.2,
+            "date": "2023-06-05",
+            "comment": "Good course overall. The instructor is knowledgeable, and the pacing is suitable for beginners. I appreciated the hands-on projects."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b9e",
+            "name": "Benjamin Adams",
+            "image": "https://your-azure-storage-url/benjamin_adams.jpg",
+            "stars": 4.5,
+            "date": "2023-06-01",
+            "comment": "The course is well-organized, and the instructor explains complex concepts in an easy-to-understand manner. The hands-on projects are a valuable addition."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4y",
+            "name": "Victoria Hall",
+            "image": "https://your-azure-storage-url/victoria_hall.jpg",
+            "stars": 4.6,
+            "date": "2023-05-25",
+            "comment": "I'm impressed with the quality of the course content. The instructor's expertise is evident, and the practical examples make the learning experience enjoyable."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8u",
+            "name": "Henry Ward",
+            "image": "https://your-azure-storage-url/henry_ward.jpg",
+            "stars": 4.3,
+            "date": "2023-05-20",
+            "comment": "The course is informative, but the quizzes could be more challenging. Overall, I learned a lot, and the instructor's teaching style is effective."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4f",
+            "name": "Madison Smith",
+            "image": "https://your-azure-storage-url/madison_smith.jpg",
+            "stars": 4.7,
+            "date": "2023-05-15",
+            "comment": "Excellent course! The instructor's passion for the subject shines through in every lecture. The real-world applications of data science concepts were particularly valuable."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5g",
+            "name": "Owen Taylor",
+            "image": "https://your-azure-storage-url/owen_taylor.jpg",
+            "stars": 4.5,
+            "date": "2023-05-10",
+            "comment": "I thoroughly enjoyed the course. The hands-on projects provided practical experience, and the instructor's clear explanations made complex topics easy to understand."
+          }
+        ]
+      }
+    },
+    {
+      "guid": "2a1f6a41-7b73-4b89-9c42-4d3df30a5624",
+      "url": "machine",
+      "courses": [
+        {
+          "guid": "8b901234-5678-9abc-def0-123456789abc",
+          "title": "Machine Learning Fundamentals",
+          "videos": [
+            {
+              "guid": "1a234567-89ab-cdef-0123-456789abcdef",
+              "title": "Introduction to Machine Learning",
+              "duration": "10:15",
+              "preview": true,
+              "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
+            },
+            {
+              "guid": "2b345678-9abc-def0-1234-56789abcdef1",
+              "title": "Supervised Learning Techniques",
+              "duration": "15:45",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/supervised-learning.mp4"
+            },
+            {
+              "guid": "3c456789-abcd-ef01-2345-6789abcdef12",
+              "title": "Unsupervised Learning Methods",
+              "duration": "12:30",
+              "preview": true,
+              "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ElephantsDream.jpg"
+            },
+            {
+              "guid": "4d567890-bcde-f012-3456-789abcdef123",
+              "title": "Model Evaluation and Metrics",
+              "duration": "18:00",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/model-evaluation.mp4"
+            }
+          ],
+          "totalDuration": "56:30",
+          "totalLessons": 4
+        },
+        {
+          "guid": "9c012345-6789-abcd-ef01-23456789abcd",
+          "title": "Web Development Basics",
+          "videos": [
+            {
+              "guid": "5e678901-cdef-0123-4567-89abcdef0123",
+              "title": "HTML5 Introduction",
+              "duration": "08:20",
+              "preview": true,
+              "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerBlazes.jpg"
+            },
+            {
+              "guid": "6f789012-def0-1234-5678-9abcdef01234",
+              "title": "CSS3 Styling Techniques",
+              "duration": "12:35",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/css3-styling.mp4"
+            },
+            {
+              "guid": "7a890123-ef01-2345-6789-abcdef012345",
+              "title": "JavaScript Fundamentals",
+              "duration": "15:45",
+              "preview": true,
+              "videoUrl":  "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+              "videoJpg": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/ForBiggerEscapes.jpg"
+            }
+          ],
+          "totalDuration": "36:40",
+          "totalLessons": 3
+        },
+        {
+          "guid": "ab234567-89cd-ef01-2345-6789abcdef01",
+          "title": "Python Programming",
+          "videos": [
+            {
+              "guid": "bc345678-9cde-f012-3456-789abcdef012",
+              "title": "Getting Started with Python",
+              "duration": "10:00",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/getting-started-python.mp4"
+            },
+            {
+              "guid": "cd456789-abcd-ef01-2345-6789abcdef123",
+              "title": "Python Functions and Modules",
+              "duration": "14:25",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/python-functions-modules.mp4"
+            },
+            {
+              "guid": "de567890-bcde-f012-3456-789abcdef234",
+              "title": "Data Structures in Python",
+              "duration": "20:30",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/data-structures-python.mp4"
+            }
+          ],
+          "totalDuration": "44:55",
+          "totalLessons": 3
+        },
+        {
+          "guid": "ef678901-2345-6789-abcd-ef0123456789",
+          "title": "Graphic Design Essentials",
+          "videos": [
+            {
+              "guid": "f7890123-4567-89ab-cdef-0123456789ab",
+              "title": "Introduction to Graphic Design",
+              "duration": "12:15",
+              "preview": false,
+              "videoUrl": "/assets/video/trailer.mp4"
+            },
+            {
+              "guid": "89a01234-5678-9abc-def0-123456789abc",
+              "title": "Color Theory in Design",
+              "duration": "16:45",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/color-theory-design.mp4"
+            },
+            {
+              "guid": "9ab12345-6789-abcd-ef01-23456789abcdef",
+              "title": "Typography Fundamentals",
+              "duration": "14:20",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/typography-fundamentals.mp4"
+            }
+          ],
+          "totalDuration": "43:20",
+          "totalLessons": 3
+        },
+        {
+          "guid": "abc23456-789a-bcde-f012-3456789abcde",
+          "title": "Mobile App Development",
+          "videos": [
+            {
+              "guid": "bcd34567-89ab-cdef-0123-456789abcdef1",
+              "title": "Overview of Mobile App Development",
+              "duration": "11:30",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/mobile-app-overview.mp4"
+            },
+            {
+              "guid": "cde45678-9abc-def0-1234-56789abcdef12",
+              "title": "Building User Interfaces",
+              "duration": "17:10",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/building-ui-mobile-app.mp4"
+            },
+            {
+              "guid": "def56789-abcd-ef01-2345-6789abcdef123",
+              "title": "App Deployment and Testing",
+              "duration": "22:40",
+              "preview": false,
+              "videoUrl": "https://example.com/videos/app-deployment-testing.mp4"
+            }
+          ],
+          "totalDuration": "51:20",
+          "totalLessons": 3
+        }
+      ],
+      "willLearnJson": [
+        { "guid": "1", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction" },
+        { "guid": "2", "willLearnTitle": "Handle specific topics like Reinforcement Learning best" },
+        { "guid": "3", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem" },
+        { "guid": "4", "willLearnTitle": "Reinforcement learning upper confidence bound Thompson sampling" },
+        { "guid": "5", "willLearnTitle": "Model Selection and Boosting fold cross validation parameter" },
+        { "guid": "6", "willLearnTitle": "Use Machine Learning for personal purpose of machine" },
+        { "guid": "7", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction-1" },
+        { "guid": "8", "willLearnTitle": "Handle specific topics like Reinforcement Learning best-1" },
+        { "guid": "9", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem-1" },
+        { "guid": "10", "willLearnTitle": "Reinforcement learning upper confidence bound Thompson sampling-1" },
+        { "guid": "11", "willLearnTitle": "Model Selection and Boosting fold cross validation parameter-1" },
+        { "guid": "12", "willLearnTitle": "Use Machine Learning for personal purpose of machine-1" }
+      ],
+      "courseHeader": {
+        "title": "Machine: Complete Data Science",
+        "description": "Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth, practical, easy-to-follow course!",
+        "CourseGeneralDescription": "Bu derinlemesine Python ve Veri Bilimi kursu, katılımcılara programlamaya dair herhangi bir deneyimi olmayanlardan başlayarak, veri bilimi alanında uzmanlaşmak isteyenlere kadar geniş bir yelpazede yönlendirme sunmaktadır. Kurs, Python programlama dilinin temellerinden başlayarak, Numpy, Pandas, Matplotlib, TensorFlow ve Keras gibi önemli kütüphaneleri kullanmayı içermektedir. Öğrenciler, gerçek dünya veri setleri üzerinde çalışarak teorik bilgilerini pekiştirecek ve bitirme projesi aracılığıyla kapsamlı bir veri analizi ve modelleme deneyimi yaşayacaklardır.\n\nKursun benzersiz yapısı, her bir konuyu pratik projelerle destekleyerek öğrencilere uygulamalı bir öğrenme deneyimi sunmaktadır. Ayrıca, kurs boyunca sürekli destek sağlanan Slack topluluğu sayesinde öğrenciler, öğrenme süreçlerinde karşılaştıkları zorlukları paylaşabilir ve çözümler bulabilirler. Kursu başarıyla tamamlayan katılımcılara verilecek sertifika, edindikleri bilgileri kanıtlamanın bir yolu olacaktır. Dr. Ayşe Yılmaz'ın rehberliğinde, bu kurs veri bilimi ve yapay zeka alanında derinlemesine bir keşif sunmaktadır.",
+        "price": "200",
+        "discountedPrice": "160",
+        "instructor": {
+          "name": "Jane Smith",
+          "image": "demo_instructor.jpg",
+          "specializations": "Data Visualization Expert",
+          "rating": 4.7,
+          "reviews": 57.821,
+          "students": 278912,
+          "courses": 18,
+          "biography": "Dr. Jane Smith is a renowned expert in the fields of data science and graphic design, bringing a wealth of knowledge and experience to her students. With a Ph.D. in Computer Science from XYZ University, Jane has dedicated her career to pushing the boundaries of creativity and innovation. As an Adobe Certified Instructor and Expert, she has not only mastered the intricacies of graphic design but has also shared her expertise with thousands of eager learners around the world.\n\nBeyond her academic achievements, Jane is a seasoned UI/UX Researcher, ensuring that her design principles are grounded in user-centric practices. Her commitment to excellence is further exemplified by her certifications as a Microsoft Certified Trainer (MCT) and a Project Management Professional (PMP). With over a decade of industry experience, Jane has cultivated a reputation for delivering engaging and comprehensive courses that empower her students to excel in their creative endeavors. Join Dr. Jane Smith on a transformative learning journey as she demystifies the world of data science and graphic design."
+        },
+        "duration": "01:31:12 Hours",
+        "enrolled": 1,
+        "reviews": {
+          "count": 3
+        },
+        "stars": 4.6,
+        "language": "English",
+        "lastUpdated": "Thu, 13-Jul-2023",
+        "courseDetails": {
+          "lectures": 22,
+          "quizzes": 4,
+          "skillLevel": "Intermediate",
+          "expiryPeriod": "Lifetime",
+          "certificate": true
+        },
+        "courseRequirements": [
+          "Öğrencilerin kursa katılabilmeleri için özel bir teknik donanım veya programlama bilgisine ihtiyaçları yoktur.",
+          "Kurs, öğrencilere özel bir programlama bilgisi veya deneyimi gerektirmemektedir. ",
+          "Öğrencilerden, kurs materyallerini düzenli olarak takip etmeleri ve öğrenme aktivitelerine katılmaları beklenir. ",
+          "Kurs, öğrencilerin etkileşimli içeriklere katılmalarını teşvik eder.",
+          "Öğrencilere, ihtiyaç duydukları takdirde destek alabilecekleri bir iletişim kanalı sağlanır."
+        ],
+        "courseImage": "/assets/image/video2.jpg"
+      },
+      "reviews": {
+        "totalReviews": 20,
+        "averageRating": 4.6,
+        "studentReviews": [
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b1a",
+            "name": "Alice Johnson",
+            "image": " ",
+            "stars": 5,
+            "date": "2023-08-15",
+            "comment": "This course exceeded my expectations! Dr. Jane Smith's teaching style is excellent, and the content is very practical and hands-on."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2a",
+            "name": "Bob Anderson",
+            "image": "https://your-azure-storage-url/bob_anderson.jpg",
+            "stars": 4,
+            "date": "2023-08-12",
+            "comment": "Great course! I learned a lot about graphic design, and the data science modules were comprehensive. Would recommend to others."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b3a",
+            "name": "Eva Martinez",
+            "image": "https://your-azure-storage-url/eva_martinez.jpg",
+            "stars": 4.5,
+            "date": "2023-08-03",
+            "comment": "The instructor is knowledgeable, and the course materials are well-organized. I wish there were more real-world examples, but overall, it's a solid course."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4b",
+            "name": "David Brown",
+            "image": "https://your-azure-storage-url/david_brown.jpg",
+            "stars": 4.2,
+            "date": "2023-07-28",
+            "comment": "The content is great, but the pacing is a bit fast. It would be helpful to have more practice exercises. Nonetheless, I'm satisfied with what I've learned."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b6c",
+            "name": "Sophia Miller",
+            "image": "https://your-azure-storage-url/sophia_miller.jpg",
+            "stars": 5,
+            "date": "2023-07-22",
+            "comment": "I absolutely loved the course! Dr. Jane Smith is an amazing instructor. The blend of theory and practical examples made it easy to grasp complex concepts."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b7q",
+            "name": "Michael Davis",
+            "image": "https://your-azure-storage-url/michael_davis.jpg",
+            "stars": 4.8,
+            "date": "2023-07-18",
+            "comment": "Well-structured course with clear explanations. The hands-on projects were challenging but rewarding. I feel more confident in my graphic design skills now."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b0t",
+            "name": "Emma Wilson",
+            "image": "https://your-azure-storage-url/emma_wilson.jpg",
+            "stars": 3.5,
+            "date": "2023-07-15",
+            "comment": "The course content is good, but the video quality could be improved. Some parts were a bit blurry. Otherwise, it's a valuable resource for learning."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2h",
+            "name": "Jackson Taylor",
+            "image": "https://your-azure-storage-url/jackson_taylor.jpg",
+            "stars": 4.5,
+            "date": "2023-07-10",
+            "comment": "Excellent course! I appreciate the real-world applications of data science concepts. The instructor's passion for the subject shines through in the lectures."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5g",
+            "name": "Olivia White",
+            "image": "https://your-azure-storage-url/olivia_white.jpg",
+            "stars": 4.2,
+            "date": "2023-07-05",
+            "comment": "The course covers a wide range of topics, but I would have liked more in-depth coverage of certain concepts. Overall, it's a good starting point for beginners."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8k",
+            "name": "Matthew Turner",
+            "image": "https://your-azure-storage-url/matthew_turner.jpg",
+            "stars": 4.7,
+            "date": "2023-07-01",
+            "comment": "The instructor is fantastic! The course strikes a good balance between theory and practice. The assignments were challenging but rewarding."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b6n",
+            "name": "Ava Harris",
+            "image": "https://your-azure-storage-url/ava_harris.jpg",
+            "stars": 4.5,
+            "date": "2023-06-25",
+            "comment": "I enjoyed the course content, especially the graphic design section. The instructor's expertise is evident, and the course materials are well-structured."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b2m",
+            "name": "Daniel Carter",
+            "image": "https://your-azure-storage-url/daniel_carter.jpg",
+            "stars": 4,
+            "date": "2023-06-20",
+            "comment": "The course provides a solid foundation in both data science and graphic design. I appreciate the instructor's clear explanations and real-world examples."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8c",
+            "name": "Isabella Lee",
+            "image": "https://your-azure-storage-url/isabella_lee.jpg",
+            "stars": 4.8,
+            "date": "2023-06-15",
+            "comment": "One of the best online courses I've taken! Dr. Jane Smith's teaching style is engaging, and the course content is relevant and practical. Highly recommended!"
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5h",
+            "name": "Lucas Garcia",
+            "image": "https://your-azure-storage-url/lucas_garcia.jpg",
+            "stars": 4.5,
+            "date": "2023-06-10",
+            "comment": "The course is comprehensive, covering key topics in data science and graphic design. The practical projects helped solidify my understanding of the concepts."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6x2b",
+            "name": "Grace Robinson",
+            "image": "https://your-azure-storage-url/grace_robinson.jpg",
+            "stars": 4.2,
+            "date": "2023-06-05",
+            "comment": "Good course overall. The instructor is knowledgeable, and the pacing is suitable for beginners. I appreciated the hands-on projects."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b9e",
+            "name": "Benjamin Adams",
+            "image": "https://your-azure-storage-url/benjamin_adams.jpg",
+            "stars": 4.5,
+            "date": "2023-06-01",
+            "comment": "The course is well-organized, and the instructor explains complex concepts in an easy-to-understand manner. The hands-on projects are a valuable addition."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4y",
+            "name": "Victoria Hall",
+            "image": "https://your-azure-storage-url/victoria_hall.jpg",
+            "stars": 4.6,
+            "date": "2023-05-25",
+            "comment": "I'm impressed with the quality of the course content. The instructor's expertise is evident, and the practical examples make the learning experience enjoyable."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b8u",
+            "name": "Henry Ward",
+            "image": "https://your-azure-storage-url/henry_ward.jpg",
+            "stars": 4.3,
+            "date": "2023-05-20",
+            "comment": "The course is informative, but the quizzes could be more challenging. Overall, I learned a lot, and the instructor's teaching style is effective."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b4f",
+            "name": "Madison Smith",
+            "image": "https://your-azure-storage-url/madison_smith.jpg",
+            "stars": 4.7,
+            "date": "2023-05-15",
+            "comment": "Excellent course! The instructor's passion for the subject shines through in every lecture. The real-world applications of data science concepts were particularly valuable."
+          },
+          {
+            "guid": "c94f1545-8e6e-4f0a-836f-480b4b5c6b5g",
+            "name": "Owen Taylor",
+            "image": "https://your-azure-storage-url/owen_taylor.jpg",
+            "stars": 4.5,
+            "date": "2023-05-10",
+            "comment": "I thoroughly enjoyed the course. The hands-on projects provided practical experience, and the instructor's clear explanations made complex topics easy to understand."
+          }
+        ]
+      }
+    }
+  ]
+}

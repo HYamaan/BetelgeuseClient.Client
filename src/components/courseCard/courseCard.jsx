@@ -15,40 +15,40 @@ const xJson = {
     "s5": "Feel comfortable with the process of turning static websites into dynamic WordPress websites",
     "s6": "Fully understand how to use Custom Post Types and Advanced Custom Fields in WordPress"
 }
-const CourseCardComponent = ({popUpDirection}) => {
+const CourseCardComponent = (props) => {
+    const {popUpDirection}=props
     const [cardHover, setCardHover] = useState(false);
     const [cardAddToBasket, setAddToBasket] = useState(false);
     const [cardLike, setCardLike] = useState(false);
-    return <>
-        <div className={`${styles.course_card} `}
-             onMouseLeave={() => setCardHover(false)}
-        >
-            <div className={styles.course_card_body}
-                 onMouseEnter={() => {
-                     setCardHover(true)
-                 }}>
-                <div className={styles.course_card_image}>
-                    <LazyLoadImage
-                        src="assets/image/video6.jpg"
-                        alt="video1.jpg"
-                        effect="blur"/>
-                    <div className={ `${cardLike ? styles.course_card_icon_svg : ""} ${styles.course_card_icon}`}
-                    onClick={()=>{setCardLike(!cardLike)}}>
-                        <FaHeart  />
-                    </div>
-                    <div className={styles.course_card_image_text}>
-                        <h3>Intermediate</h3>
-                    </div>
+
+
+    const courseCard = <>
+        <div className={styles.course_card_body}
+             onMouseEnter={() => {
+                 setCardHover(true)
+             }}>
+            <div className={styles.course_card_image}>
+                <LazyLoadImage
+                    src="assets/image/video6.jpg"
+                    alt="video1.jpg"
+                    effect="blur"/>
+                <div className={ `${cardLike ? styles.course_card_icon_svg : ""} ${styles.course_card_icon}`}
+                     onClick={()=>{setCardLike(!cardLike)}}>
+                    <FaHeart  />
                 </div>
-                <div className={styles.course_card_text}>
-                    <h5>WordPress Theme Development with Bootstrap</h5>
-                    <div className={styles.review_icon}>
-                        <div className={styles.review_icon_star}>
-                            <p>4</p>
-                            <FaStar/>
-                            <p>(2 Reviews)</p>
-                        </div>
-                        <div className={styles.review_btn}>
+                <div className={styles.course_card_image_text}>
+                    <h3>Intermediate</h3>
+                </div>
+            </div>
+            <div className={styles.course_card_text}>
+                <h5>WordPress Theme Development with Bootstrap</h5>
+                <div className={styles.review_icon}>
+                    <div className={styles.review_icon_star}>
+                        <p>4</p>
+                        <FaStar/>
+                        <p>(2 Reviews)</p>
+                    </div>
+                    <div className={styles.review_btn}>
                     <span>
                          <Image
                              src="/assets/image/compare.png"
@@ -58,29 +58,93 @@ const CourseCardComponent = ({popUpDirection}) => {
                          />
                     Compare
                     </span>
+                    </div>
+                </div>
+                <div className={styles.ellipsis_line}>
+                    Learn how to confidently develop custom & profitable Responsive WordPress Themes and Websites
+                    with no prior experience.
+                </div>
+                <div className={styles.courses_price_border}>
+                    <div className={styles.courses_price}>
+                        <div className={styles.courses_price_left}>
+                            <h5>$10</h5>
+                            <p>
+                                <del>$11.99</del>
+                            </p>
                         </div>
-                    </div>
-                    <div className={styles.ellipsis_line}>
-                        Learn how to confidently develop custom & profitable Responsive WordPress Themes and Websites
-                        with no prior experience.
-                    </div>
-                    <div className={styles.courses_price_border}>
-                        <div className={styles.courses_price}>
-                            <div className={styles.courses_price_left}>
-                                <h5>$10</h5>
-                                <p>
-                                    <del>$11.99</del>
-                                </p>
-                            </div>
-                            <div className={styles.courses_price_right}>
-                                <FaRegClock/>
-                                24:11:44 Hours
-                            </div>
+                        <div className={styles.courses_price_right}>
+                            <FaRegClock/>
+                            24:11:44 Hours
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
+        </>
+    const courseCardList = <>
+        <div className={styles.course_card_list_body}>
+            <div className={`${styles.course_card_image} ${styles.course_card_list_image}`}>
+                <LazyLoadImage
+                    src="assets/image/video6.jpg"
+                    alt="video1.jpg"
+                    effect="blur"/>
+                <div className={ `${cardLike ? styles.course_card_icon_svg : ""} ${styles.course_card_icon}`}
+                     onClick={()=>{setCardLike(!cardLike)}}>
+                    <FaHeart  />
+                </div>
+                <div className={styles.course_card_image_text}>
+                    <h3>Intermediate</h3>
+                </div>
+            </div>
+            <div className={`${styles.course_card_list_text} ${styles.course_card_text}`}>
+                <h5>WordPress Theme Development with Bootstrap</h5>
+                <div className={`${styles.review_icon} ${styles.course_card_list_review_icon}`}>
+                    <div className={styles.review_icon_star}>
+                        <p>4</p>
+                        <FaStar/>
+                        <p>(2 Reviews)</p>
+                    </div>
+                    <div className={styles.review_btn}>
+                    <span>
+                         <Image
+                             src="/assets/image/compare.png"
+                             alt="video1.jpg"
+                             width={1}
+                             height={1}
+                         />
+                    Compare
+                    </span>
+                    </div>
+                </div>
+                <div className={styles.ellipsis_line}>
+                    The horse is a large, strong, and elegant mammal with a long, flowing mane and tail. It is known for its speed, agility, and intelligence, making it a popular animal for riding, racing, and farm work. Horses have long, slender legs with hooves, which enable them to run at high speeds and jump over obstacles. They come in a wide variety of colors and breeds, and have a strong social hierarchy within their herds. Horses are herbivores and primarily graze on grass and hay, and require regular grooming and exercise to maintain their health and well-being.
+                </div>
+                <div className={styles.courses_price_border}>
+                    <div className={styles.courses_price}>
+                        <div className={styles.courses_price_left}>
+                            <h5>$10</h5>
+                            <p>
+                                <del>$11.99</del>
+                            </p>
+                        </div>
+                        <div className={styles.courses_price_right}>
+                            <FaRegClock/>
+                            24:11:44 Hours
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </>
+
+    return <>
+        <div className={`${styles.course_card} `}
+             onMouseLeave={() => setCardHover(false)}
+        >
+            {courseCard}
+
             {cardHover && (<div className={`
                     ${styles.webui_popover}
                      ${popUpDirection === "right" ? styles.webui_popover_right : styles.webui_popover_left}
