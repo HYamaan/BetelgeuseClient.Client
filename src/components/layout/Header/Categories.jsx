@@ -3,9 +3,10 @@ import CategoriesJson from '../../../data/Categories.json';
 import {FaAngleRight} from "react-icons/fa6";
 import {MdArrowBackIos} from "react-icons/md";
 import styles from "./header.module.css";
+import {NavbarCssStyleUseEffect, NavbarStyle} from "@/components/layout/Header/cssStyle";
 
 const CategoriesComponent = (props) => {
-    const { closeIcon, setShowSubCategoriesForCss ,versionNavigation} = props || {};
+    const { closeIcon, setShowSubCategoriesForCss ,versionNavigation,categoriesHover} = props || {};
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedSubcategory, setSelectedSubcategory] = useState(null);
 
@@ -15,6 +16,10 @@ const CategoriesComponent = (props) => {
     const [backMenu, setBackMenu] = useState(false);
     // MOBILE END
 
+    const [categoriesStyle,setCategoriesStyle]=useState(NavbarStyle(categoriesHover))
+
+    //CSS
+    NavbarCssStyleUseEffect(setCategoriesStyle,categoriesHover)
     const handleCategoryHover = (categoryName) => {
 
         setSelectedCategory(categoryName);
@@ -69,8 +74,8 @@ const CategoriesComponent = (props) => {
                     key={category.name}
                     className={`
                     ${styles.categoryListTitle} ${selectedCategory === category.name ? `${styles.categoryListTitleHover}` : ''}
-      
                     `}
+                    style={categoriesStyle}
                     {...(versionNavigation
                         ? {
                             onMouseEnter: () => handleCategoryHover(category.name),
@@ -124,8 +129,6 @@ const CategoriesComponent = (props) => {
             </div>
         );
     };
-
-
     const renderTopics = () => {
         if (!selectedSubcategory || !versionNavigation) return null;
         const selectedCategoryData = CategoriesJson.categories.find((category) => category.name === selectedCategory);
@@ -150,7 +153,7 @@ const CategoriesComponent = (props) => {
         </>
     };
     return (
-        <div className={styles.categoryList}>
+        <div className={styles.categoryList} style={categoriesStyle}>
             {renderCategories()}
             {renderSubcategories()}
             {renderTopics()}

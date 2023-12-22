@@ -14,7 +14,7 @@ import {calculateStarsRatio} from "@/hooks/calculate";
 import UserReviewInfo from "@/components/course/UserReviewInfo";
 
 const CourseDescription = (props) => {
-    const{courseReviews,courseHeader,courseWillLearnJson,allStudentReview,setAllStudentReview}=props;
+    const{courseReviews,courseHeader,courseWillLearnJson,allStudentReview,setAllStudentReview,setOpenVideoJson,setOpenVideo}=props;
     const starsRatio = calculateStarsRatio(courseReviews["studentReviews"]);
     const [activeAccordion, setActiveAccordion] = useState(null);
     const totalItems = courseWillLearnJson.length;
@@ -66,6 +66,7 @@ const CourseDescription = (props) => {
                             </h2>
                             {activeAccordion === index && (value.videos.map(videoValue => (<div
                                 className={`${styles.accordion_body} ${activeAccordion === index ? styles.open : ''}`}
+                                onClick={videoValue.preview ? () => {setOpenVideoJson(videoValue); setOpenVideo(true)} : undefined}
                                 key={videoValue["guid"]}>
                                 <div
                                     className={styles.accordion_lecture + (videoValue.preview ? ` ${styles.accordion_lecture_hover}` : '')}>

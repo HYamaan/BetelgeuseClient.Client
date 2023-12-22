@@ -157,9 +157,7 @@
       "totalLessons": 3
     }
   ],
-
-
-"willLearnJson": [
+  "willLearnJson": [
     { "guid": "1", "willLearnTitle": "Handle advanced techniques like Dimensionality Reduction" },
     { "guid": "2", "willLearnTitle": "Handle specific topics like Reinforcement Learning best" },
     { "guid": "3", "willLearnTitle": "Know which Machine Learning model to choose for each type of problem" },
@@ -178,7 +176,8 @@
     "title": "The Data Science Course: Complete Data Science",
     "description": "Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth, practical, easy-to-follow course!",
     "CourseGeneralDescription": "Bu derinlemesine Python ve Veri Bilimi kursu, katılımcılara programlamaya dair herhangi bir deneyimi olmayanlardan başlayarak, veri bilimi alanında uzmanlaşmak isteyenlere kadar geniş bir yelpazede yönlendirme sunmaktadır. Kurs, Python programlama dilinin temellerinden başlayarak, Numpy, Pandas, Matplotlib, TensorFlow ve Keras gibi önemli kütüphaneleri kullanmayı içermektedir. Öğrenciler, gerçek dünya veri setleri üzerinde çalışarak teorik bilgilerini pekiştirecek ve bitirme projesi aracılığıyla kapsamlı bir veri analizi ve modelleme deneyimi yaşayacaklardır.\n\nKursun benzersiz yapısı, her bir konuyu pratik projelerle destekleyerek öğrencilere uygulamalı bir öğrenme deneyimi sunmaktadır. Ayrıca, kurs boyunca sürekli destek sağlanan Slack topluluğu sayesinde öğrenciler, öğrenme süreçlerinde karşılaştıkları zorlukları paylaşabilir ve çözümler bulabilirler. Kursu başarıyla tamamlayan katılımcılara verilecek sertifika, edindikleri bilgileri kanıtlamanın bir yolu olacaktır. Dr. Ayşe Yılmaz'ın rehberliğinde, bu kurs veri bilimi ve yapay zeka alanında derinlemesine bir keşif sunmaktadır.",
-
+    "price": "200",
+    "discountedPrice": "160",
     "instructor": {
       "name": "Jane Smith",
       "image": "demo_instructor.jpg",

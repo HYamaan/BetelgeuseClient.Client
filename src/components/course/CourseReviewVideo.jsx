@@ -5,7 +5,6 @@ import "plyr/dist/plyr.css";
 const PlyrComponent = (props) => {
     const {className,videoUrl}=props;
     const playerRef = useRef(null);
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const sources = {
         type: "video",
@@ -23,24 +22,24 @@ const PlyrComponent = (props) => {
                 type: "video/webm",
                 size: 1080
             }
-        ],
-        tracks: [
-            {
-                kind: "captions",
-                label: "English",
-                srclang: "en",
-                src: "https://media.nagwa.com/412180825716/en/subtitle_en.vtt",
-                default: true
-            },
-            {
-                kind: "captions",
-                label: "French",
-                srclang: "fr",
-                src: "https://media.nagwa.com/412180825716/en/subtitle_en.vtt"
-            }
         ]
+        // tracks: [
+        //     {
+        //         kind: "captions",
+        //         label: "English",
+        //         srclang: "en",
+        //         src: "https://media.nagwa.com/412180825716/en/subtitle_en.vtt",
+        //         default: true
+        //     },
+        //     {
+        //         kind: "captions",
+        //         label: "French",
+        //         srclang: "fr",
+        //         src: "https://media.nagwa.com/412180825716/en/subtitle_en.vtt"
+        //     }
+        // ]
     };
-    console.log("sources",sources);
+
     useEffect(() => {
         const player = new plyr(".js-plyr", {
             controls: [
@@ -57,9 +56,6 @@ const PlyrComponent = (props) => {
             quality: {
                 default: "auto",
                 options: ["auto",1080,720, 480, 360],
-                forced: true,
-                autoplay: true,
-                loadSprite: true,
                 onChange: (quality) => {
                     if (quality === "auto" && navigator.connection) {
                         const connection = navigator.connection;
@@ -76,7 +72,9 @@ const PlyrComponent = (props) => {
                     }
                 },
             },
-
+            autoplay: true,
+            forced: true,
+            loadSprite: true,
         });
 
         const handleKeyDown = (event) => {

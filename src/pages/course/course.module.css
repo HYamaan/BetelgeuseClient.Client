@@ -627,9 +627,40 @@
 background-color: var(--color--saphireBlue);
     color: var(--color-white-1);
 }
+.btn_basket{
+    margin: 0;
+
+}
+.card_add_remove_button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .4rem;
+    margin: 1rem auto;
+    width: 80%;
+}
 .debit_card_icon{
     font-size: 1.2rem;
 }
+.btn_like{
+    margin: 0;
+    padding: 0;
+    font-size:1rem;
+    width:2.6rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:.9rem;
+    color: var(--color--saphireBlue);
+    background-color: var(--color--lavender);
+    border: var(--color--saphireBlue) solid 1.5px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .5s;
+    cursor: pointer;
+}
+
 .video_preview{
     position: fixed;
     top: 50%;
@@ -667,6 +698,9 @@ background-color: var(--color--saphireBlue);
     margin:1rem 0 3rem 0;
     padding: 0 2rem;
 }
+.video_preview_active_row{
+    background-color: var(--color-card) !important;
+}
 .video_other{
     display: flex;
     align-items: center;
@@ -678,9 +712,7 @@ background-color: var(--color--saphireBlue);
     background-color: inherit;
     padding: .6rem 0;
 }
-.video_other_parent:hover{
-    background-color: var(--secondary-color);
-}
+
 .video_other_video{
     width: 5rem;
 }

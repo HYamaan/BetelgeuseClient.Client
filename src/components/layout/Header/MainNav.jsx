@@ -1,3 +1,4 @@
+"use client"
 import React, {useState} from 'react';
 import classes from "./header.module.css";
 import {GiStripedSun} from "react-icons/gi";
@@ -10,6 +11,7 @@ import {MdLanguage} from "react-icons/md";
 import LanguageComponent from "./Language";
 import {BsList} from "react-icons/bs";
 import {useRouter} from "next/router";
+import {useSelector} from "react-redux";
 
 const MainNav = (props) => {
     const {versionNavigation,setCloseIcon} =props;
@@ -18,7 +20,7 @@ const MainNav = (props) => {
     const [ebookHover,setEbookHover]=useState(null);
     const [shoppingBasketHover,setShoppingBasketHover]=useState(null);
     const [languageHover,setLanguageHover]=useState(null);
-
+    const shoppingBasketCounter = useSelector((state)=>state.shoppingBasket.totalQuantity);
     return <>
             <div
                 onClick={() => router.push('/')}
@@ -32,7 +34,7 @@ const MainNav = (props) => {
                     <div className="py-8 z-0" onMouseEnter={() => setCategoriesHover(true)}
                     >Categories
                     </div>
-                    {categoriesHover && <CategoryList versionNavigation={versionNavigation}/>}
+                    <CategoryList versionNavigation={versionNavigation} categoriesHover={categoriesHover}/>
                 </div>
             </div>
             <div className={`${classes.navSearch} ${classes.flex}`}>
@@ -48,10 +50,8 @@ const MainNav = (props) => {
             <div className={classes.navEbookTop}
                  onMouseLeave={() => setEbookHover(false)}>
                 <div className={classes.navEbook}>
-                    <div className="py-8 z-0" onMouseEnter={() => setEbookHover(true)}>
-                        Ebook
-                        {ebookHover && <Ebook/>}
-                    </div>
+                    <div className="py-8 z-0" onMouseEnter={() => setEbookHover(true)}>Ebook</div>
+                    <Ebook ebookHover={ebookHover}/>
                 </div>
             </div>
             <div className={classes.navFindTutor}>Find Tutor</div>
@@ -63,7 +63,7 @@ const MainNav = (props) => {
                      setShoppingBasketHover(true)
                  }}>
                 <div className={`${classes.navShoppingBasket} ${classes.flex}`}>
-                    <span className={classes.navShoppingBasketDropDownCounter}>3</span>
+                    <span className={classes.navShoppingBasketDropDownCounter}>{shoppingBasketCounter}</span>
                     <LuShoppingCart/>
 
                     {shoppingBasketHover && <ShoppingBasketComponent setShoppingBasketHover={setShoppingBasketHover}/>}
