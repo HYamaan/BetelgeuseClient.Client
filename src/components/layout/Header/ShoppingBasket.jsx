@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import {useSelector} from "react-redux";
+import Link from "next/link";
 
 const ShoppingBasketComponent = ({ setShoppingBasketHover }) => {
-    const shoppingBasketSelector = useSelector(state => state.shoppingBasket.shoppingBasketValue)
+    const shoppingBasketSelector = useSelector(state => state.shoppingBasket.cart)
     const PriceSelector = useSelector(state => state.shoppingBasket.Price)
     const [chooseCourse, setChooseCourse] = useState(null);
     const handleChooseCourseClick = (id) => {
@@ -58,7 +59,7 @@ const ShoppingBasketComponent = ({ setShoppingBasketHover }) => {
                     <span className="text-[16px] font-medium">${PriceSelector.discountPrice}</span>
                     <span className="ms-3 text-[14px] text-fogGray line-through">{PriceSelector.totalPrice}$</span>
                 </div>)}
-                <div className="px-8 py-2 text-white bg-sapphireBlue text-center rounded-lg">Checkout</div>
+                <div className="px-8 py-2 text-white bg-sapphireBlue text-center rounded-lg"><Link href="/cart">Checkout</Link></div>
             </div>
         </div>
     );

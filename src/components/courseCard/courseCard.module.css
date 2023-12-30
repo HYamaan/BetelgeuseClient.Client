@@ -428,6 +428,7 @@
     .course_card {
         border-right: none;
         border-left: none;
+        margin-right: 1rem;
     }
 }
 

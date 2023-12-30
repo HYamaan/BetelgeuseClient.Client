@@ -191,7 +191,7 @@
           "courses": 18,
           "biography": "Dr. Jane Smith is a renowned expert in the fields of data science and graphic design, bringing a wealth of knowledge and experience to her students. With a Ph.D. in Computer Science from XYZ University, Jane has dedicated her career to pushing the boundaries of creativity and innovation. As an Adobe Certified Instructor and Expert, she has not only mastered the intricacies of graphic design but has also shared her expertise with thousands of eager learners around the world.\n\nBeyond her academic achievements, Jane is a seasoned UI/UX Researcher, ensuring that her design principles are grounded in user-centric practices. Her commitment to excellence is further exemplified by her certifications as a Microsoft Certified Trainer (MCT) and a Project Management Professional (PMP). With over a decade of industry experience, Jane has cultivated a reputation for delivering engaging and comprehensive courses that empower her students to excel in their creative endeavors. Join Dr. Jane Smith on a transformative learning journey as she demystifies the world of data science and graphic design."
         },
-        "duration": "01:31:12 Hours",
+        "duration": "01:31:12",
         "enrolled": 1,
         "reviews": {
           "count": 3
@@ -217,6 +217,7 @@
       },
       "reviews": {
         "totalReviews": 20,
+        "totalRating": 150,
         "averageRating": 4.6,
         "studentReviews": [
           {
@@ -599,6 +600,7 @@
       },
       "reviews": {
         "totalReviews": 20,
+        "totalRating": 114,
         "averageRating": 4.6,
         "studentReviews": [
           {

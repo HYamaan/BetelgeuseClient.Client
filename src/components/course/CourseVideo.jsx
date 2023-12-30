@@ -14,7 +14,7 @@ import {useDispatch} from "react-redux";
 
 const CourseVideo = (props) => {
     const dispatch = useDispatch()
-    const {courseHeader, openVideo, setOpenVideo, courses,openVideoJson,setOpenVideoJson} = props;
+    const {courseHeader, openVideo, setOpenVideo, courses,openVideoJson,setOpenVideoJson,reviews,guid} = props ;
     // const {courseNecessaryInformation,setCourseNecessaryInformation}=useState({});
     const [cardAddToBasket, setAddToBasket] = useState(false);
     const [cardLike,setCardLike]=useState(false);
@@ -37,12 +37,17 @@ const CourseVideo = (props) => {
     }, [openVideoJson]);
 
     const courseNecessaryInformation={
-        guid:props.guid,
+        guid:guid,
         courseImage:courseHeader.courseImage,
         courseName:courseHeader.title,
-        createdName:courseHeader.instructor.name,
+        createdName:courseHeader["instructor"].name,
         price:courseHeader.price,
-        discountedPrice:courseHeader.discountedPrice
+        discountedPrice:courseHeader.discountedPrice,
+        stars:courseHeader.stars,
+        duration:courseHeader.duration,
+        lectures:courseHeader["courseDetails"].lectures,
+        skillLevel:courseHeader["courseDetails"].skillLevel,
+        reviews:reviews["totalRating"]
     }
     const handleClickAddToCart=()=>{
         setAddToBasket(true);

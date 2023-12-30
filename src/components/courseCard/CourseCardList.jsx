@@ -56,7 +56,7 @@ const CourseCardList = () => {
             {
                 breakpoint: 576,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 1.1,
                     slidesToScroll: 1,
                     nextArrow:null,
                     prevArrow:null,

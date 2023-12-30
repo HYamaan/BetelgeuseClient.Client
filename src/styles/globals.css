@@ -10,7 +10,8 @@
   --primary-color:#676C7D;
   --primary-color-2:#6E798A;
   --secondary-color:#676C7D;
-
+  --danger:#d7191c;
+--panel-bg:#fbfbfd;
   --color-grey-1: #6b7280;
   --color-grey-2: #C7CBD1;
   --color-grey-3: #676c7d;
@@ -24,6 +25,7 @@
   --color--black:	#000000;
   --color--black-2:#333333;
   --color--saphireBlue:#754FFE;
+  --color--saphireBlueDark:#6034FE;
   --color--lavender:#F0EDFD;
   --color-card:#1E293B;
 
@@ -46,7 +48,7 @@
 }
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--color-white-1);
+  background-color: var(--panel-bg);
 }
 .slick-prev{
   left: -46px !important;
@@ -84,6 +86,7 @@ color: var(--color--saphireBlue) !important;
 .plyr__controls .plyr__controls__item input{
   color: var(--color--saphireBlue) !important;
 }
+
 @media (max-width: 992px) {
   .slick-prev:before, .slick-next:before{
 display: none;

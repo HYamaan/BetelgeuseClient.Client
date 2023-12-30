@@ -1,0 +1,132 @@
+
+.promotionSection{
+    width: 80%;
+    margin:5rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+.promotion_image{
+    position: relative;
+    flex: 1;
+    z-index: 100;
+}
+.promotion_image .banner_image{
+    position: relative;
+    z-index: 100;
+    box-shadow:0 30px 60px 0 rgba(1, 11, 60, 0.14);
+    border-radius: 40px 4px 40px 4px;
+    vertical-align: middle;
+    border-style: none;
+
+}
+.promotion_image .dot_shape{
+    position: absolute;
+    bottom: 2.5rem;
+    left: -1.8rem;
+    animation: dot-animation 3500ms linear 0s infinite alternate;
+    z-index: 99;
+}
+.promotion_image .circle{
+    position: absolute;
+    top: -3.7rem;
+    right: 3rem;
+    z-index: 99;
+}
+.promotionContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: .8rem;
+    padding-left: 5.5rem;
+    padding-right: 1rem;
+    flex:1;
+}
+
+
+.promotion_title{
+    width: 100%;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.22;
+    text-align: start;
+    color: var(--color-card);
+}
+.promotion_description{
+    line-height: 1.5;
+    color: var(--secondary-color);
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .4rem;
+    margin-top: 1.5rem;
+}
+.button_dark{
+    background-color: var(--color--saphireBlue);
+    color: var(--color-white-2);
+    padding:.6rem 1.6rem;
+    border-radius: 10px;
+    border:1px solid var(--color--saphireBlue);
+    font-size: .9rem;
+    font-weight: 500;
+    box-shadow: 0 5px 16px 1px rgba(117, 79, 254, 0.7);
+    cursor: pointer;
+}
+.button_dark:hover{
+    transition: all .4s ease-in-out;
+    box-shadow: 0 5px 16px 1px rgba(96, 52, 254, 0.7);
+    background-color: var(--color--saphireBlueDark);
+}
+.button_light{
+    color: var(--color--saphireBlue);
+    padding:.6rem 1.6rem;
+    border:1px solid var(--color--saphireBlue);
+    border-radius: 10px;
+    font-size: .9rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: unset;
+}
+.button_light:hover{
+    transition: all .4s ease-in-out;
+    color: var(--color-white-2);
+    background-color: var(--color--saphireBlue);
+    box-shadow: 0 5px 16px 1px rgba(117, 79, 254, 0.7);
+}
+@keyframes dot-animation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(80px);
+    }
+}
+.promotion_imageFalse{
+    padding-left: 5.5rem;
+    flex:unset;
+
+}
+.promotionContainerFalse{
+    padding-left: 5rem !important;
+    padding-right: 3rem !important;
+}
+.promotion_image .banner_imageFalse{
+    border-radius: 4px 40px 4px 40px;
+}
+.promotion_image .dot_shapeFalse{
+    right: -1.8rem ;
+    left:unset;
+}
+.promotion_image .circleFalse{
+    right:unset;
+    left: 1rem;
+    top: -4rem;
+
+}

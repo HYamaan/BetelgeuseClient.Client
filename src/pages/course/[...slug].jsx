@@ -6,7 +6,7 @@ import CourseBread from "../../components/course/CourseBread";
 import useDisableBodyScroll from "../../hooks/useDisableBodyScroll";
 import CourseJson from "../../data/Course.json"
 
-const Course = ({courseHeader, willLearnJson, reviews, courses }) => {
+const Course = ({courseHeader, willLearnJson, reviews, courses,guid}) => {
     const [allStudentReview, setAllStudentReview] = useState(false);
     const [openVideo,setOpenVideo]=useState(false);
     const [openVideoJson,setOpenVideoJson]=useState({});
@@ -31,6 +31,8 @@ const Course = ({courseHeader, willLearnJson, reviews, courses }) => {
                     <div className={styles.course_right}>
                         <CourseVideo
                             courseHeader={courseHeader}
+                            guid={guid}
+                            reviews={reviews}
                             setOpenVideo={setOpenVideo}
                             openVideo={openVideo}
                             courses={courses}
@@ -51,9 +53,9 @@ export async function getServerSideProps({params}) {
     const foundCourse = CourseJson.course.find(value => value.url === courseUrl);
     if (foundCourse !== undefined && foundCourse !== null) {
         console.log("burada",courseUrl)
-        const { courseHeader, willLearnJson, reviews, courses } = foundCourse;
+        const { courseHeader, willLearnJson, reviews, courses,guid} = foundCourse;
         return {
-            props: {courseHeader, willLearnJson, reviews, courses},
+            props: {courseHeader, willLearnJson, reviews, courses,guid},
         };
     } else {
         console.error(`Course not found for guid: ${courseUrl}`);
