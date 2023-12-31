@@ -1,6 +1,6 @@
 .course_card {
     position: relative;
-    min-width: 18.2rem;
+    max-width: 18.2rem;
     color: var(--primary-color);
     border-right: .8rem solid transparent;
     border-left: .8rem solid transparent;

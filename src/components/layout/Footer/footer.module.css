@@ -1,0 +1,190 @@
+.footer{
+   background-color: var(--color-footer-background);
+    position: relative;
+    font-family: Inter,sans-serif;
+    margin-top: 5rem;
+}.footer p{
+     color: var(--color-1);
+     padding: 20px 0;
+     font-size: 14px;
+     font-weight: 400;
+     letter-spacing: 0.5px;
+     line-height: 1.7;
+     text-align: justify;
+     padding-right: 55px;
+ }
+.footerSection{
+    width: 80%;
+    margin:10rem auto 0 auto;
+    padding: 10rem 2rem 0.5rem 2rem;
+    color: var(--color-white-2);
+    z-index: 100;
+    position: relative;
+}
+
+.footerSubscribe{
+    position: absolute;
+    width: calc(100% - 4rem); /*4 rem padding*/
+    top: -100px;
+    height: 200px;
+    background-image: url("~public/assets/image/shape/footer-pattern.png");
+    background-color: var(--color--saphireBlue);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 2px 6px 1px rgba(117, 79, 254, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerSubscribe_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1 !important;
+    pointer-events: none;
+    color: var(--color-white-4);
+}
+.footerSubscribe_title h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.22;
+}
+.footerSubscribe_title span{
+    font-size: .9rem;
+    margin-top: .4rem;
+}
+.join_us{
+    border-radius: 38px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding:.625rem;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+.join_us .formInput{
+    width: 80%;
+    overflow: visible;
+    outline: none;
+    color: black;
+    margin-left: 1rem;
+    font-size: .85rem;
+    margin-right: .6rem;
+}
+.button{
+    background-color:var(--color--saphireBlue);
+    border-radius: 25rem;
+    padding: .8rem 1.7rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
+.button:hover{
+    transition: all .4s ease-in-out;
+    background-color:var(--color--saphireBlueDark)
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logoSection{
+    width: 33%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: .9rem;
+}
+.banner{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.LogoSun {
+    font-size: 4rem;
+    margin-bottom: .7rem;
+    margin-right: .7rem;
+}
+.logoText{
+    vertical-align:top;
+    font-size: 2.7rem;
+    font-family: 'Alex Brush', cursive;
+}
+.logoText:first-letter{
+    font-size:3.7rem;
+}
+.contents{
+    width: 66%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: .9rem;
+    margin-top:.7rem;
+    line-height: 24px;
+}
+.contents > div >h4{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+.title_contents >p{
+    padding:.3rem 0;
+    cursor: pointer;
+}
+.title_contents > p:hover
+{
+    transition: all 0.4s ease-in-out;
+    color: var(--color--saphireBlue);
+}
+.socialMediaSection{
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.2rem;
+    gap: 1rem;
+}
+.socialMediaSection div{
+    border: 1px solid var(--color-white-2);
+    border-radius: 50%;
+    padding: .5rem;
+    cursor: pointer;
+}
+.socialMediaSection div:hover{
+    transition: all .4s ease-in-out;
+    background-color: var(--color-white-2);
+    color: var(--color-footer-background);
+}
+.contact_with_us{
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+
+.footer_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: .2rem;
+    border-top: 1px solid  var(--color-1);
+}
+.footer_bottom_details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_bottom_details > p > span{
+    cursor: pointer;
+}
+.footer_bottom_details > p > span:hover{
+    transition: all 0.4s ease-in-out;
+    color: var(--color--saphireBlue);
+}
+

@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react';
-import CategoriesJson from '../../../data/Categories.json';
+import CategoriesJson from '../../../data/CoursesRadionData.json';
 import {FaAngleRight} from "react-icons/fa6";
 import {MdArrowBackIos} from "react-icons/md";
 import styles from "./header.module.css";

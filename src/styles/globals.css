@@ -4,14 +4,18 @@
 @tailwind utilities;
 
 :root {
+  --panel-bg:#fbfbfd;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
   --primary-color:#676C7D;
   --primary-color-2:#6E798A;
   --secondary-color:#676C7D;
-  --danger:#d7191c;
---panel-bg:#fbfbfd;
+  --color-footer-background: #171719;
+  --color-footer-subscribe:#8a44e3;
+
+
   --color-grey-1: #6b7280;
   --color-grey-2: #C7CBD1;
   --color-grey-3: #676c7d;
@@ -28,6 +32,9 @@
   --color--saphireBlueDark:#6034FE;
   --color--lavender:#F0EDFD;
   --color-card:#1E293B;
+  --danger:#d7191c;
+
+  --color-1:rgba(255, 255, 255, 0.644)
 
 }
 @media (prefers-color-scheme: dark) {

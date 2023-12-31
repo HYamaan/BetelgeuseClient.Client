@@ -4,7 +4,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component";
 import {FaHome} from "react-icons/fa";
 import {MdOutlineArrowForwardIos} from "react-icons/md";
 import {IoFilter} from "react-icons/io5";
-import categoriesJson from '@/data/Categories.json'
+import CoursesRadionData from '@/data/CoursesRadionData.json'
 import {uniqueArrayReturnIdAndName} from "@/lib/uniqeArray";
 import CoursesRadio from "@/components/courses/CoursesRadio";
 import CourseCardComponent from "@/components/courseCard/courseCard";
@@ -16,7 +16,7 @@ const Courses = () => {
     const [checkedLanguage, setCheckedLanguage] = useState(null);
     const [checkedDuration, setCheckedDuration] = useState(null);
     const [checkedRatings, setCheckedRatings] = useState(null);
-    const categoriesFilter = uniqueArrayReturnIdAndName(categoriesJson.categories);
+    const categoriesFilter = uniqueArrayReturnIdAndName(CoursesRadionData.categories);
     const [showAllCategories, setShowAllCategories] = useState(false);
 
 
@@ -56,37 +56,36 @@ const Courses = () => {
                     />
 
                     <CoursesRadio
-                        valueArray={categoriesJson.price}
+                        valueArray={CoursesRadionData.price}
                         stateValue={checkedPrice}
                         setStateValue={setCheckedPrice}
                         title={"Price"}
                     />
                     <CoursesRadio
-                        valueArray={categoriesJson.level}
+                        valueArray={CoursesRadionData.level}
                         stateValue={checkedLevel}
                         setStateValue={setCheckedLevel}
                         title={"Level"}
                     />
                     <CoursesRadio
-                        valueArray={categoriesJson.language}
+                        valueArray={CoursesRadionData.language}
                         stateValue={checkedLanguage}
                         setStateValue={setCheckedLanguage}
                         title={"Language"}
                     />
                     <CoursesRadio
-                        valueArray={categoriesJson.duration}
+                        valueArray={CoursesRadionData.duration}
                         stateValue={checkedDuration}
                         setStateValue={setCheckedDuration}
                         title={"Video Duration"}
                     />
                     <CoursesRadio
-                        valueArray={categoriesJson.ratings}
+                        valueArray={CoursesRadionData.ratings}
                         stateValue={checkedRatings}
                         setStateValue={setCheckedRatings}
                         stars={true}
                         title={"Ratings"}
                     />
-
                 </div>
                 <div className={styles.courses_detail}>
 

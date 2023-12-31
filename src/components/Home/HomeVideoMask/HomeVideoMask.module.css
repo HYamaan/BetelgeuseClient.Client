@@ -29,46 +29,6 @@ position: absolute;
     color: var(--color--black);
 
 }
-.svgContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8rem;
-    height: 8rem;
-    background-color: var(--color-white-2);
-    border-radius: 50%;
-    animation: pulse  1.6s infinite;
-}
-.svgContainer::before{
-    content: '';
-    position: absolute;
-    z-index: 50;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 8rem;
-    height: 8rem;
-    background-color: var(--color-white-2);
-    border-radius: 50%;
-    animation: pulse 2.4s 1.6s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 #fff6;
-    }
-    70% {
-    box-shadow: 0 0 0 70px #fff0;
-    }
-    100% {
-        box-shadow: 0 0 0 0 #fff0;
-    }
-}
-
 .text{
     position: relative;
     z-index: 50;
