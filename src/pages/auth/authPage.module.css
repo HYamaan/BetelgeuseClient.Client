@@ -1,0 +1,127 @@
+.authContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.authContainer_Image_Styles {
+    vertical-align: middle;
+    transform: scale(0.7);
+    z-index: 10;
+}
+
+.authContainer_Image {
+    flex: 1 1 0;
+    align-self: start;
+}
+
+.authContainer_Input_Boxes {
+    flex: 1 1 0;
+
+}
+
+.authContainer_Input_Boxes_Child {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_title {
+    color: var(--color--saphireBlue);
+    font-weight: 600;
+    font-size: 1.75rem
+}
+
+.login_title_marker {
+    color: var(--color--saphireBlue);
+}
+
+.login_description {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: .9rem;
+    color: var(--color-grey-3);
+}
+
+.button {
+    width: 100%;
+    background-color: var(--color--saphireBlue);
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: .4rem;
+    color: var(--color-white-1);
+    cursor: pointer;
+}
+
+.forgot_password {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.dont_have_account {
+    align-self: center;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+
+.login_page_signup {
+    margin: .7rem;
+    color: var(--color--saphireBlue);
+    cursor: pointer;
+}
+
+@media (min-width: 1400px) {
+    .authContainer {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .authContainer {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .authContainer {
+        max-width: 992px;
+    }
+
+    .authContainer_Image_Styles {
+        transform: scale(.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .authContainer {
+        max-width: 768px;
+        flex-flow: column;
+    }
+
+    .authContainer_Input_Boxes_Child {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .authContainer {
+        max-width: 576px;
+    }
+
+    .authContainer_Image_Styles {
+        transform: scale(1.1);
+    }
+
+}
+
+

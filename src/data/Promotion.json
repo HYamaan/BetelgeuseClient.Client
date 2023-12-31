@@ -1,0 +1,23 @@
+[
+  {
+    "image": "/assets/image/instructor/become_instructor_banner.jpg",
+    "title": "Become an Instructor",
+    "description": "Are you interested to be a part of our community? You can be a part of our community by signing up as an instructor or organization.",
+    "button_dark": "Become an instructor",
+    "button_light": "Registration Packages"
+  },
+  {
+    "image": "/assets/image/instructor/forum_section.jpg",
+    "title": "Have a Question? Ask it in forum and get answer",
+    "description": "Our forums helps you to create your questions on different subjects and communicate with other forum users. Our users will help you to get the best answer!",
+    "button_dark": "Create a new topic",
+    "button_light": "Browse forums"
+  },
+  {
+    "image": "/assets/image/instructor/instructor_finder_banner.jpg",
+    "title": "Find the best instructor",
+    "description": "Looking for an instructor? Find the best instructors according to different parameters like gender, skill level, price, meeting type, rating, etc. Find instructors on the map.",
+    "button_dark": "Tutor Finder",
+    "button_light": "Tutors on Map"
+  }
+]

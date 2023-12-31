@@ -1,0 +1,41 @@
+.auth_button_title{
+    font-size: .9rem;
+    color: var(--color-grey-3);
+    font-weight: 600;
+    margin-bottom: 0.65rem;
+    text-transform: capitalize;
+}
+.auth_button_box{
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+.auth_button_icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding-left: 0.875rem;
+    margin-right: 20px;
+    pointer-events: none;
+}
+.auth_button_icon i{
+    color: var(--color-grey-1);
+}
+.auth_button_input {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-size: 0.9rem;
+    border-radius: 0.75rem;
+    display: block;
+    width: 100%;
+    padding-left:2.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    outline: none;
+}
+.auth_button_input:focus{
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #93c5fd;
+}

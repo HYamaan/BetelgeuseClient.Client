@@ -1,0 +1,39 @@
+{
+  "kurslar": [
+    {
+      "kurs_adi": "Python Temel Kursu",
+      "yayinci_kullanici": "full_name_1",
+      "indirimli_fiyat": 150,
+      "indirimsiz_fiyat": 200,
+      "image": "video1.jpg"
+    },
+    {
+      "kurs_adi": "Python İleri Seviye Kursu",
+      "yayinci_kullanici": "full_name_2",
+      "indirimli_fiyat": 180,
+      "indirimsiz_fiyat": 250,
+      "image": "video2.jpg"
+    },
+    {
+      "kurs_adi": "Veri Analizi ve Python",
+      "yayinci_kullanici": "full_name_3",
+      "indirimli_fiyat": 200,
+      "indirimsiz_fiyat": 280,
+      "image": "video3.jpg"
+    },
+    {
+      "kurs_adi": "Django Web Geliştirme Kursu",
+      "yayinci_kullanici": "full_name_4",
+      "indirimli_fiyat": 250,
+      "indirimsiz_fiyat": 300,
+      "image": "video4.jpg"
+    },
+    {
+      "kurs_adi": "Python ve Yapay Zeka",
+      "yayinci_kullanici": "full_name_5",
+      "indirimli_fiyat": 300,
+      "indirimsiz_fiyat": 350,
+      "image": "video5.jpg"
+    }
+  ]
+}

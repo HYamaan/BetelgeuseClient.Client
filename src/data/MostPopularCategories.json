@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Development",
+    "iconClass": "fa fa-code",
+    "quantity": 5
+  },
+  {
+    "title": "Business",
+    "iconClass": "fa fa-building",
+    "quantity": 7
+  },
+  {
+    "title": "Finance & Accounting",
+    "iconClass": "fa fa-dollar-sign",
+    "quantity": 2
+  },
+  {
+    "title": "IT & Software",
+    "iconClass": "fa fa-laptop-code",
+    "quantity": 3
+  },
+  {
+    "title": "Office Productivity",
+    "iconClass": "fa fa-desktop",
+    "quantity": 8
+  },
+  {
+    "title": "Personal Development",
+    "iconClass": "fa fa-lightbulb",
+    "quantity": 1
+  },
+  {
+    "title": "Design",
+    "iconClass": "fa fa-paint-brush",
+    "quantity": 6
+  },
+  {
+    "title": "Marketing",
+    "iconClass": "fa fa-bullhorn",
+    "quantity": 4
+  },
+  {
+    "title": "Lifestyle",
+    "iconClass": "fa fa-coffee",
+    "quantity": 9
+  },
+  {
+    "title": "Photography & Video",
+    "iconClass": "fa fa-camera",
+    "quantity": 5
+  },
+  {
+    "title": "Health & Fitness",
+    "iconClass": "fa fa-heartbeat",
+    "quantity": 7
+  },
+  {
+    "title": "Music",
+    "iconClass": "fa fa-music",
+    "quantity": 3
+  }
+]

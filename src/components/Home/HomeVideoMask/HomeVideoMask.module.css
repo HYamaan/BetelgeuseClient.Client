@@ -1,0 +1,99 @@
+.section{
+    position: relative;
+    margin: 20rem 0;
+    width: 100%;
+    height: 100%;
+}
+.videoMask{
+    position: relative;
+    height: 250px;
+    width: 100%;
+    border-top: 1px solid  var(--color-grey-3);
+    background: rgb(98,76,235);
+    background: radial-gradient(circle, rgba(98,76,235,1) 0%, rgba(89,74,217,1) 25%, rgba(89,74,217,1) 75%, rgba(31,59,100,1) 100%);
+}
+.videoMaskImage{
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 75%;
+    border-radius: 20px;
+    vertical-align: middle;
+}
+.VideoMaskImage_svg {
+    position: relative;
+    z-index: 100;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color--black);
+
+}
+.text{
+    position: relative;
+    z-index: 50;
+    left: 50%;
+    transform: translate(-50%,50%);
+    color: var(--color-white-2);
+    width: max-content;
+}
+.text h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+.text p{
+    font-weight: 400;
+}
+.PlaySvg svg {
+    font-size: 3rem;
+}
+
+.PlaySvg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 147px;
+    height: 147px;
+    box-shadow: 0 20px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 22;
+}
+
+.PlaySvg::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 50%;
+    animation: pulse 2s ease-out infinite; /* Corrected the animation name */
+}
+
+.PlaySvg::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 50%;
+    animation: pulse 2s 1s ease-out infinite; /* Corrected the animation name and added a delay of 1s */
+}
+
+@keyframes pulse {
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+

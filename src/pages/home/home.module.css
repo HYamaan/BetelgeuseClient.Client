@@ -1,0 +1,17 @@
+.top_courses {
+    padding-top: 4rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-card)
+}
+
+.top_courses::before {
+    content: "";
+    background-image: url("~public/assets/image/shape/h-1-bn-shape-2.png");
+    width: 7rem;
+    height: 1.3rem;
+    position: absolute;
+    background-size: 8rem;
+    margin-top: 2rem;
+    left: 14.5rem;
+}

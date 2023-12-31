@@ -1,0 +1,792 @@
+
+{
+  "categories": [
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789abd",
+      "name": "Development",
+      "subcategories": [
+        {
+          "name": "Web Development",
+          "topics": [
+            "React.js Basics",
+            "Node.js Development",
+            "Front-end Frameworks",
+            "Responsive Design",
+            "SPA (Single Page Applications)"
+          ]
+        },
+        {
+          "name": "Mobile App Development",
+          "topics": [
+            "iOS App Development",
+            "Android App Development",
+            "Flutter Framework",
+            "React Native",
+            "Mobile UI/UX Design"
+          ]
+        },
+        {
+          "name": "Database Management",
+          "topics": [
+            "SQL Fundamentals",
+            "Database Design",
+            "NoSQL Databases",
+            "Data Warehousing",
+            "Database Security"
+          ]
+        },
+        {
+          "name": "Game Development",
+          "topics": [
+            "Unity Game Development",
+            "Game Design Principles",
+            "3D Game Development",
+            "Game Physics",
+            "Multiplayer Game Development"
+          ]
+        },
+        {
+          "name": "Software Engineering",
+          "topics": [
+            "Agile Methodology",
+            "Software Testing Principles",
+            "Continuous Integration",
+            "Code Review Best Practices",
+            "Version Control with Git"
+          ]
+        },
+        {
+          "name": "Programming Languages",
+          "topics": [
+            "JavaScript ES6+",
+            "Python Programming",
+            "Java Fundamentals",
+            "C# Programming",
+            "Ruby Programming"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789ab1",
+      "name": "Business",
+      "subcategories": [
+        {
+          "name": "Entrepreneurship",
+          "topics": [
+            "Business Ideas",
+            "Startup Funding",
+            "Business Planning",
+            "Pitching Your Business",
+            "Scaling a Business"
+          ]
+        },
+        {
+          "name": "Management",
+          "topics": [
+            "Leadership Skills",
+            "Team Building",
+            "Performance Management",
+            "Conflict Resolution",
+            "Strategic Management"
+          ]
+        },
+        {
+          "name": "Marketing",
+          "topics": [
+            "Content Marketing Strategies",
+            "Social Media Advertising",
+            "Branding Techniques",
+            "Customer Acquisition",
+            "Marketing Analytics"
+          ]
+        },
+        {
+          "name": "Business Strategy",
+          "topics": [
+            "SWOT Analysis",
+            "Competitive Intelligence",
+            "Strategic Planning",
+            "Business Model Canvas",
+            "Innovation Strategies"
+          ]
+        },
+        {
+          "name": "Finance",
+          "topics": [
+            "Financial Modeling",
+            "Investment Valuation",
+            "Financial Decision Making",
+            "Risk Management",
+            "Personal Finance Tips"
+          ]
+        },
+        {
+          "name": "Sales",
+          "topics": [
+            "Sales Techniques",
+            "Negotiation Skills",
+            "Customer Relationship Management",
+            "Sales Funnel Optimization",
+            "Closing Deals"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789ab2",
+      "name": "Finance & Accounting",
+      "subcategories": [
+        {
+          "name": "Financial Planning",
+          "topics": [
+            "Budgeting",
+            "Retirement Planning",
+            "Tax Planning",
+            "Investment Strategies",
+            "Personal Finance Management"
+          ]
+        },
+        {
+          "name": "Accounting Basics",
+          "topics": [
+            "Bookkeeping",
+            "Financial Statements",
+            "Tax Accounting",
+            "Cost Accounting",
+            "Auditing"
+          ]
+        },
+        {
+          "name": "Investment Strategies",
+          "topics": [
+            "Stock Market",
+            "Real Estate Investment",
+            "Mutual Funds",
+            "Retirement Investments",
+            "Portfolio Diversification"
+          ]
+        },
+        {
+          "name": "Taxation",
+          "topics": [
+            "Income Tax",
+            "Corporate Tax",
+            "International Taxation",
+            "Tax Compliance",
+            "Tax Planning"
+          ]
+        },
+        {
+          "name": "Personal Finance",
+          "topics": [
+            "Savings and Investments",
+            "Credit Management",
+            "Debt Reduction",
+            "Financial Goals",
+            "Emergency Funds"
+          ]
+        },
+        {
+          "name": "Auditing",
+          "topics": [
+            "Internal Auditing",
+            "External Auditing",
+            "Audit Planning",
+            "Audit Reports",
+            "Quality Assurance"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789ab3",
+      "name": "IT & Software",
+      "subcategories": [
+        {
+          "name": "Network Administration",
+          "topics": [
+            "Cisco Networking",
+            "Network Security",
+            "Routing and Switching",
+            "Wireless Networks",
+            "IPv6 Essentials"
+          ]
+        },
+        {
+          "name": "Cybersecurity",
+          "topics": [
+            "Ethical Hacking",
+            "Network Security",
+            "Incident Response",
+            "Malware Analysis",
+            "Security Awareness"
+          ]
+        },
+        {
+          "name": "System Administration",
+          "topics": [
+            "Linux Administration",
+            "Windows Server Administration",
+            "Active Directory",
+            "PowerShell Scripting",
+            "Server Optimization"
+          ]
+        },
+        {
+          "name": "Cloud Computing",
+          "topics": [
+            "AWS Cloud",
+            "Microsoft Azure",
+            "Google Cloud Platform",
+            "Cloud Security",
+            "Serverless Architecture"
+          ]
+        },
+        {
+          "name": "IT Project Management",
+          "topics": [
+            "Project Planning",
+            "Agile Project Management",
+            "Scrum Methodology",
+            "Risk Management",
+            "Project Delivery"
+          ]
+        },
+        {
+          "name": "Software Testing",
+          "topics": [
+            "Manual Testing",
+            "Automated Testing",
+            "Performance Testing",
+            "Test Case Design",
+            "Continuous Testing"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789ab4",
+      "name": "Office Productivity",
+      "subcategories": [
+        {
+          "name": "Microsoft Office",
+          "topics": [
+            "Excel Formulas",
+            "Word Document Formatting",
+            "PowerPoint Presentation Tips",
+            "Outlook Productivity",
+            "Access Database Basics"
+          ]
+        },
+        {
+          "name": "Time Management",
+          "topics": [
+            "Task Prioritization",
+            "Time Blocking",
+            "Effective Meetings",
+            "Procrastination Management",
+            "Work-Life Balance"
+          ]
+        },
+        {
+          "name": "Communication Skills",
+          "topics": [
+            "Effective Communication",
+            "Professional Email Etiquette",
+            "Presentation Skills",
+            "Conflict Resolution",
+            "Active Listening"
+          ]
+        },
+        {
+          "name": "Task Automation",
+          "topics": [
+            "Workflow Automation",
+            "Batch Processing",
+            "Automation Tools",
+            "Macro Creation",
+            "Scripting for Productivity"
+          ]
+        },
+        {
+          "name": "Email Efficiency",
+          "topics": [
+            "Inbox Organization",
+            "Email Filters",
+            "Managing Email Overload",
+            "Effective Email Writing",
+            "Email Etiquette"
+          ]
+        },
+        {
+          "name": "Document Collaboration",
+          "topics": [
+            "Google Workspace",
+            "Microsoft Teams",
+            "Collaborative Editing",
+            "Version Control",
+            "File Sharing Best Practices"
+          ]
+        }
+      ]
+    },
+    { "guid": "8b901234-5678-9abc-def0-123456789ab6",
+      "name": "Personal Development",
+      "subcategories": [
+        {
+          "name": "Self-Improvement",
+          "topics": [
+            "Positive Thinking",
+            "Goal Setting",
+            "Personal Growth Plans",
+            "Self-Reflection",
+            "Building Confidence"
+          ]
+        },
+        {
+          "name": "Time Management",
+          "topics": [
+            "Prioritizing Tasks",
+            "Time Blocking Techniques",
+            "Productivity Hacks",
+            "Time Management Tools",
+            "Effective Scheduling"
+          ]
+        },
+        {
+          "name": "Mindfulness",
+          "topics": [
+            "Meditation Practices",
+            "Mindful Living",
+            "Stress Reduction",
+            "Mindful Eating",
+            "Mindful Breathing"
+          ]
+        },
+        {
+          "name": "Emotional Intelligence",
+          "topics": [
+            "Self-Awareness",
+            "Empathy",
+            "Social Skills",
+            "Managing Emotions",
+            "Building Relationships"
+          ]
+        },
+        {
+          "name": "Public Speaking",
+          "topics": [
+            "Speech Preparation",
+            "Effective Delivery",
+            "Overcoming Stage Fright",
+            "Engaging the Audience",
+            "Storytelling Techniques"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa1",
+      "name": "Design",
+      "subcategories": [
+        {
+          "name": "Graphic Design",
+          "topics": [
+            "Adobe Creative Suite",
+            "Typography",
+            "Color Theory",
+            "Logo Design",
+            "Print Design"
+          ]
+        },
+        {
+          "name": "Web Design",
+          "topics": [
+            "UI/UX Design Principles",
+            "Responsive Web Design",
+            "Wireframing",
+            "Prototyping",
+            "Design Systems"
+          ]
+        },
+        {
+          "name": "User Experience (UX)",
+          "topics": [
+            "User Research",
+            "Information Architecture",
+            "Usability Testing",
+            "Interaction Design",
+            "Persona Creation"
+          ]
+        },
+        {
+          "name": "Motion Graphics",
+          "topics": [
+            "After Effects Basics",
+            "Animation Principles",
+            "Motion Design Techniques",
+            "Video Editing",
+            "Cinema 4D Fundamentals"
+          ]
+        },
+        {
+          "name": "3D Modeling",
+          "topics": [
+            "Blender Basics",
+            "3ds Max",
+            "Maya Fundamentals",
+            "ZBrush Sculpting",
+            "Architectural Visualization"
+          ]
+        },
+        {
+          "name": "Product Design",
+          "topics": [
+            "Product Prototyping",
+            "Design Thinking",
+            "User-Centered Design",
+            "Industrial Design",
+            "Product Development Lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa2",
+      "name": "Marketing",
+      "subcategories": [
+        {
+          "name": "Digital Marketing",
+          "topics": [
+            "Social Media Marketing",
+            "Content Marketing",
+            "Search Engine Optimization (SEO)",
+            "Email Marketing",
+            "Inbound Marketing"
+          ]
+        },
+        {
+          "name": "Content Marketing",
+          "topics": [
+            "Content Creation",
+            "Blogging Strategies",
+            "Content Distribution",
+            "Content Calendar",
+            "Content Marketing Analytics"
+          ]
+        },
+        {
+          "name": "Social Media Marketing",
+          "topics": [
+            "Social Media Strategy",
+            "Social Media Advertising",
+            "Community Management",
+            "Influencer Marketing",
+            "Social Media Analytics"
+          ]
+        },
+        {
+          "name": "SEO (Search Engine Optimization)",
+          "topics": [
+            "Keyword Research",
+            "On-Page SEO",
+            "Link Building",
+            "Technical SEO",
+            "SEO Analytics"
+          ]
+        },
+        {
+          "name": "Email Marketing",
+          "topics": [
+            "Email Campaigns",
+            "Automation Tools",
+            "Email Copywriting",
+            "Segmentation",
+            "Email Marketing Metrics"
+          ]
+        },
+        {
+          "name": "Influencer Marketing",
+          "topics": [
+            "Finding Influencers",
+            "Influencer Collaboration",
+            "Influencer Marketing Platforms",
+            "Measuring Influencer ROI",
+            "Legal Considerations"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa3",
+      "name": "Lifestyle",
+      "subcategories": [
+        {
+          "name": "Travel",
+          "topics": [
+            "Travel Planning",
+            "Budget Travel",
+            "Adventure Travel",
+            "Travel Hacks",
+            "Cultural Experiences"
+          ]
+        },
+        {
+          "name": "Cooking",
+          "topics": [
+            "Recipes",
+            "Cooking Techniques",
+            "Healthy Cooking",
+            "Meal Planning",
+            "Cuisine Exploration"
+          ]
+        },
+        {
+          "name": "Home Decor",
+          "topics": [
+            "Interior Design",
+            "DIY Home Projects",
+            "Furniture Selection",
+            "Home Organization",
+            "Decor Trends"
+          ]
+        },
+        {
+          "name": "Fashion",
+          "topics": [
+            "Fashion Trends",
+            "Personal Style",
+            "Wardrobe Essentials",
+            "Sustainable Fashion",
+            "Shopping Tips"
+          ]
+        },
+        {
+          "name": "Fitness",
+          "topics": [
+            "Workout Plans",
+            "Nutrition for Fitness",
+            "Strength Training",
+            "Cardiovascular Exercise",
+            "Fitness Tracking"
+          ]
+        },
+        {
+          "name": "Hobbies",
+          "topics": [
+            "Crafting",
+            "Gardening",
+            "Collecting",
+            "Outdoor Activities",
+            "DIY Projects"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa4",
+      "name": "Photography & Video",
+      "subcategories": [
+        {
+          "name": "Photography Basics",
+          "topics": [
+            "Camera Settings",
+            "Composition Techniques",
+            "Understanding Light",
+            "Editing in Lightroom",
+            "Photography Equipment"
+          ]
+        },
+        {
+          "name": "Photo Editing",
+          "topics": [
+            "Adobe Photoshop",
+            "Lightroom Editing",
+            "Color Correction",
+            "Portrait Retouching",
+            "Photo Manipulation"
+          ]
+        },
+        {
+          "name": "Videography",
+          "topics": [
+            "Video Production",
+            "Cinematography Basics",
+            "Video Editing Software",
+            "Storyboarding",
+            "Audio for Video"
+          ]
+        },
+        {
+          "name": "Cinematography",
+          "topics": [
+            "Camera Movement",
+            "Lighting for Film",
+            "Shot Composition",
+            "Film Editing Techniques",
+            "Cinematic Storytelling"
+          ]
+        },
+        {
+          "name": "Drone Photography",
+          "topics": [
+            "Drone Operation",
+            "Aerial Photography Techniques",
+            "Legal Considerations",
+            "Editing Drone Footage",
+            "Drone Photography Tips"
+          ]
+        },
+        {
+          "name": "Visual Storytelling",
+          "topics": [
+            "Narrative Techniques",
+            "Storyboard Creation",
+            "Emotional Storytelling",
+            "Documentary Filmmaking",
+            "Creating Impactful Visuals"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa5",
+      "name": "Health & Fitness",
+      "subcategories": [
+        {
+          "name": "Nutrition",
+          "topics": [
+            "Healthy Eating",
+            "Nutrient-Rich Foods",
+            "Dietary Supplements",
+            "Meal Planning for Fitness",
+            "Nutrition Myths"
+          ]
+        },
+        {
+          "name": "Exercise Programs",
+          "topics": [
+            "Cardio Workouts",
+            "Strength Training Programs",
+            "Flexibility Exercises",
+            "Home Workouts",
+            "HIIT (High-Intensity Interval Training)"
+          ]
+        },
+        {
+          "name": "Mental Health",
+          "topics": [
+            "Stress Management",
+            "Mindfulness Practices",
+            "Mental Resilience",
+            "Positive Psychology",
+            "Mental Health Awareness"
+          ]
+        },
+        {
+          "name": "Yoga",
+          "topics": [
+            "Yoga Poses",
+            "Yoga for Beginners",
+            "Advanced Yoga Practices",
+            "Meditation in Yoga",
+            "Yoga for Stress Relief"
+          ]
+        },
+        {
+          "name": "Weight Loss",
+          "topics": [
+            "Healthy Weight Loss Strategies",
+            "Effective Diets",
+            "Weight Loss Exercises",
+            "Weight Management",
+            "Behavioral Changes for Weight Loss"
+          ]
+        },
+        {
+          "name": "Healthy Cooking",
+          "topics": [
+            "Nutrient-Rich Recipes",
+            "Meal Prep for Health",
+            "Balanced Meal Planning",
+            "Healthy Snacking",
+            "Cooking Techniques for Nutrient Retention"
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "8b901234-5678-9abc-def0-123456789aa7",
+      "name": "Music",
+      "subcategories": [
+        {
+          "name": "Music Theory",
+          "topics": [
+            "Understanding Notes and Chords",
+            "Rhythm and Timing",
+            "Key Signatures",
+            "Scales and Modes",
+            "Harmony in Music"
+          ]
+        },
+        {
+          "name": "Instrument Mastery",
+          "topics": [
+            "Learning Guitar",
+            "Piano Techniques",
+            "Violin Mastery",
+            "Drumming Fundamentals",
+            "Bass Guitar Skills"
+          ]
+        },
+        {
+          "name": "Songwriting",
+          "topics": [
+            "Lyric Writing",
+            "Melody Creation",
+            "Song Structure",
+            "Collaborative Songwriting",
+            "Writing Hooks and Catchy Choruses"
+          ]
+        },
+        {
+          "name": "Music Production",
+          "topics": [
+            "Digital Audio Workstations (DAWs)",
+            "Recording Techniques",
+            "Mixing and Mastering",
+            "Music Arrangement",
+            "Sound Design"
+          ]
+        },
+        {
+          "name": "Singing Techniques",
+          "topics": [
+            "Vocal Warm-Ups",
+            "Pitch Control",
+            "Breathing Exercises",
+            "Singing Styles",
+            "Performance Techniques"
+          ]
+        },
+        {
+          "name": "Music Business",
+          "topics": [
+            "Artist Management",
+            "Music Marketing",
+            "Royalties and Contracts",
+            "Distribution Channels",
+            "Building a Music Career"
+          ]
+        }
+      ]
+    }
+  ],
+  "price": ["All", "Free", "Paid"],
+  "level": ["All","Beginner","Intermediate","Advanced"],
+  "language": ["All","Turkish","English"],
+  "duration": ["0-1 Saat","1-3 Saat","3-5 Saat","5+ Saat"],
+  "ratings": ["4.5","4","3.5","3"]
+
+}
