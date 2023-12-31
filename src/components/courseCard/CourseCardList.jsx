@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from 'react';
+import React, {useMemo} from 'react';
 import SampleNextArrow from "@/components/courseCard/Arrow/SampleNextArrow";
 import SamplePrevArrow from "@/components/courseCard/Arrow/SamplePrevArrow";
 import "slick-carousel/slick/slick.css";
@@ -7,7 +7,6 @@ import Slider from "react-slick";
 import dynamic from "next/dynamic";
 const CourseCard = dynamic(() => import('../../components/courseCard/courseCard'))
 const CourseCardList = () => {
-    const [ currentSlide, setCurrentSlide ] = useState(0);
     const courses = useMemo(
         () => [
             { id: 1, title: 'Course 1' },
@@ -32,9 +31,6 @@ const CourseCardList = () => {
         slidesToScroll: 1,
         nextArrow:<SampleNextArrow length={courses.length-4}/>,
         prevArrow:<SamplePrevArrow/>,
-        afterChange: (index)=>{
-            setCurrentSlide(index);
-        },
         responsive: [
             {
                 breakpoint: 1200,
@@ -64,20 +60,13 @@ const CourseCardList = () => {
             }
         ]
     };
-    const popUpDirections = useMemo(() => {
-        return courses.map((item, index) => {
-            return Math.abs(index - currentSlide) % 4 === 0 ||
-            Math.abs(index - currentSlide) % 4 === 1
-                ? 'right'
-                : 'left';
-        });
-    }, [currentSlide, courses]);
+
 
     return (
         <Slider {...settings}>
             {courses.map((item, index) => (
                 <React.Fragment key={index}>
-                    <CourseCard popUpDirection={popUpDirections[index]} />
+                    <CourseCard  />
                 </React.Fragment>
             ))}
         </Slider>

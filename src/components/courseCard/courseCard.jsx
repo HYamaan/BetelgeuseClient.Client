@@ -15,8 +15,7 @@ const xJson = {
     "s5": "Feel comfortable with the process of turning static websites into dynamic WordPress websites",
     "s6": "Fully understand how to use Custom Post Types and Advanced Custom Fields in WordPress"
 }
-const CourseCardComponent = (props) => {
-    const {popUpDirection}=props
+const CourseCardComponent = () => {
     const [cardHover, setCardHover] = useState(false);
     const [cardAddToBasket, setAddToBasket] = useState(false);
     const [cardLike, setCardLike] = useState(false);
@@ -32,10 +31,6 @@ const CourseCardComponent = (props) => {
                     src="assets/image/video6.jpg"
                     alt="video1.jpg"
                     effect="blur"/>
-                <div className={ `${cardLike ? styles.course_card_icon_svg : ""} ${styles.course_card_icon}`}
-                     onClick={()=>{setCardLike(!cardLike)}}>
-                    <FaHeart  />
-                </div>
                 <div className={styles.course_card_image_text}>
                     <h3>Intermediate</h3>
                 </div>
@@ -143,65 +138,66 @@ const CourseCardComponent = (props) => {
         <div className={`${styles.course_card} `}
              onMouseLeave={() => setCardHover(false)}
         >
-            {courseCard}
-
-            {cardHover && (<div className={`
-                    ${styles.webui_popover}
-                     ${popUpDirection === "right" ? styles.webui_popover_right : styles.webui_popover_left}
-                     ${styles.webui_popover_active}`}
-            >
-                <div className={`${styles.arrow} 
-                        ${popUpDirection === "right" ? styles.arrow_left : styles.arrow_right}`}>
-                </div>
-                <div className={styles.webui_popover_inner}>
-                    <div className={styles.web_popover_content}>
-                        <p className={styles.course_last_update}>Last updated Wed, 04-Oct-2023</p>
-                        <Link href="#" className={styles.course_title}>WordPress Theme Development with
-                            Bootstrap</Link>
-                        <div className={styles.course_meta}>
+           {courseCard}
+            <div className={styles.course_popover}>
+                {
+                    cardHover && (
+                        <div className={`${styles.webui_popover}`}>
+                            <div className={styles.webui_popover_inner}>
+                                <div className={styles.web_popover_content}>
+                                    <Link href="#" className={styles.course_title}>WordPress Theme Development with
+                                        Bootstrap</Link>
+                                    <div className={styles.course_meta}>
                             <span>
                                 <FaPlayCircle/>
                                 25 Lessons
                             </span>
-                            <span>
+                                        <span>
                                 <LuClock/>
                                 01:15:34 Hours
                             </span>
-                            <span>
+                                        <span>
                                 <FaClosedCaptioning/>
                                 English
                             </span>
+                                    </div>
+                                    <div className={styles.course_subtitle}>
+                                        Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth,
+                                        practical, easy-to-follow course!
+                                    </div>
+                                    <div className={styles.will_learn_section}>
+                                        {Object.entries(xJson).slice(0, 3).map(([key, value]) => (
+                                            <div key={key} className={styles.will_learn}>
+                                                <FaCircle/>
+                                                <div>{value}</div>
+                                            </div>))}
+                                    </div>
+                                    <div className={styles.popover_buttons}>
+                                        {cardAddToBasket ? (<div className={styles.purchase_btn} onClick={() => {
+                                            setAddToBasket(false)
+                                        }}>
+                                            <FaMinus/>
+                                            Remove from cart
+                                        </div>) : (<div className={styles.purchase_btn}
+                                                        onClick={() => {
+                                                            setAddToBasket(true)
+                                                        }}>
+                                            <FaPlus/>
+                                            Add to cart
+                                        </div>)}
+                                        <div className={ `${cardLike ? styles.course_card_icon_svg : ""} ${styles.course_card_icon}`}
+                                             onClick={()=>{setCardLike(!cardLike)}}>
+                                            <FaHeart  />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className={styles.course_subtitle}>
-                            Learn Adobe Illustrator CC graphic design, logo design, and more with this in-depth,
-                            practical, easy-to-follow course!
-                        </div>
-                        <h6 className={styles.course_outcomes_text}>Outcomes:</h6>
-                        <div className={styles.will_learn_section}>
-                            {Object.entries(xJson).slice(0, 3).map(([key, value]) => (
-                                <div key={key} className={styles.will_learn}>
-                                    <FaCircle/>
-                                    <div>{value}</div>
-                                </div>))}
-                        </div>
-                        <div className={styles.popover_buttons}>
-                            {cardAddToBasket ? (<div className={styles.purchase_btn} onClick={() => {
-                                setAddToBasket(false)
-                            }}>
-                                <FaMinus/>
-                                Remove from cart
-                            </div>) : (<div className={styles.purchase_btn}
-                                            onClick={() => {
-                                                setAddToBasket(true)
-                                            }}>
-                                <FaPlus/>
-                                Add to cart
-                            </div>)}
+                    )
+                }
+            </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>)}
+
         </div>
 
     </>
