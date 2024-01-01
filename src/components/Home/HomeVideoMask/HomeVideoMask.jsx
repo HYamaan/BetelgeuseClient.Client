@@ -16,9 +16,6 @@ const HomeVideoMask = () => {
             <div className={styles.PlaySvg}>
                 <CiPlay1/>
             </div>
-          {/*<div className={styles.svgContainer}>*/}
-          {/*    <CiPlay1 className={styles.VideoMaskImage_svg}/>*/}
-          {/*</div>*/}
             <div className={styles.text}>
                 <h1>Start learning anywhere, anytime...</h1>
                 <p>Use Rocket LMS to access high-quality education materials without any limitations in the easiest way.</p>
