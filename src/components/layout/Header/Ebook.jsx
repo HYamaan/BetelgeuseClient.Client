@@ -1,12 +1,14 @@
 import styles from "./header.module.css";
 import {useState} from 'react';
-import EbookJson from '../../../data/Ebook.json';
 import {NavbarCssStyleUseEffect, NavbarStyle} from './cssStyle'
+import {useQuery} from "react-query";
+import {fetchBookCategories} from "@/lib/fetch";
 
 const  Ebook= (props) => {
     const {ebookHover} = props;
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [ebookStyle,setEbookStyle]=useState(NavbarStyle(ebookHover))
+    const { data:bookCategories } = useQuery('BookCategories', fetchBookCategories);
 
     //CSS
     NavbarCssStyleUseEffect(setEbookStyle,ebookHover)
@@ -19,7 +21,7 @@ const  Ebook= (props) => {
         <div className={styles.categoryBookList} style={ebookStyle}>
             {/* BookCategories */}
             <div className={`${styles.categoryListCategory}`}>
-                {EbookJson.bookCategories.map((category) => (
+                {bookCategories?.map((category) => (
                     <div
                         key={category.name}
                         className={`${styles.categoryListTitle} ${

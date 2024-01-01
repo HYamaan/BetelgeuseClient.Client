@@ -19,7 +19,6 @@ const Courses = () => {
     const categoriesFilter = uniqueArrayReturnIdAndName(CoursesRadionData.categories);
     const [showAllCategories, setShowAllCategories] = useState(false);
 
-
     return <>
         <div className={styles.courses_header}>
             <div className={styles.courses_header_description}>

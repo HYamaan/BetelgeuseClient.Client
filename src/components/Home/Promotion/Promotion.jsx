@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from "@/components/Home/Promotion/promotion.module.css";
 import Image from "next/image";
-import Data from '@/data/Promotion.json'
+import {useQuery} from "react-query";
+import { fetchPromotion} from "@/lib/fetch";
 const Promotion = () => {
-
+    const { data:promotionData } = useQuery('Promotion', fetchPromotion);
     return <section className={styles.section}>
-        {Data.map((item,index)=>{
+        {promotionData?.map((item,index)=>{
             const order=(index % 2 === 0);
             const {image,title,description,button_dark,button_light}=item;
             return  <div className={styles.promotionSection} key={index}>
