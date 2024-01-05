@@ -85,9 +85,7 @@ const BlogDetail = () => {
                                             <p>Report</p>
                                         </div>
                                     </OutsideClickHandler>
-                                )
-                                }
-
+                                )}
                             </div>
 
                         </div>
@@ -146,7 +144,6 @@ const BlogDetail = () => {
             </div>
         </div>
     </div>
-
 };
 
 export default BlogDetail;
