@@ -65,7 +65,4 @@ export async function getServerSideProps({params}) {
             notFound: true,
         };
     }
-
-
-
 }

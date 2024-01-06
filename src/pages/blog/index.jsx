@@ -1,14 +1,27 @@
 import React from 'react';
-import Banner from "@/components/Blog/Banner/Banner";
-import BlogDetail from "@/components/Blog/BlogDetail/BlogDetail";
+import Blogs from "@/components/Blog/Blogs/Blogs";
+import {fetchBlogs, fetchBlogsCategory} from "@/lib/fetch";
 
-const Blog = () => {
-    return<>
-        <Banner/>
-        <div className="w-[80%] mx-auto px-[2.4rem] mt-[4rem]">
-            <BlogDetail/>
-        </div>
+const Blog = ({blogsData, categories,blogsLength}) => {
+    return <>
+        <Blogs
+            blogsData={blogsData}
+            categories={categories}
+            blogsLength={blogsLength}
+        />
     </>
 };
-
 export default Blog;
+
+export async function getServerSideProps() {
+    const blogsData = await fetchBlogs();
+    const categories =  await fetchBlogsCategory();
+    const blogsLength = blogsData.length;
+    return {
+        props: {
+            blogsData,
+            categories,
+            blogsLength
+        },
+    };
+}

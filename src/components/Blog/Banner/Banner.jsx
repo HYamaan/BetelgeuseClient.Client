@@ -11,7 +11,7 @@ import {
     RedditShareButton
 } from "react-share";
 
-const Banner = () => {
+const Banner = ({date,author,title,category}) => {
     const [openPopUp, setOpenPopUp] = useState(false)
 
     const share = useRouter();
@@ -30,11 +30,11 @@ const Banner = () => {
                 alt="circle"
             />
             <div className={styles.titleSection}>
-                <h1>How To Teach Your Kid Easily</h1>
+                <h1>{title}</h1>
                 <div className={styles.title_description}>
-                    <p>Created by <span>George Hamilton</span></p>
-                    <p>in <span>Articles</span></p>
-                    <p>30 Jun 2021</p>
+                    <p>Created by <span>{author}</span></p>
+                    <p>in <span>{category}</span></p>
+                    <p>{date}</p>
                     <p className={styles.share} onClick={() => {
                         setOpenPopUp(true)
                     }}>

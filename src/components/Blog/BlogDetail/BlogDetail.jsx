@@ -7,12 +7,26 @@ import {useFormik} from "formik";
 import {BlogDetailCommentSchema} from "@/schema/BlogDetailCommentSchema";
 import {HiOutlineDotsVertical} from "react-icons/hi";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
-const BlogDetail = () => {
+import Banner from "@/components/Blog/Banner/Banner";
+import {useRouter} from "next/router";
+const BlogDetail = ({blogDetail}) => {
+    const router =useRouter();
     const [dotInformationPopup,setDotInformationPopup]=useState(false);
 
     const handleOutsideClick = () => {
         setDotInformationPopup(false);
     };
+    const handleClickAllPosts =()=>{
+        router.push('/'+ router.asPath.split('/')[1])
+    }
+    const handleClickCategoriesPosts = (categoryUrl) => {
+        const url =categoryUrl.toLowerCase();
+        const currentPath = router.asPath.split('/');
+        const basePath = currentPath[1];
+        const newUrl = `/${basePath}?category=${url}`;
+        router.push(newUrl);
+    };
+
     const onSubmit = async (values, actions) => {
         console.log("values",values)
         console.log("actions",actions)
@@ -24,31 +38,40 @@ const BlogDetail = () => {
         onSubmit,
         validationSchema: BlogDetailCommentSchema,
     });
-    return <div className={styles.blogSection}>
-        <div className={styles.blogContainer} >
-            <div className={styles.blogPost}>
-                <LazyLoadImage
-                    src="/assets/image/background/blog-detail.png"
-                    className={styles.blogDetailImage}
-                />
-                your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be<p>A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination.</p>
-                <h2>Exploring Generative AI in Content Creation</h2>
-                <p>If you choose to use a digital calendar, I recommend Google Calendar.</p>
-                <p>(b) Schedule a fixed time every week where you review your upcoming events over the next two months. Mark down when you’ll start preparing for that Math exam, working on that History project, or writing that English paper.</p>
-                <p>(d) Next, note your commitments for the coming week, e.g. extracurricular activities, family gatherings, extra classes. On your calendar, highlight the blocks of time you’ll have for schoolwork.</p>
-                <p>This planning process might sound time-consuming, but it’ll typically take just 15 minutes every week.</p>
-                <p>This is a wise investment of time as a student, because the rest of your week will become far more productive.</p>
-                <p>This way, you’ll be studying smart, not just hard!</p>
-                <h2>Rule #2: Be organized.</h2>
-                <p>Ever had trouble finding fore you finally asked to borrow them from your friend.</p>
 
-                <p>Many students tell me that they keep all their notes and assignments in one big pile, and only sort them out before their exams!</p>
+    return<>
+        <Banner
+            date={blogDetail[0].date}
+            author={blogDetail[0].author}
+            title={blogDetail[0].title}
+            category={blogDetail[0].category[0]}
+        />
+        <section className="w-[80%] mx-auto px-[2.4rem] mt-[4rem]">
+            <div className={styles.blogSection}>
+                <div className={styles.blogContainer} >
+                    <div className={styles.blogPost}>
+                        {blogDetail[0].blogPost.map((item, index) => {
+                            const itemKey = Object.keys(item)[0];
+                            const ItemComponent = itemKey || 'div';
 
-                <p>Being organized – it’s easier said than done, I know.</p>
-            </div>
-            <div className={styles.blogComments}>
-                <h4 className={styles.blogComments_title}>Comments<span>(1)</span></h4>
-                <form onSubmit={BlogDetailComment.handleSubmit} >
+                            if (item.src) {
+                                return (
+                                    <LazyLoadImage
+                                        key={index}
+                                        src={item.src}
+                                        className={styles.blogDetailImage}
+                                    />
+                                );
+                            } else if (item[itemKey]) {
+                                return <ItemComponent key={index}>{item[itemKey]}</ItemComponent>;
+                            } else {
+                                return null;
+                            }
+                        })}
+                    </div>
+                    <div className={styles.blogComments}>
+                        <h4 className={styles.blogComments_title}>Comments<span>(1)</span></h4>
+                        <form onSubmit={BlogDetailComment.handleSubmit} >
                     <textarea
                         name="textarea"
                         value={BlogDetailComment.values.textarea}
@@ -56,94 +79,99 @@ const BlogDetail = () => {
                         onBlur={BlogDetailComment.handleBlur}
                         className={styles.form_control}
                     />
-                    <input type="submit" value="Post comment"  className={styles.button_dark}/>
-                </form>
-                <div className={`${styles.box} my-5`}>
-                    <div className={styles.comment_user_info}>
-                        <div className={styles.comment_user}>
-                            <Avatar
-                                src="/assets/image/instructor/demo_instructor.jpg"
-                                alt="demo Onstructor"
-                                sx={{bgcolor: deepPurple.A700}}
-                            />
-                            <div className={styles.comment_user_description}>
-                                <p className={styles.comment_user_name}>Robert Ransdell</p>
-                                <p className={styles.comment_user_degree}>User</p>
-                            </div>
-                        </div>
-                        <div className={styles.comment_date}>
-                            <div >
-                                <span>4 Mar 2022</span> | <span>12:07</span>
-                            </div>
-                            <HiOutlineDotsVertical onClick={()=>{setDotInformationPopup(!dotInformationPopup)}}/>
-
-                            <div  className={`${styles.dotInformationPopup} ${dotInformationPopup ? styles.visible : ''}`}>
-                                {dotInformationPopup && (
-                                    <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-                                        <div className={styles.dot_info}>
-                                            <p>Reply</p>
-                                            <p>Report</p>
+                            <input type="submit" value="Post comment"  className={styles.button_dark}/>
+                        </form>
+                        {
+                            blogDetail[0].comments.map((item,index)=>(
+                                <div className={`${styles.box} my-5`} key={index}>
+                                    <div className={styles.comment_user_info}>
+                                        <div className={styles.comment_user}>
+                                            <Avatar
+                                                src={item.userImageSrc}
+                                                alt="demo Onstructor"
+                                                sx={{bgcolor: deepPurple.A700}}
+                                            />
+                                            <div className={styles.comment_user_description}>
+                                                <p className={styles.comment_user_name}>{item.userName}</p>
+                                                <p className={styles.comment_user_degree}>{item.userDegree}</p>
+                                            </div>
                                         </div>
-                                    </OutsideClickHandler>
-                                )}
-                            </div>
+                                        <div className={styles.comment_date}>
+                                            <div >
+                                                <span>{item.commentDate.date}</span> | <span>{item.commentDate.time}</span>
+                                            </div>
+                                            <HiOutlineDotsVertical onClick={()=>{setDotInformationPopup(!dotInformationPopup)}}/>
 
+                                            <div  className={`${styles.dotInformationPopup} ${dotInformationPopup ? styles.visible : ''}`}>
+                                                {dotInformationPopup && (
+                                                    <OutsideClickHandler onOutsideClick={handleOutsideClick}>
+                                                        <div className={styles.dot_info}>
+                                                            <p>Reply</p>
+                                                            <p>Report</p>
+                                                        </div>
+                                                    </OutsideClickHandler>
+                                                )}
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div className={styles.user_comment}>{item.commentText}</div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className={styles.infoSection}>
+                    <div className={`${styles.instructor} ${styles.box}`}>
+                        <Avatar
+                            src={blogDetail[0].authorImage}
+                            alt={blogDetail[0].title.split(" ")[0]}
+                            sx={{bgcolor: deepPurple.A700}}
+                        />
+                        <div className={styles.instructor_title}>{blogDetail[0].author}</div>
+                        <div className={styles.instructor_subTitle}>Author</div>
+                        <div className="button_dark w-full text-center mt-4">Author Posts</div>
+                    </div>
+                    <div className={`${styles.box} ${styles.categories}`}>
+                        <h2>Categories</h2>
+                        {
+                            blogDetail[0].category.map((item,index)=>(<p key={index} onClick={()=>{handleClickCategoriesPosts(item)}}>{item}</p>))
+                        }
+                    </div>
+                    <div className={`${styles.box} ${styles.recentPost}`}>
+                        <h2>Recent posts</h2>
+                        <div className={styles.otherBlogDetail}>
+                            <div className={styles.otherBlogDetailImageParent}>
+                                <LazyLoadImage
+                                    src="/assets/image/background/blog-detail.png"
+                                    className={styles.otherBlogDetailImage}
+                                />
+                            </div>
+                            <div className={styles.otherBlogDetailDescription}>
+                                <p>How to Teach Your Kid Easily</p>
+                                <p>30 Jun 2021</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.user_comment}>
-                        Thank you for this excellent article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className={styles.infoSection}>
-            <div className={`${styles.instructor} ${styles.box}`}>
-                <Avatar
-                    src="/assets/image/instructor/demo_instructor.jpg"
-                    alt="demo Onstructor"
-                    sx={{bgcolor: deepPurple.A700}}
-                />
-                <div className={styles.instructor_title}>George Hamilton</div>
-                <div className={styles.instructor_subTitle}>Author</div>
-                <div className="button_dark w-full text-center mt-4">Author Posts</div>
-            </div>
-            <div className={`${styles.box} ${styles.categories}`}>
-                <h2>Categories</h2>
-                <p>Announcements</p>
-                <p>Articles</p>
-                <p>Events</p>
-                <p>News</p>
-            </div>
-            <div className={`${styles.box} ${styles.recentPost}`}>
-                <h2>Recent posts</h2>
-                <div className={styles.otherBlogDetail}>
-                    <div className={styles.otherBlogDetailImageParent}>
-                        <LazyLoadImage
-                            src="/assets/image/background/blog-detail.png"
-                            className={styles.otherBlogDetailImage}
-                        />
-                    </div>
-                    <div className={styles.otherBlogDetailDescription}>
-                        <p>How to Teach Your Kid Easily</p>
-                        <p>30 Jun 2021</p>
+                        <div className={styles.otherBlogDetail}>
+                            <div className={styles.otherBlogDetailImageParent}>
+                                <LazyLoadImage
+                                    src="/assets/image/background/blog-detail.png"
+                                    className={styles.otherBlogDetailImage}
+                                />
+                            </div>
+                            <div className={styles.otherBlogDetailDescription}>
+                                <p>How to Teach Your Kid Easily</p>
+                                <p>30 Jun 2021</p>
+                            </div>
+                        </div>
+                        <div className={`button_dark mt-5`} onClick={handleClickAllPosts}>View All Posts</div>
                     </div>
                 </div>
-                <div className={styles.otherBlogDetail}>
-                    <div className={styles.otherBlogDetailImageParent}>
-                        <LazyLoadImage
-                            src="/assets/image/background/blog-detail.png"
-                            className={styles.otherBlogDetailImage}
-                        />
-                    </div>
-                    <div className={styles.otherBlogDetailDescription}>
-                        <p>How to Teach Your Kid Easily</p>
-                        <p>30 Jun 2021</p>
-                    </div>
-                </div>
-                <div className={`button_dark mt-5`}>View All Posts</div>
             </div>
-        </div>
-    </div>
+        </section>
+    </>
 };
 
 export default BlogDetail;
+
+
