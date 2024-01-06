@@ -3,6 +3,7 @@ import styles from "@/components/Home/Promotion/promotion.module.css";
 import {useQuery} from "react-query";
 import { fetchPromotion} from "@/lib/fetch";
 import {LazyLoadImage} from "react-lazy-load-image-component";
+import Image from 'next/image'
 const Promotion = () => {
     const { data:promotionData } = useQuery('Promotion', fetchPromotion);
     return <section>
@@ -16,9 +17,8 @@ const Promotion = () => {
                         width={400}
                         height={460}
                         className={`${styles.banner_image} ${!order && styles.banner_imageFalse}`}
-                        effect="blur"
                         alt="banner"/>
-                    <LazyLoadImage
+                    <Image
                         src={"/assets/image/shape/promotion-shape.png"}
                         width={65}
                         height={65}
@@ -26,7 +26,7 @@ const Promotion = () => {
                         alt="shape"
                         effect="blur"
                     />
-                    <LazyLoadImage
+                    <Image
                         src={"/assets/image/shape/circle-1.png"}
                         width={170}
                         height={170}

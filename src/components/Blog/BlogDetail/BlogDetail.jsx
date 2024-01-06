@@ -20,6 +20,7 @@ const BlogDetail = ({blogDetail}) => {
         router.push('/'+ router.asPath.split('/')[1])
     }
     const handleClickCategoriesPosts = (categoryUrl) => {
+        console.log("category",categoryUrl)
         const url =categoryUrl.toLowerCase();
         const currentPath = router.asPath.split('/');
         const basePath = currentPath[1];
@@ -45,6 +46,7 @@ const BlogDetail = ({blogDetail}) => {
             author={blogDetail[0].author}
             title={blogDetail[0].title}
             category={blogDetail[0].category[0]}
+            handleClickCategoriesPosts={handleClickCategoriesPosts}
         />
         <section className="w-[80%] mx-auto px-[2.4rem] mt-[4rem]">
             <div className={styles.blogSection}>

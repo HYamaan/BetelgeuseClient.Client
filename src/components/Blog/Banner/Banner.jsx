@@ -11,7 +11,7 @@ import {
     RedditShareButton
 } from "react-share";
 
-const Banner = ({date,author,title,category}) => {
+const Banner = ({date,author,title,category,handleClickCategoriesPosts}) => {
     const [openPopUp, setOpenPopUp] = useState(false)
 
     const share = useRouter();
@@ -33,7 +33,7 @@ const Banner = ({date,author,title,category}) => {
                 <h1>{title}</h1>
                 <div className={styles.title_description}>
                     <p>Created by <span>{author}</span></p>
-                    <p>in <span>{category}</span></p>
+                    <p>in <span onClick={()=>{handleClickCategoriesPosts(category)}}>{category}</span></p>
                     <p>{date}</p>
                     <p className={styles.share} onClick={() => {
                         setOpenPopUp(true)
@@ -52,7 +52,7 @@ const Banner = ({date,author,title,category}) => {
                             <p>Share this post with others</p>
                         </div>
                         <div className={styles.url}>
-                            <p className={styles.copy_url}>{links.length > 50 ? links.split(0, 49) + '...' : links}</p>
+                            <p className={styles.copy_url}>{links.length > 44 ? links.slice(0, 44) + '...' : links}</p>
                             <p className={styles.copy_button} onClick={copylink}>Copy</p>
                         </div>
                         <div className={styles.SocialMedia}>
