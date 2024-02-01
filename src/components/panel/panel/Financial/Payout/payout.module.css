@@ -1,0 +1,10 @@
+.payout_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.section {
+    width: 100%;
+    padding: 1rem;
+}

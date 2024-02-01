@@ -10,15 +10,15 @@ import {loginSchema} from "@/schema/loginSchema";
 import {useFormik} from "formik";
 const LoginPage = () => {
     const onSubmit = async (values, actions) => {
-        actions.preventDefault();
-
+        console.log("Burada", values);
     }
     const LoginFormik = useFormik({
         initialValues: {
             email: "", password: "",
         }, onSubmit, validationSchema: loginSchema,
     });
-    const LoginInput = [{
+    const LoginInput = [
+        {
         id: 1,
         name: "email",
         type: "email",

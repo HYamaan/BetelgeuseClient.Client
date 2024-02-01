@@ -68,3 +68,118 @@ export const fetchBlogDetail= async (url) => {
         throw new Error('Error fetching courses');
     }
 };
+export const fetchPanelNavigation = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/userPanelNavigation`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelPurchasesCourse = async (startIndex, endIndex) => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/purchasesCourse`);
+        const allData = response.data;
+
+        const slicedData = startIndex !== undefined && endIndex !== undefined
+            ? allData.slice(startIndex, endIndex)
+            : allData;
+
+        return {
+            data: slicedData,
+            length: allData.length,
+        };
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelFavoritesCourse = async (startIndex, endIndex) => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/favoritesCourse`);
+        const allData = response.data;
+
+        const slicedData = startIndex !== undefined && endIndex !== undefined
+            ? allData.slice(startIndex, endIndex)
+            : allData;
+
+        return {
+            data: slicedData,
+            length: allData.length,
+        };
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelCommentsCourse = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelComments`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelFollowingCourse = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/followingCourse`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelAssignments = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelAssignments`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelMeetingsInstructor = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelMeetingsInstructor`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelAchievements = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelAchievements`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelCompletionCertificates = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/CompletionCertificates`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelStorePurchases = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelStoreMyPurchases`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchPanelFinancialSummary = async (startIndex, endIndex) => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER}/panelFinancialSummary`);
+        const allData = response.data;
+
+        const slicedData = startIndex !== undefined && endIndex !== undefined
+            ? allData.slice(startIndex, endIndex)
+            : allData;
+
+        return {
+            data: slicedData,
+            length: allData.length,
+        };
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};

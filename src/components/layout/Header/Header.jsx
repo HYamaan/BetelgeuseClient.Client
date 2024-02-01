@@ -7,11 +7,11 @@ const MobilMenu = dynamic(()=> import  ("./MobilMenu"),{ssr:true});
 
 const Header = () => {
 const versionNavigation= false;
-    const [closeIcon,setCloseIcon]=useState(true);
+    const [closeIcon, setCloseIcon] = useState(false);
     return <>
-        <div className={classes.nav_list_component}>
-            <MobilMenu versionNavigation={versionNavigation} closeIcon={closeIcon} setCloseIcon={setCloseIcon}/>
-        </div>
+        {/*<div className={classes.nav_list_component}>*/}
+        {/*    <MobilMenu versionNavigation={versionNavigation} closeIcon={closeIcon} setCloseIcon={setCloseIcon}/>*/}
+        {/*</div>*/}
         <nav className={`${classes.nav}`}>
             <MainNav versionNavigation={!versionNavigation} setCloseIcon={setCloseIcon}/>
         </nav>

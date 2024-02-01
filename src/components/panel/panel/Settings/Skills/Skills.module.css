@@ -1,0 +1,31 @@
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item {
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: solid 2px #f1f1f1;
+    background-color: #f1f1f1;
+    color: #818894;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    border: 2px solid var(--color--saphireBlue);
+    transition: all 0.3s ease;
+}
+
+.item.active {
+    border: 2px solid var(--color--saphireBlue);
+    background-color: var(--color--saphireBlue);
+    color: var(--color-white-1);
+    transition: all 0.3s ease;
+}

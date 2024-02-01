@@ -1,0 +1,47 @@
+.certificates_row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr 1.2fr;
+    gap: 1.5rem;
+
+}
+
+.view_button_edit {
+    top: -2rem !important;
+    left: -4.5rem !important;
+}
+
+.certificates_row_head {
+    color: var(--color-grey-3);
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.certificates_row_item {
+    margin: 1.7rem 0;
+    font-size: .85rem;
+    color: var(--color-card);
+    font-weight: 500;
+}
+
+.certificates_row_items {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr 1fr;
+    gap: .5rem;
+}
+
+.certificates_row_items div:not(:first-child) {
+    align-self: center;
+    justify-self: center;
+}
+
+@media (max-width: 992px) {
+    .section {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .certificates_row {
+        grid-template-columns: 1fr;
+        gap: .4rem;
+    }
+}
