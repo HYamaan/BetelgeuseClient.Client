@@ -3,7 +3,6 @@ import styles from "./paginationUi.module.css";
 import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
 const PaginationUI = ({paginationNumber, setPaginationNumber, totalPages}) => {
-    console.log(paginationNumber, totalPages)
     const handleClickPagination = (number) => {
         if (number > 0 && number <= totalPages) {
             setPaginationNumber(number);

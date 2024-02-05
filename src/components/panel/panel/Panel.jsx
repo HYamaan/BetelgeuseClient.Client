@@ -18,11 +18,26 @@ import CoursesSupport from "@/components/panel/panel/Support/CoursesSupport/Cour
 import SettingSections from "@/components/panel/panel/Settings/SettingSections/SettingSections";
 import Notifications from "@/components/panel/panel/Notifications/Notifications";
 
-const Panel = () => {
+const Panel = (props) => {
+    const {openPanelName} = props;
     return <>
-
         <LazyLoadComponent>
-            <Notifications/>
+            {openPanelName === "DashboardPanel" && <DashboardPanel/>}
+            {openPanelName === "Purchases" && <Purchases/>}
+            {openPanelName === "Favorites" && <Favorites/>}
+            {openPanelName === "MyComments" && <MyComments/>}
+            {openPanelName === "FollowingCourses" && <FollowingCourses/>}
+            {openPanelName === "MyAssignments" && <MyAssignments/>}
+            {openPanelName === "Reservations" && <Reservations/>}
+            {openPanelName === "Achievements" && <Achievements/>}
+            {openPanelName === "CompletionCertificates" && <CompletionCertificates/>}
+            {openPanelName === "MyPurchases" && <MyPurchases/>}
+            {openPanelName === "FinancialSummary" && <FinancialSummary/>}
+            {openPanelName === "Payout" && <Payout/>}
+            {openPanelName === "NewSupport" && <NewSupport/>}
+            {openPanelName === "CoursesSupport" && <CoursesSupport/>}
+            {openPanelName === "SettingSections" && <SettingSections/>}
+            {openPanelName === "Notifications" && <Notifications/>}
         </LazyLoadComponent>
     </>
 };

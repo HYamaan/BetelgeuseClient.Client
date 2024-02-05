@@ -23,14 +23,14 @@ const OneFileUpload = (props) => {
         }
     }
 
-    return <div className={panelCss.specific_date}>
+    return <div className={`${panelCss.specific_date} ${panelCss.FilePickerOptionelWidth}`}>
         <p className={panelCss.specific_date_title}>{title}</p>
         <div className={panelCss.calender}>
                     <span className={panelCss.calender_style} onClick={handleClick}>
                    <BiCloudUpload/>
                     </span>
 
-            <div className={`${panelCss.date_picker} ${panelCss.file_picker}`}>
+            <div className={`${panelCss.date_picker} ${panelCss.file_picker} ${panelCss.FilePickerOptionelWidth}`}>
                 <div className={panelCss.file_list}>
                     {file.name}
                 </div>

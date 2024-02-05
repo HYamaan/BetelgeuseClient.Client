@@ -10,7 +10,7 @@ const Images = () => {
     return <section className={styles.section}>
         <h1 className={panelCss.title}>Image</h1>
         <div className={styles.row}>
-            <div className={styles.profile_image}>
+            <div className={`${styles.profile_image} w-1/5`}>
                 <p className={`${panelCss.specific_date_title} self-start mt-4`}>Profile Image</p>
                 <LazyLoadImage src={`assets/image/instructor/demo_instructor.jpg`}
                                alt="demo_instructor.jpg"

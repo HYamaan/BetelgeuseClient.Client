@@ -5,15 +5,24 @@ import {FiMenu} from "react-icons/fi";
 import {IoCloseOutline} from "react-icons/io5";
 
 const PanelNavigator = (props) => {
-    const {menuItems, openPanelId, setOpenPanelId} = props;
+    const {menuItems, openPanelName, setOpenPanelName} = props;
     const [mobilShowPanelNav, setMobilShowPanelNav] = useState(false);
     const [subMenuOpen, setSubMenuOpen] = useState(0);
     const [subMenuActive, setSubMenuActive] = useState(null);
 
-    const handleMenuItemClick = (index) => {
+    const handleMenuItemClick = (menuItem, index) => {
         setSubMenuOpen(index)
         setSubMenuActive(null);
+        if (menuItem?.componentName) {
+            setOpenPanelName(menuItem.componentName)
+        }
     };
+    const handleSubMenuClick = (subMenuItem, index) => {
+        setSubMenuActive(index)
+        if (subMenuItem?.componentName) {
+            setOpenPanelName(subMenuItem.componentName)
+        }
+    }
 
     return <>
         <div className={styles.panel__nav__mobil}>
@@ -56,7 +65,7 @@ const PanelNavigator = (props) => {
                     {menuItems.map((menuItem, index) => {
                         return (
                             <li key={index} className={`${styles.sidenav__item} `}>
-                                <div onClick={() => handleMenuItemClick(index)}
+                                <div onClick={() => handleMenuItemClick(menuItem, index)}
                                      className={`${styles.sidenav__item__title} ${subMenuOpen === index ? styles.active : ""}`}>
                                 <span>
                                     <i className={menuItem.icon}></i>
@@ -68,7 +77,8 @@ const PanelNavigator = (props) => {
                                     {menuItem.submenu && (
                                         <ul className={styles.sidenav__item__submenu}>
                                             {menuItem.submenu.map((subMenuItem, subIndex) => (
-                                                <li key={subIndex} onClick={() => setSubMenuActive(subIndex)}
+                                                <li key={subIndex}
+                                                    onClick={() => handleSubMenuClick(subMenuItem, subIndex)}
                                                     className={`${subIndex === subMenuActive ? styles.active : null}`}
                                                 >
                                                     {subMenuItem.text}

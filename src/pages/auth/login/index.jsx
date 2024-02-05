@@ -8,9 +8,36 @@ import {FaUserAlt} from "react-icons/fa";
 import {BiSolidLockAlt} from "react-icons/bi";
 import {loginSchema} from "@/schema/loginSchema";
 import {useFormik} from "formik";
+import {useDispatch} from "react-redux";
+import {setAuthToken} from "@/redux/features/AuthToken/authTokenSlice";
+
 const LoginPage = () => {
+    const dispatch = useDispatch();
     const onSubmit = async (values, actions) => {
-        console.log("Burada", values);
+        console.log("values", values);
+        const headers = {
+            'Content-Type': 'application/json;charset=utf-8\'',
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json',
+            'Cache-Control': 'no-cache',
+        };
+        dispatch(setAuthToken("deneme"))
+        // try {
+        //     const loginData={
+        //         email:values.email,
+        //         password:values.password
+        //     }
+        //
+        //     const response = await axios.post('your-login-api-endpoint', loginData,headers);
+        //     if (response.status === 200) {
+        //         const token = response.data.token;
+        //         dispatch(setToken(token));
+        //     } else {
+        //         console.error('Giriş başarısız');
+        //     }
+        // }catch {
+        //     console.log("Error");
+        // }
     }
     const LoginFormik = useFormik({
         initialValues: {

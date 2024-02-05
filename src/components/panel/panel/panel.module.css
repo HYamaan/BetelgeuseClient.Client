@@ -48,6 +48,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 0.7rem 1rem;
+    cursor: pointer;
 }
 
 .calender_style svg {
@@ -86,6 +87,11 @@
 
 .file_picker::-webkit-scrollbar {
     display: none;
+}
+
+.FilePickerOptionelWidth {
+    width: 100% !important;
+    max-width: 100% !important;
 }
 
 .file_list {
