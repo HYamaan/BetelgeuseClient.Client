@@ -34,4 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-/public/assets/image/shape/HGS proje literatüre.pdf
+
+# IDE
+/.idea

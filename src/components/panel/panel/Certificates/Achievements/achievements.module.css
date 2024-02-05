@@ -1,0 +1,104 @@
+
+.certificates_statistics_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.filter_certificates_row {
+    display: grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap: 1.7rem;
+}
+
+.certificates_row {
+    display: grid;
+    grid-template-columns:2fr repeat(5, 1fr) .2fr;
+    gap: .4rem;
+    font-size: .9rem;
+}
+
+.certificates_row_head {
+    color: var(--color-grey-3);
+    font-weight: 500;
+}
+
+.certificates_row div:not(:first-child) {
+    align-self: center;
+    justify-self: center;
+}
+
+.certificates_row_item {
+    margin: .5rem 0;
+    font-weight: 500;
+}
+
+.item_quiz_titles {
+    display: flex;
+    justify-items: flex-start;
+    flex-direction: column;
+}
+
+.item_quiz_subtitle {
+    font-size: .73rem;
+    font-weight: 400;
+    color: var(--color-grey-3);
+}
+
+.view_button_edit {
+    top: -2rem !important;
+    left: -4.5rem !important;
+}
+
+@media (max-width: 992px) {
+    .section {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .filter_certificates_row {
+        grid-template-columns: 1fr;
+        gap: .4rem;
+    }
+
+    .certificates_row_head {
+        font-size: .9rem;
+    }
+
+    .achievements_row_item {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows:2fr repeat(5, 1fr) 3fr;
+        grid-column-gap: 2rem;
+        padding: 1.4rem 1rem;
+    }
+
+    .achievements_row_item div {
+        align-self: center;
+        justify-self: flex-start;
+    }
+
+    .item_quiz_titles {
+        font-size: .9rem;
+        line-height: 1.5;
+    }
+
+    .view_button {
+        padding: .5rem 1.2rem;
+        background: var(--color-warning) !important;
+        border-radius: 5px;
+        color: var(--color-white-1) !important;
+        font-size: .8rem;
+    }
+
+    .achievements_button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-column-start: -3;
+        grid-column-end: -1;
+        grid-row-start: 7;
+        grid-row-end: 8;
+    }
+
+}

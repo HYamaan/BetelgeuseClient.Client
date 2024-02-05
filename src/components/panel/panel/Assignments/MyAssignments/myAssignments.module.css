@@ -1,0 +1,193 @@
+
+.statistics_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.statistics_row > div {
+    align-self: center;
+    justify-self: center;
+}
+
+.statistics_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .1rem;
+    width: 100%;
+    color: var(--color-card);
+}
+
+.statistics_content img {
+    width: 64px;
+    height: 64px;
+    aspect-ratio: auto 64/64;
+}
+
+.statistics_content_count {
+    font-size: 1.9rem;
+    font-weight: bold;
+
+}
+
+.statistics_content_title {
+    line-height: 0.5;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-grey-1);
+}
+
+.filter_row {
+    display: grid;
+    grid-template-columns: 3fr 3fr 5fr 2fr 3fr;
+    gap: 1.7rem;
+}
+
+.myAssignment_row {
+    display: grid;
+    grid-template-columns:3fr 1.5fr 2fr 2fr 1.5fr 1.5fr 1.5fr 1.5fr .5fr;
+    align-self: center;
+    justify-self: center;
+    gap: .6rem;
+}
+
+.myAssignment_row p {
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--color-grey-3);
+}
+
+.myAssignment_row p:not(:first-child),
+.myAssignment_item > div:not(:first-child) {
+    align-self: center;
+    justify-self: center;
+}
+
+.myAssignment_item {
+    margin: 1.5rem 0;
+}
+
+.myAssignment_item div {
+    font-size: .85rem;
+    color: var(--color-card);
+}
+
+.item_title_course {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.item_title {
+    font-size: .9rem;
+    line-height: 1.2;
+}
+
+.item_subTitle {
+
+    font-size: .75rem;
+    color: var(--color-grey-3);
+}
+
+.view_button_edit {
+    left: -9.4rem !important;
+    top: -2.5rem !important;
+}
+
+@media (max-width: 992px) {
+    .assignments_Section {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .statistics_row {
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+    }
+
+    .statistics_content {
+        padding: .5rem 0;
+    }
+
+    .statistics_content img {
+        width: 58px;
+        height: 58px;
+        aspect-ratio: auto 58/58;
+    }
+
+    .statistics_content_count {
+        font-size: 1.5rem;
+    }
+
+    .statistics_content_title {
+        font-size: .8rem;
+    }
+
+    .filter_row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 992px) {
+    .myAssignment_mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 12px 23px 0 rgba(62, 73, 84, 0.2);
+    }
+
+    .myAssignment_row {
+        align-self: flex-start;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.58rem;
+        font-size: .8rem;
+        font-weight: 500;
+        color: var(--color-grey-3);
+    }
+
+    .myAssignment_mobile > div:not(:first-child) {
+        gap: .55rem;
+    }
+
+    .myAssignment_mobile > div:not(:first-child) > div {
+        color: var(--color-card);
+        font-size: .7rem;
+    }
+
+    .myAssignment_row p:not(:first-child) {
+        align-self: auto;
+    }
+
+    .myAssignment_row p {
+        font-size: .7rem;
+    }
+
+    .item_title {
+        font-size: .7rem;
+        line-height: 1;
+    }
+
+    .item_subTitle {
+        font-size: .55rem;
+        line-height: 1;
+    }
+
+    .item_title_course {
+        align-items: flex-start;
+    }
+
+    .view_button {
+        margin-top: .4rem;
+        padding: 0.3rem 1.4rem;
+        background: var(--color-warning) !important;
+        border-radius: 5px;
+        color: var(--color-white-1) !important;
+        margin-right: 0.5rem;
+    }
+}

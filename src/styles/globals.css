@@ -21,6 +21,7 @@
   --color-grey-3: #676c7d;
   --color-grey-4:#505763;
   --color-grey-5:#f1f1f1;
+  --color-grey-6: #ececec;
   --color-soft-grey-1:#6e798a;
 
   --color-white-1:#ffff;
@@ -33,7 +34,9 @@
   --color--saphireBlueDark:#6034FE;
   --color--lavender:#F0EDFD;
   --color-card:#1E293B;
-  --danger:#d7191c;
+  --color-danger: #d7191c;
+  --color-success: #43d477;
+  --color-warning: #f59e0b;
 
   --color-1:rgba(255, 255, 255, 0.644)
 
@@ -171,11 +174,11 @@ body {
 }
 
 .button_close{
-  background-color: var(--danger);
+  background-color: var(--color-danger);
   color: var(--color-white-2);
   padding:.6rem 1.6rem;
   border-radius: 10px;
-  border:1px solid var(--danger);
+  border: 1px solid var(--color-danger);
   font-size: .9rem;
   font-weight: 500;
   box-shadow: 0 5px 16px 1px rgba(215, 25, 28, 0.7);

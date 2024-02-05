@@ -3,7 +3,9 @@
     position: relative;
     font-family: Inter,sans-serif;
     margin-top: 5rem;
-}.footer p{
+}
+
+.footer p {
      color: var(--color-1);
      padding: 20px 0;
      font-size: 14px;
@@ -143,7 +145,9 @@
     transition: all 0.4s ease-in-out;
     color: var(--color--saphireBlue);
 }
-.socialMediaSection{
+
+.socialMediaSection,
+.socialMediaSection_mobil {
     align-self: flex-start;
     display: flex;
     justify-content: space-between;
@@ -151,13 +155,17 @@
     font-size:1.2rem;
     gap: 1rem;
 }
-.socialMediaSection div{
+
+.socialMediaSection div,
+.socialMediaSection_mobil div {
     border: 1px solid var(--color-white-2);
     border-radius: 50%;
     padding: .5rem;
     cursor: pointer;
 }
-.socialMediaSection div:hover{
+
+.socialMediaSection div:hover,
+.socialMediaSection_mobil div:hover {
     transition: all .4s ease-in-out;
     background-color: var(--color-white-2);
     color: var(--color-footer-background);
@@ -171,6 +179,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 2rem;
     padding-top: .2rem;
     border-top: 1px solid  var(--color-1);
@@ -188,3 +197,74 @@
     color: var(--color--saphireBlue);
 }
 
+.socialMediaSection_mobil {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 576px) {
+    .footer p {
+        letter-spacing: .1px;
+        padding-right: .5rem;
+        text-align: start;
+    }
+
+    .footerSection {
+        width: 100%;
+        padding: 8rem 1rem 0.5rem 1rem;
+    }
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .contents {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .banner {
+        justify-content: center;
+    }
+
+    .logoSection {
+        width: 100%;
+        gap: .2rem;
+    }
+
+    .socialMediaSection {
+        display: none;
+        visibility: hidden;
+    }
+
+    .socialMediaSection_mobil {
+        margin-top: 1rem;
+        display: flex;
+        visibility: visible;
+    }
+
+    .footerSubscribe {
+        width: calc(100% - 2rem);
+        flex-direction: column;
+        padding: 25px 5px;
+        gap: .7rem;
+    }
+
+    .footerSubscribe_title {
+        padding: 0 10px;
+    }
+
+    .footerSubscribe_title h2 {
+        font-size: 1.7rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    .join_us {
+        padding: .2rem;
+        width: 100%;
+    }
+
+}

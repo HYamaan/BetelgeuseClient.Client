@@ -83,7 +83,21 @@ const Footer = () => {
                                 </div>
                             </div>
                         ))}
-
+                    </div>
+                    <div className={styles.socialMediaSection_mobil}>
+                        <span className={styles.contact_with_us}>Follow us</span>
+                        <div>
+                            <FaFacebookF/>
+                        </div>
+                        <div>
+                            <FaInstagram/>
+                        </div>
+                        <div>
+                            <FaTwitter/>
+                        </div>
+                        <div>
+                            <FaLinkedinIn/>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.footer_bottom}>

@@ -1,0 +1,31 @@
+.PanelSection {
+    width: 100%;
+    display: flex;
+    background-color: var(--panel-bg);
+}
+
+.PanelSection__sideBar {
+    width: 254px;
+    box-shadow: 18px 0 35px 0 rgba(0, 0, 0, 0.02);
+    background-color: var(--color-white-1);
+    padding: 50px 25px 25px 25px;
+
+}
+
+.PanelSection__sidePanel {
+    padding: 30px 15px;
+    width: calc(100% - 254px);
+
+}
+
+@media (max-width: 992px) {
+    .PanelSection {
+        flex-wrap: wrap;
+    }
+
+    .PanelSection__sideBar,
+    .PanelSection__sidePanel {
+        width: 100%;
+        padding: 0;
+    }
+}

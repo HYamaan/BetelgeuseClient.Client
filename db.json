@@ -1073,7 +1073,20 @@
     "author": "FoodieAdventurer",
     "comments": 6,
       "url": "gourmet-delights-culinary-adventures"
-  }
+    },
+    {
+      "id": "6e0c71f8-09a7-4f22-84fb-6e1b8f6abefc",
+      "imageSrc": "/assets/image/background/blogs/blog6.jpg",
+      "date": "22 Oct 2025",
+      "category": [
+        "Science"
+      ],
+      "title": "The Wonders of the Cosmos",
+      "url": "the-wonders-of-the-cosmos",
+      "description": "Unravel the mysteries of the cosmos and explore the fascinating world of astronomy and space exploration.",
+      "author": "SpaceEnthusiast",
+      "comments": 10
+    }
   ],
   "blogsDetail": [
     {
@@ -1446,6 +1459,1337 @@
           "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
         }
       ]
+    },
+    {
+      "id": "6e0c71f8-09a7-4f22-84fb-6e1b8f6abefc",
+      "imageSrc": "/assets/image/background/blogs/blog6.jpg",
+      "date": "22 Oct 2025",
+      "category": [
+        "Science"
+      ],
+      "title": "The Wonders of the Cosmos",
+      "url": "the-wonders-of-the-cosmos",
+      "description": "Unravel the mysteries of the cosmos and explore the fascinating world of astronomy and space exploration.",
+      "author": "SpaceEnthusiast",
+      "blogPost": [
+        {
+          "src": "/assets/image/background/blogs/blog6.jpg"
+        },
+        {
+          "p": "Have you ever found yourself desperately searching for your notes or assignments when you needed them? Chances are, you ended up wasting precious time in the process. Being organized and efficient in your academic pursuits is a key aspect of success."
+        },
+        {
+          "p": "A robust academic record not only opens doors for your future but also instills values such as hard work, discipline, and determination. In the journey to becoming a straight-A student, you'll find that the process itself teaches valuable life skills."
+        },
+        {
+          "h2": "Harnessing the Power of Technology in Education"
+        },
+        {
+          "p": "Modern education is heavily influenced by technology. To enhance your learning experience, embrace digital tools and resources. Explore educational apps, online platforms, and interactive multimedia to supplement your studies."
+        },
+        {
+          "p": "Stay organized with note-taking apps, utilize online collaboration tools, and leverage e-books and online resources. Technology can streamline your workflow and provide access to a wealth of information at your fingertips."
+        },
+        {
+          "p": "However, it's crucial to maintain a balance. Limit screen time, take breaks, and prioritize face-to-face interactions for a well-rounded and effective learning approach."
+        },
+        {
+          "h2": "Rule #8: Cultivate a Growth Mindset"
+        },
+        {
+          "p": "Adopting a growth mindset is fundamental to academic success. Rather than viewing challenges as obstacles, see them as opportunities to learn and grow. Embrace the belief that intelligence and abilities can be developed through dedication and effort."
+        },
+        {
+          "p": "Celebrate the process of learning, not just the final grades. Embrace setbacks as part of the journey and use them to fuel your determination. A growth mindset fosters resilience, curiosity, and a lifelong love for learning."
+        }
+      ],
+      "comments": [
+        {
+          "userName": "John Doe",
+          "userDegree": "User",
+          "commentDate": {
+            "date": "4 Mar 2022",
+            "time": "12:07"
+          },
+          "commentText": "Thank you for this excellent article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
+          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
+        }
+      ]
+    }
+  ],
+  "userPanelNavigation": [
+    {
+      "id": "a5f065b2-2061",
+      "icon": "fa-solid fa-gauge",
+      "text": "Dashboard",
+      "componentName": "DashboardPanel"
+    },
+    {
+      "text": "Courses",
+      "icon": "fa-solid fa-book",
+      "submenu": [
+        {
+          "id": "d1a6e8f0-7c6e",
+          "text": "My purchases",
+          "componentName": "Purchases"
+        },
+        {
+          "id": "c8e2a7fb-912c",
+          "text": "My comments",
+          "componentName": "MyComments"
+        },
+        {
+          "id": "d1a6e8f0-716e",
+          "text": "Favorites",
+          "componentName": "Favorites"
+        }
+      ]
+    },
+    {
+      "id": "e9d47fb1-3a89",
+      "icon": "fa-solid fa-calendar-alt",
+      "text": "Upcoming Courses",
+      "submenu": [
+        {
+          "id": "f0a1b2c3-4d5e",
+          "text": "Following courses",
+          "componentName": "FollowingCourses"
+        }
+      ]
+    },
+    {
+      "text": "Assignments",
+      "icon": "fa-solid fa-tasks",
+      "submenu": [
+        {
+          "id": "g7c3e2b4-ae52",
+          "text": "My Assignments",
+          "componentName": "MyAssignments"
+        }
+      ]
+    },
+    {
+      "text": "Meeting",
+      "icon": "fa-solid fa-calendar-check",
+      "submenu": [
+        {
+          "id": "i1a2b3c4-5e6f",
+          "text": "My reservation",
+          "componentName": "Reservations"
+        }
+      ]
+    },
+    {
+      "text": "Certificates",
+      "icon": "fa-solid fa-certificate",
+      "submenu": [
+        {
+          "id": "n1o2p3q4-r5s6t7",
+          "text": "Achievements",
+          "componentName": "Achievements"
+        },
+        {
+          "id": "u8v9w0x1-y2z3a4",
+          "text": "Certificate Validation"
+        },
+        {
+          "id": "b5c6d7e8-f9g0h1",
+          "text": "Completion Certificates",
+          "componentName": "CompletionCertificates"
+        }
+      ]
+    },
+    {
+      "text": "Store",
+      "icon": "fa-solid fa-shopping-cart",
+      "submenu": [
+        {
+          "id": "q1r2s3t4-u5v6w7x8",
+          "text": "My purchases",
+          "componentName": "MyPurchases"
+        }
+      ]
+    },
+    {
+      "text": "Financial",
+      "icon": "fa-solid fa-dollar-sign",
+      "submenu": [
+        {
+          "id": "o5p6q7r8-s9t0u1v2",
+          "text": "Financial summary",
+          "componentName": "FinancialSummary"
+        },
+        {
+          "id": "w3x4y5z6-a1b2c3d4",
+          "text": "Payout",
+          "componentName": "Payout"
+        }
+      ]
+    },
+    {
+      "text": "Support",
+      "icon": "fa-solid fa-life-ring",
+      "submenu": [
+        {
+          "id": "k1l2m3n4-o5p6q7r8",
+          "text": "New",
+          "componentName": "NewSupport"
+        },
+        {
+          "id": "s9t0u1v2w3-x4y5z6a1",
+          "text": "Courses Support",
+          "componentName": "CoursesSupport"
+        }
+      ]
+    },
+    {
+      "text": "Forums",
+      "icon": "fa-solid fa-comments",
+      "submenu": [
+        {
+          "id": "s9t0u1v2w3-x4y5z6a1",
+          "text": "New Topic"
+        },
+        {
+          "id": "b2c3d4e5-f6g7h8i9",
+          "text": "My Topic"
+        },
+        {
+          "id": "j0k1l2m3n4-o5p6q7r8",
+          "text": "My Posts"
+        },
+        {
+          "id": "s9t0u1v2w3-x4y5z6a1",
+          "text": "Bookmarks"
+        }
+      ]
+    },
+    {
+      "id": "j0k1l2m3n4-o5p6q7r8",
+      "icon": "fa-solid fa-bell",
+      "text": "Notifications",
+      "componentName": "Notifications"
+    },
+    {
+      "id": "s9t0u1v2w3-x4y5z6a1",
+      "icon": "fa-solid fa-cogs",
+      "text": "Settings",
+      "componentName": "SettingSections"
+    },
+    {
+      "id": "b2c3d4e5-f6g7h8i9",
+      "icon": "fa-solid fa-sign-out-alt",
+      "text": "Log out"
+    }
+  ],
+  "purchasesCourse": [
+    {
+      "title": "The Future of Energy",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 2.5,
+      "price": {
+        "currency": "$",
+        "amount": 10
+      },
+      "details": {
+        "itemID": "2009",
+        "category": "Communications",
+        "duration": "2:30 Hrs",
+        "startDate": "1 Mar 2022",
+        "instructor": "Robert Ransdell",
+        "purchaseDate": "1 Mar 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-1.jpg"
+      }
+    },
+    {
+      "title": "Another Course",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.2,
+      "price": {
+        "currency": "$",
+        "amount": 15
+      },
+      "details": {
+        "itemID": "2010",
+        "category": "Technology",
+        "duration": "3:00 Hrs",
+        "startDate": "15 Apr 2022",
+        "instructor": "Jennifer Smith",
+        "purchaseDate": "5 Apr 2022"
+      },
+      "status": "downloadable",
+      "media": {
+        "image": "/assets/image/background/panel/bg-2.jpg"
+      }
+    },
+    {
+      "title": "Advanced Programming",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.8,
+      "price": {
+        "currency": "$",
+        "amount": 20
+      },
+      "details": {
+        "itemID": "2011",
+        "category": "Programming",
+        "duration": "4:30 Hrs",
+        "startDate": "1 May 2022",
+        "instructor": "Michael Johnson",
+        "purchaseDate": "20 Apr 2022"
+      },
+      "status": "finished",
+      "media": {
+        "image": "/assets/image/background/panel/bg-3.jpg"
+      }
+    },
+    {
+      "title": "Web Development Basics",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 3.5,
+      "price": {
+        "currency": "$",
+        "amount": 12
+      },
+      "details": {
+        "itemID": "2012",
+        "category": "Web Development",
+        "duration": "2:00 Hrs",
+        "startDate": "10 Jun 2022",
+        "instructor": "Emily Brown",
+        "purchaseDate": "1 Jun 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-4.jpg"
+      }
+    },
+    {
+      "title": "Data Science Essentials",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.0,
+      "price": {
+        "currency": "$",
+        "amount": 18
+      },
+      "details": {
+        "itemID": "2013",
+        "category": "Data Science",
+        "duration": "3:30 Hrs",
+        "startDate": "5 Jul 2022",
+        "instructor": "Christopher White",
+        "purchaseDate": "20 Jun 2022"
+      },
+      "status": "downloadable",
+      "media": {
+        "image": "/assets/image/background/panel/bg-5.jpg"
+      }
+    },
+    {
+      "title": "Machine Learning Fundamentals",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.6,
+      "price": {
+        "currency": "$",
+        "amount": 22
+      },
+      "details": {
+        "itemID": "2014",
+        "category": "Machine Learning",
+        "duration": "5:00 Hrs",
+        "startDate": "10 Aug 2022",
+        "instructor": "Sophia Martinez",
+        "purchaseDate": "1 Aug 2022"
+      },
+      "status": "finished",
+      "media": {
+        "image": "/assets/image/background/panel/bg-6.jpg"
+      }
+    },
+    {
+      "title": "Digital Marketing Strategies",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 3.9,
+      "price": {
+        "currency": "$",
+        "amount": 16
+      },
+      "details": {
+        "itemID": "2015",
+        "category": "Marketing",
+        "duration": "3:30 Hrs",
+        "startDate": "5 Sep 2022",
+        "instructor": "Daniel Walker",
+        "purchaseDate": "20 Aug 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-7.jpg"
+      }
+    },
+    {
+      "title": "Financial Planning Basics",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 3.2,
+      "price": {
+        "currency": "$",
+        "amount": 14
+      },
+      "details": {
+        "itemID": "2016",
+        "category": "Finance",
+        "duration": "2:15 Hrs",
+        "startDate": "10 Oct 2022",
+        "instructor": "Olivia Turner",
+        "purchaseDate": "1 Oct 2022"
+      },
+      "status": "downloadable",
+      "media": {
+        "image": "/assets/image/background/panel/bg-8.jpg"
+      }
+    },
+    {
+      "title": "Photography Masterclass",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.5,
+      "price": {
+        "currency": "$",
+        "amount": 25
+      },
+      "details": {
+        "itemID": "2017",
+        "category": "Photography",
+        "duration": "4:00 Hrs",
+        "startDate": "5 Nov 2022",
+        "instructor": "Isabella Johnson",
+        "purchaseDate": "20 Oct 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-9.jpg"
+      }
+    },
+    {
+      "title": "Entrepreneurship Essentials",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 3.8,
+      "price": {
+        "currency": "$",
+        "amount": 18
+      },
+      "details": {
+        "itemID": "2018",
+        "category": "Entrepreneurship",
+        "duration": "3:30 Hrs",
+        "startDate": "10 Dec 2022",
+        "instructor": "David Smith",
+        "purchaseDate": "1 Dec 2022"
+      },
+      "status": "finished",
+      "media": {
+        "image": "/assets/image/background/panel/bg-10.jpg"
+      }
+    },
+    {
+      "title": "Graphic Design Fundamentals",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.2,
+      "price": {
+        "currency": "$",
+        "amount": 20
+      },
+      "details": {
+        "itemID": "2019",
+        "category": "Graphic Design",
+        "duration": "4:30 Hrs",
+        "startDate": "5 Jan 2023",
+        "instructor": "Emma White",
+        "purchaseDate": "20 Dec 2022"
+      },
+      "status": "downloadable",
+      "media": {
+        "image": "/assets/image/background/panel/bg-11.jpg"
+      }
+    },
+    {
+      "title": "Health and Wellness Journey",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 3.5,
+      "price": {
+        "currency": "$",
+        "amount": 15
+      },
+      "details": {
+        "itemID": "2020",
+        "category": "Wellness",
+        "duration": "2:00 Hrs",
+        "startDate": "10 Feb 2023",
+        "instructor": "Sophie Davis",
+        "purchaseDate": "1 Feb 2023"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-12.jpg"
+      }
+    },
+    {
+      "title": "Artificial Intelligence Basics",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 4.7,
+      "price": {
+        "currency": "$",
+        "amount": 24
+      },
+      "details": {
+        "itemID": "2021",
+        "category": "Artificial Intelligence",
+        "duration": "5:30 Hrs",
+        "startDate": "5 Mar 2023",
+        "instructor": "James Miller",
+        "purchaseDate": "20 Feb 2023"
+      },
+      "status": "downloadable",
+      "media": {
+        "image": "/assets/image/background/panel/bg-13.jpg"
+      }
+    }
+  ],
+  "favoritesCourse": [
+    {
+      "title": "The Future of Energy",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 2.5,
+      "price": {
+        "currency": "$",
+        "amount": 10
+      },
+      "details": {
+        "itemID": "2009",
+        "category": "Communications",
+        "duration": "2:30 Hrs",
+        "startDate": "1 Mar 2022",
+        "instructor": "Robert Ransdell",
+        "purchaseDate": "1 Mar 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-1.jpg"
+      }
+    }
+  ],
+  "followingCourse": [
+    {
+      "title": "The Future of Energy",
+      "info": [
+        {
+          "type": "Course",
+          "degree": "badge"
+        },
+        {
+          "type": "Gift",
+          "degree": "success"
+        }
+      ],
+      "rating": 2.5,
+      "price": {
+        "currency": "$",
+        "amount": 10
+      },
+      "details": {
+        "itemID": "2009",
+        "category": "Communications",
+        "duration": "2:30 Hrs",
+        "startDate": "1 Mar 2022",
+        "instructor": "Robert Ransdell",
+        "purchaseDate": "1 Mar 2022"
+      },
+      "status": "course",
+      "media": {
+        "image": "/assets/image/background/panel/bg-1.jpg"
+      }
+    }
+  ],
+  "panelComments": [
+    {
+      "id": "ca4d832a-1f6a-4b2e-b2c6-06de9915a73a",
+      "title": "Become a Product Manager",
+      "courseUrl": "become-a-product-manager",
+      "status": "Published",
+      "date": {
+        "day": "14 Jul 2021",
+        "time": "01:21"
+      }
+    },
+    {
+      "id": "e1f496c9-88f9-4a82-9a8a-c1d3c2b879af",
+      "title": "Web Development Basics",
+      "courseUrl": "web-development-basics",
+      "status": "Draft",
+      "date": {
+        "day": "15 Jul 2021",
+        "time": "10:45"
+      }
+    },
+    {
+      "id": "f2b1e3d8-70ce-4b79-98e7-9f3fcb6e67c1",
+      "title": "Introduction to Data Science",
+      "courseUrl": "data-science-intro",
+      "status": "Published",
+      "date": {
+        "day": "16 Jul 2021",
+        "time": "03:30"
+      }
+    }
+  ],
+  "panelAssignments": [
+    {
+      "guid": "c119e4d3-7079-4332-b17e-99ba0403b2c7",
+      "task": {
+        "title": "Mid-term Homework",
+        "subtitle": "New Learning Page"
+      },
+      "deadline": "6 Nov 2022",
+      "firstSubmission": "-",
+      "lastSubmission": "-",
+      "attempts": "0/1",
+      "grade": "-",
+      "passGrade": "75",
+      "status": {
+        "color": "danger",
+        "text": "Not submitted"
+      }
+    },
+    {
+      "guid": "d83bb1cc-2cdd-4374-b223-d53eb5b51e08",
+      "task": {
+        "title": "Students Assignment",
+        "subtitle": "New Update Features"
+      },
+      "deadline": "18 Dec 2022",
+      "firstSubmission": "22 Jun 2022 | 02:08",
+      "lastSubmission": "22 Jun 2022 | 02:12",
+      "attempts": "2/5",
+      "grade": "80",
+      "passGrade": "70",
+      "status": {
+        "color": "success",
+        "text": "Passed"
+      }
+    }
+  ],
+  "panelMeetingsInstructor": [
+    {
+      "guid": "28b7f8f1-2b3a-47cd-9e67-f754c3319f2d",
+      "instructor": {
+        "guid": "0f7b3d49-261c-4689-9b1c-e9ae9322fb00",
+        "imageSrc": "/assets/image/instructor/instructor-1.jpg",
+        "alt": "circle",
+        "title": "Robert Ransdell",
+        "email": "instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "In-person",
+        "day": "Tue",
+        "date": "15 Mar 2022",
+        "startTime": "0:30",
+        "endTime": "11:30",
+        "amount": "825",
+        "currency": "$",
+        "studentsCount": 5,
+        "status": {
+          "color": "pendingColor",
+          "text": "Pending"
+        }
+      }
+    },
+    {
+      "guid": "another-guid-here",
+      "instructor": {
+        "guid": "another-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-2.jpg",
+        "alt": "circle",
+        "title": "Another Instructor",
+        "email": "another_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Virtual",
+        "day": "Mon",
+        "date": "22 Apr 2022",
+        "startTime": "13:00",
+        "endTime": "15:30",
+        "amount": "650",
+        "currency": "$",
+        "studentsCount": 8,
+        "status": {
+          "color": "approvedColor",
+          "text": "Approved"
+        }
+      }
+    },
+    {
+      "guid": "yet-another-guid",
+      "instructor": {
+        "guid": "yet-another-guid",
+        "imageSrc": "/assets/image/instructor/instructor-3.jpg",
+        "alt": "circle",
+        "title": "Yet Another Instructor",
+        "email": "yet_another_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Online",
+        "day": "Fri",
+        "date": "08 Jun 2022",
+        "startTime": "18:00",
+        "endTime": "19:30",
+        "amount": "700",
+        "currency": "$",
+        "studentsCount": 6,
+        "status": {
+          "color": "completedColor",
+          "text": "Completed"
+        }
+      }
+    },
+    {
+      "guid": "fourth-guid-here",
+      "instructor": {
+        "guid": "fourth-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-4.jpg",
+        "alt": "circle",
+        "title": "Fourth Instructor",
+        "email": "fourth_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Hybrid",
+        "day": "Wed",
+        "date": "12 Sep 2022",
+        "startTime": "10:45",
+        "endTime": "12:15",
+        "amount": "900",
+        "currency": "$",
+        "studentsCount": 10,
+        "status": {
+          "color": "pendingColor",
+          "text": "Pending"
+        }
+      }
+    },
+    {
+      "guid": "fifth-guid-here",
+      "instructor": {
+        "guid": "fifth-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-5.jpg",
+        "alt": "circle",
+        "title": "Fifth Instructor",
+        "email": "fifth_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "In-person",
+        "day": "Thu",
+        "date": "05 May 2022",
+        "startTime": "14:30",
+        "endTime": "16:00",
+        "amount": "750",
+        "currency": "$",
+        "studentsCount": 7,
+        "status": {
+          "color": "approvedColor",
+          "text": "Approved"
+        }
+      }
+    },
+    {
+      "guid": "sixth-guid-here",
+      "instructor": {
+        "guid": "sixth-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-6.jpg",
+        "alt": "circle",
+        "title": "Sixth Instructor",
+        "email": "sixth_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Online",
+        "day": "Sat",
+        "date": "20 Nov 2022",
+        "startTime": "16:15",
+        "endTime": "17:45",
+        "amount": "800",
+        "currency": "$",
+        "studentsCount": 9,
+        "status": {
+          "color": "completedColor",
+          "text": "Completed"
+        }
+      }
+    },
+    {
+      "guid": "seventh-guid-here",
+      "instructor": {
+        "guid": "seventh-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-7.jpg",
+        "alt": "circle",
+        "title": "Seventh Instructor",
+        "email": "seventh_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Hybrid",
+        "day": "Tue",
+        "date": "18 Apr 2023",
+        "startTime": "08:00",
+        "endTime": "09:30",
+        "amount": "950",
+        "currency": "$",
+        "studentsCount": 12,
+        "status": {
+          "color": "pendingColor",
+          "text": "Pending"
+        }
+      }
+    },
+    {
+      "guid": "eighth-guid-here",
+      "instructor": {
+        "guid": "eighth-guid-here",
+        "imageSrc": "/assets/image/instructor/instructor-8.jpg",
+        "alt": "circle",
+        "title": "Eighth Instructor",
+        "email": "eighth_instructor@demo.com"
+      },
+      "meetingInfo": {
+        "type": "Virtual",
+        "day": "Fri",
+        "date": "14 Jul 2023",
+        "startTime": "20:45",
+        "endTime": "22:15",
+        "amount": "875",
+        "currency": "$",
+        "studentsCount": 11,
+        "status": {
+          "color": "approvedColor",
+          "text": "Approved"
+        }
+      }
+    }
+  ],
+  "panelAchievements": [
+    {
+      "guid": "a62ef481-3c45-4d8f-9f74-951b5a91c0d1",
+      "certificate": {
+        "title": "Elementary Quiz",
+        "subTitle": "Become a Product Manager"
+      },
+      "certificateID": "3",
+      "minimumGrade": "70",
+      "averageGrade": "100",
+      "myGrade": "80",
+      "date": "13 Jul 2021"
+    },
+    {
+      "guid": "b7cfbd1e-92a3-4f4f-818c-5e3c6f0d0e4b",
+      "certificate": {
+        "title": "Advanced Coding",
+        "subTitle": "Mastering Algorithms"
+      },
+      "certificateID": "7",
+      "minimumGrade": "90",
+      "averageGrade": "95",
+      "myGrade": "92",
+      "date": "24 Sep 2021"
+    },
+    {
+      "guid": "c8ab22c2-0581-4e2f-a5ec-74e779e8fda3",
+      "certificate": {
+        "title": "Data Science Fundamentals",
+        "subTitle": "Analyzing Big Data"
+      },
+      "certificateID": "11",
+      "minimumGrade": "80",
+      "averageGrade": "92",
+      "myGrade": "88",
+      "date": "5 Nov 2021"
+    },
+    {
+      "guid": "da821cdc-6d3b-4671-aaab-803f03da0de0",
+      "certificate": {
+        "title": "Graphic Design Basics",
+        "subTitle": "Creating Visually Stunning Designs"
+      },
+      "certificateID": "14",
+      "minimumGrade": "75",
+      "averageGrade": "88",
+      "myGrade": "78",
+      "date": "18 Dec 2021"
+    },
+    {
+      "guid": "e95b1f20-0c5c-4f06-9814-6cbf8101f472",
+      "certificate": {
+        "title": "Business Strategy",
+        "subTitle": "Navigating the Corporate World"
+      },
+      "certificateID": "19",
+      "minimumGrade": "85",
+      "averageGrade": "96",
+      "myGrade": "90",
+      "date": "7 Feb 2022"
+    }
+  ],
+  "CompletionCertificates": [
+    {
+      "guid": "f8cb8e1a-2714-4b92-94af-2d1872f24c18",
+      "course": "Travel Management Course",
+      "certificateID": "6",
+      "date": "1 Jul 2022"
+    },
+    {
+      "guid": "652b6e07-bae0-4c45-9e58-72ebd4f726a4",
+      "course": "Digital Marketing Fundamentals",
+      "certificateID": "12",
+      "date": "15 Aug 2022"
+    },
+    {
+      "guid": "89c8e6bb-3bf7-4120-844a-2f12097d6e68",
+      "course": "Web Development Bootcamp",
+      "certificateID": "8",
+      "date": "7 Sep 2022"
+    },
+    {
+      "guid": "1ec3e77e-df9c-4aa3-896b-b495c8cf6a29",
+      "course": "Financial Planning Workshop",
+      "certificateID": "14",
+      "date": "3 Oct 2022"
+    },
+    {
+      "guid": "b41d1799-7fb8-4821-8140-6bea495490bf",
+      "course": "Business Communication Skills",
+      "certificateID": "9",
+      "date": "22 Oct 2022"
+    },
+    {
+      "guid": "c598b3c9-9cf1-438b-8726-22d826a66b1b",
+      "course": "Artificial Intelligence Essentials",
+      "certificateID": "18",
+      "date": "11 Nov 2022"
+    },
+    {
+      "guid": "7e4ba4d3-8f2e-4c9f-9e05-2f28127192f2",
+      "course": "Health and Wellness Seminar",
+      "certificateID": "23",
+      "date": "5 Dec 2022"
+    },
+    {
+      "guid": "2b7cf018-8e3a-4b63-9a89-11ee92c13ba9",
+      "course": "Project Management Professional",
+      "certificateID": "17",
+      "date": "19 Jan 2023"
+    },
+    {
+      "guid": "efc3b4d7-0a4f-4e77-9d14-aa62d7e49b77",
+      "course": "Cybersecurity Fundamentals",
+      "certificateID": "13",
+      "date": "8 Feb 2023"
+    },
+    {
+      "guid": "be1e69c3-3c07-4a2d-8ad2-8d7ee7407c1b",
+      "course": "Leadership and Management Training",
+      "certificateID": "21",
+      "date": "2 Mar 2023"
+    }
+  ],
+  "panelStoreMyPurchases": [
+    {
+      "guid": "28b7f8f1-2b3a-47cd-9e67-f754c3319f2d",
+      "instructor": {
+        "guid": "0f7b3d49-261c-4689-9b1c-e9ae9322fb00",
+        "imageSrc": "/assets/image/instructor/instructor-1.jpg",
+        "title": "Robert Ransdell",
+        "email": "instructor@demo.com"
+      },
+      "orderId": {
+        "Id": 5,
+        "productCount": 1
+      },
+      "price": "20",
+      "currency": "$",
+      "discount": "4",
+      "tax": "1",
+      "deliveryFee": "0.00",
+      "totalAmount": "17",
+      "type": "virtual",
+      "timestamp": {
+        "date": "27 Jun 2022",
+        "time": "05:36"
+      },
+      "status": {
+        "color": "success",
+        "text": "completed"
+      }
+    },
+    {
+      "guid": "6dab9a3f-86eb-47a2-9d86-ecf833a911e1",
+      "instructor": {
+        "guid": "9a9f867b-8be9-42b4-8d2c-86d5a8e8e1c3",
+        "imageSrc": "/assets/image/instructor/instructor-2.jpg",
+        "title": "Emily Johnson",
+        "email": "emily@demo.com"
+      },
+      "orderId": {
+        "Id": 8,
+        "productCount": 2
+      },
+      "price": "35",
+      "currency": "$",
+      "discount": "5",
+      "tax": "2",
+      "deliveryFee": "0.00",
+      "totalAmount": "32",
+      "type": "physical",
+      "timestamp": {
+        "date": "15 Aug 2022",
+        "time": "12:45"
+      },
+      "status": {
+        "color": "warning",
+        "text": "Shipped"
+      }
+    },
+    {
+      "guid": "45c57d92-913d-4ed3-8b72-320ce5904a2b",
+      "instructor": {
+        "guid": "f8d7e0a4-3201-4e0f-bb15-21e7ff775050",
+        "imageSrc": "/assets/image/instructor/instructor-3.jpg",
+        "title": "Jessica Anderson",
+        "email": "jessica@demo.com"
+      },
+      "orderId": {
+        "Id": 12,
+        "productCount": 1
+      },
+      "price": "25",
+      "currency": "$",
+      "discount": "3",
+      "tax": "1",
+      "deliveryFee": "0.00",
+      "totalAmount": "23",
+      "type": "virtual",
+      "timestamp": {
+        "date": "5 Sep 2022",
+        "time": "08:20"
+      },
+      "status": {
+        "color": "warning",
+        "text": "Waiting for Delivery"
+      }
+    }
+  ],
+  "panelFinancialSummary": [
+    {
+      "type": "Sherlock Holmes e-book",
+      "detail": "#4",
+      "description": "Paid from credit",
+      "amount": "5.25",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "24 Jun 2022"
+    },
+    {
+      "type": "Manual document",
+      "detail": "--",
+      "description": "Gift Balance",
+      "amount": "300",
+      "incoming": true,
+      "creator": "Manual",
+      "date": "25 Jun 2022"
+    },
+    {
+      "type": "Installment",
+      "detail": "Installment and Secure Host",
+      "description": "Paid from credit",
+      "amount": "33",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "3 Jun 2023"
+    },
+    {
+      "type": "Effective Time Management",
+      "detail": "#2000",
+      "description": "Affiliate income",
+      "amount": "1.50",
+      "incoming": true,
+      "creator": "Automatic",
+      "date": "17 Mar 2023"
+    },
+    {
+      "type": "Another Transaction Type",
+      "detail": "#123",
+      "description": "Another Description",
+      "amount": "10.75",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "1 Jan 2023"
+    },
+    {
+      "type": "Yet Another Transaction",
+      "detail": "#456",
+      "description": "Yet Another Description",
+      "amount": "7.90",
+      "incoming": true,
+      "creator": "Automatic",
+      "date": "5 Apr 2023"
+    },
+    {
+      "type": "Online Course",
+      "detail": "#789",
+      "description": "Paid from credit",
+      "amount": "15",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "8 Sep 2022"
+    },
+    {
+      "type": "Gift Card Redemption",
+      "detail": "--",
+      "description": "Gift Card",
+      "amount": "50",
+      "incoming": true,
+      "creator": "Manual",
+      "date": "12 Dec 2022"
+    },
+    {
+      "type": "Subscription Renewal",
+      "detail": "#101",
+      "description": "Renewal fee",
+      "amount": "25.99",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "20 Aug 2022"
+    },
+    {
+      "type": "Product Sale",
+      "detail": "#234",
+      "description": "Sold item",
+      "amount": "42.50",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "9 Nov 2022"
+    },
+    {
+      "type": "Tech Gadgets Purchase",
+      "detail": "#567",
+      "description": "Electronics",
+      "amount": "200",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "10 Feb 2023"
+    },
+    {
+      "type": "Freelance Project Payment",
+      "detail": "#890",
+      "description": "Web Development",
+      "amount": "300",
+      "incoming": true,
+      "creator": "Manual",
+      "date": "15 May 2023"
+    },
+    {
+      "type": "Bookstore Purchase",
+      "detail": "#111",
+      "description": "Books",
+      "amount": "40",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "22 Apr 2023"
+    },
+    {
+      "type": "Charity Donation",
+      "detail": "--",
+      "description": "Humanitarian Aid",
+      "amount": "50",
+      "incoming": true,
+      "creator": "Manual",
+      "date": "3 Mar 2023"
+    },
+    {
+      "type": "Fitness Class Subscription",
+      "detail": "#333",
+      "description": "Monthly Fee",
+      "amount": "19.99",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "7 Jul 2022"
+    },
+    {
+      "type": "Travel Expenses",
+      "detail": "#456",
+      "description": "Vacation",
+      "amount": "350",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "18 Sep 2022"
+    },
+    {
+      "type": "Software License Renewal",
+      "detail": "#789",
+      "description": "Annual Fee",
+      "amount": "60",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "5 Nov 2022"
+    },
+    {
+      "type": "Online Art Workshop",
+      "detail": "#222",
+      "description": "Art Education",
+      "amount": "25",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "12 Feb 2023"
+    },
+    {
+      "type": "Home Decor Purchase",
+      "detail": "#444",
+      "description": "Interior Design",
+      "amount": "75",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "9 Mar 2023"
+    },
+    {
+      "type": "Birthday Gift Purchase",
+      "detail": "#666",
+      "description": "Surprise Gift",
+      "amount": "30",
+      "incoming": false,
+      "creator": "Automatic",
+      "date": "28 Jun 2022"
     }
   ]
 }

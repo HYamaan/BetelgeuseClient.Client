@@ -1,0 +1,219 @@
+.container {
+    padding: 1rem .2rem;
+}
+
+.support_row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.report_row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) .85fr;
+    gap: 1.2rem;
+    font-size: .85rem;
+}
+
+.history_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 48.5rem;
+    max-height: 48.5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.history_row_persons {
+    order: 1;
+    flex: 1 1 50%;
+    max-width: 50%;
+    padding-right: .4rem;
+}
+
+.persons_row {
+    display: grid;
+    grid-template-columns: 2.5fr 3fr 1fr;
+
+    font-weight: 600;
+    font-size: .9rem;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem;
+    cursor: pointer;
+    user-select: auto;
+}
+
+.persons_row:hover {
+    background-color: #f7fafd;
+}
+
+.persons_row_head {
+    margin: 1rem 0;
+    color: var(--color-grey-3);
+    border-bottom: 2px solid var(--color-grey-6);
+    padding-bottom: .8rem;
+}
+
+.persons_detail {
+    max-width: 230px;
+}
+
+.persons_course_title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-weight: 500;
+    gap: 0;
+}
+
+.contact_status {
+    text-transform: capitalize;
+    justify-self: center;
+    font-weight: 500;
+}
+
+.contact_duty {
+    display: flex;
+    gap: .3rem;
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--color-grey-3);
+}
+
+.history_row_chat {
+    order: 2;
+    flex: 1 1 50%;
+    max-width: 50%;
+    border-left: 1px solid var(--color-grey-6);
+}
+
+.history_row_chat_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.chat_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-grey-6);
+    background-color: #f7fafd;
+}
+
+.conversations_card {
+    height: 24rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.chat_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--color-grey-6);
+    border-radius: 10px;
+}
+
+.chat_body_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: .85rem;
+    border-bottom: 1px solid var(--color-grey-6);
+}
+
+.chat_body_content {
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--color-grey-3);
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin-top: 1rem;
+}
+
+.chat_title {
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.chat_subtitle {
+    font-size: .8rem;
+    font-weight: 400;
+    color: var(--color-grey-3);
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.conversations_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-grey-6);
+    background-color: #f7fafd;
+}
+
+.conversations_title {
+    font-size: .95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #171347;
+}
+
+@media (max-width: 992px) {
+    .section {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .report_row {
+        grid-template-columns: 1fr;
+        gap: .4rem;
+    }
+
+    .persons_row {
+        gap: 1.1rem;
+    }
+
+    .history_row {
+        height: 70rem;
+    }
+
+    .history_row_persons {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .history_row_chat {
+        flex: 1 1 100%;
+        max-width: 100%;
+        border-left: unset;
+    }
+
+    .contact_duty {
+        flex-direction: column;
+        line-height: 1.2;
+    }
+}
