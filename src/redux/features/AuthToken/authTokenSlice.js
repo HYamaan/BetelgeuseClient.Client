@@ -11,8 +11,6 @@ export const authTokenSlice = createSlice({
         setAuthToken: (state, action) => {
             state.authToken = action.payload;
             Cookies.set('authToken', action.payload);
-            console.log("AuthTokenReduxState", state.authToken);
-            console.log("AuthTokenCookies", Cookies.get('authToken'));
         },
         removeAuthToken: (state, action) => {
             if (!state.authToken) {

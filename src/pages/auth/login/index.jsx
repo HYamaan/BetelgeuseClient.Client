@@ -8,36 +8,34 @@ import {FaUserAlt} from "react-icons/fa";
 import {BiSolidLockAlt} from "react-icons/bi";
 import {loginSchema} from "@/schema/loginSchema";
 import {useFormik} from "formik";
-import {useDispatch} from "react-redux";
-import {setAuthToken} from "@/redux/features/AuthToken/authTokenSlice";
+import axios from "axios";
+import {useRouter} from "next/router";
 
 const LoginPage = () => {
-    const dispatch = useDispatch();
+    const router = useRouter();
+    const handleClickForgotPassword = () => {
+        router.push("/auth/forgot-password");
+    }
+    const handleClickSignUp = () => {
+        router.push("/auth/register");
+    }
+
     const onSubmit = async (values, actions) => {
-        console.log("values", values);
-        const headers = {
-            'Content-Type': 'application/json;charset=utf-8\'',
-            'X-Requested-With': 'XMLHttpRequest',
-            'Accept': 'application/json',
-            'Cache-Control': 'no-cache',
-        };
-        dispatch(setAuthToken("deneme"))
-        // try {
-        //     const loginData={
-        //         email:values.email,
-        //         password:values.password
-        //     }
-        //
-        //     const response = await axios.post('your-login-api-endpoint', loginData,headers);
-        //     if (response.status === 200) {
-        //         const token = response.data.token;
-        //         dispatch(setToken(token));
-        //     } else {
-        //         console.error('Giriş başarısız');
-        //     }
-        // }catch {
-        //     console.log("Error");
-        // }
+        try {
+            const loginData = {
+                email: values.email,
+                password: values.password
+            }
+
+            const response = await axios.post(`/api/auth/login`, loginData);
+            if (response.status === 200) {
+                router.push("/panel");
+            } else {
+                console.error('Giriş başarısız');
+            }
+        } catch (error) {
+            console.log("Error", error);
+        }
     }
     const LoginFormik = useFormik({
         initialValues: {
@@ -91,8 +89,10 @@ const LoginPage = () => {
                                 })}
                                 <input type="submit" value="Login"  className={styles.button}/>
                             </form>
-                            <p className={styles.forgot_password}>Forgot password?</p>
-                            <p className={styles.dont_have_account}>Dont have an account? <span className={styles.login_page_signup}>Sign Up</span></p>
+                            <p className={styles.forgot_password} onClick={handleClickForgotPassword}>Forgot
+                                password?</p>
+                            <p className={styles.dont_have_account}>Dont have an account? <span
+                                className={styles.login_page_signup} onClick={handleClickSignUp}>Sign Up</span></p>
                         </div>
                     </div>
             </div>

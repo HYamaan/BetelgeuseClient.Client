@@ -9,6 +9,7 @@ import {HiOutlineDotsVertical} from "react-icons/hi";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import Banner from "@/components/Blog/Banner/Banner";
 import {useRouter} from "next/router";
+
 const BlogDetail = ({blogDetail}) => {
     const router =useRouter();
     const [dotInformationPopup,setDotInformationPopup]=useState(false);
@@ -20,7 +21,6 @@ const BlogDetail = ({blogDetail}) => {
         router.push('/'+ router.asPath.split('/')[1])
     }
     const handleClickCategoriesPosts = (categoryUrl) => {
-        console.log("category",categoryUrl)
         const url =categoryUrl.toLowerCase();
         const currentPath = router.asPath.split('/');
         const basePath = currentPath[1];
@@ -42,10 +42,10 @@ const BlogDetail = ({blogDetail}) => {
 
     return<>
         <Banner
-            date={blogDetail[0].date}
-            author={blogDetail[0].author}
-            title={blogDetail[0].title}
-            category={blogDetail[0].category[0]}
+            date={blogDetail.createdDate}
+            author={blogDetail.author.userName}
+            title={blogDetail.title}
+            category={blogDetail.blogCategory.name}
             handleClickCategoriesPosts={handleClickCategoriesPosts}
         />
         <section className="w-[80%] mx-auto px-[2.4rem] mt-[4rem]">

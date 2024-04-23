@@ -12,7 +12,7 @@
 
 .authContainer_Image_Styles {
     vertical-align: middle;
-    transform: scale(0.7);
+    transform: scale(0.85);
     z-index: 10;
 }
 
@@ -57,6 +57,18 @@
     padding: .4rem;
     color: var(--color-white-1);
     cursor: pointer;
+}
+
+.button_sendRequest {
+    width: 100%;
+    background-color: var(--color--saphireBlue);
+    font-size: .9rem;
+    border-radius: .5rem;
+    padding: .6rem;
+    color: var(--color-white-1);
+    cursor: pointer;
+    margin-bottom: .8rem;
+    text-align: center;
 }
 
 .forgot_password {

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import styles from './blogs.module.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { FiCalendar, FiUser } from 'react-icons/fi';
-import { BiComment } from 'react-icons/bi';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
+import {FiCalendar, FiUser} from 'react-icons/fi';
+import {BiComment} from 'react-icons/bi';
 import {useRouter} from "next/router";
 
 const Blogs = ({ blogsData, categories ,blogsLength}) => {
@@ -18,6 +18,7 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
     };
     const handleClickBlogPage =  (url)=>{
         console.log("router",router.query.hasOwnProperty("category"))
+        console.log("url", url);
          router.push( "blog/" + url);
     }
 
@@ -68,45 +69,47 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
                 {categories.map((item, index) =>{
                     return <p
                         key={index}
-                        className={`${categoriesActive === item[0].toLowerCase() && styles.active}`}
+                        className={`${categoriesActive === item.name && styles.active}`}
                         onClick={() => {
-                            setCategoriesActive(item[0].toLowerCase());
+                            setCategoriesActive(item.name);
                         }}
                     >
-                        {item}
+                        {item.name}
                     </p>
                 })}
             </div>
             <div className={styles.carts}>
                 {blogs.map((item) => (
-                    <div key={item.id} className={styles.cart} onClick={()=>{handleClickBlogPage(item.url)}}>
+                    <div key={item.id} className={styles.cart} onClick={() => {
+                        handleClickBlogPage(item.id)
+                    }}>
                         <div className={styles.blog_grid_image}>
                             <div className={styles.blog_grid_lazy_load_image}>
-                                <LazyLoadImage src={item.imageSrc}
+                                <LazyLoadImage src={`assets/${item.blogImage}`}
                                                alt={item.title ? item.title.split(' ')[0] : 'FallbackAltText'} />
                             </div>
                             <p className={styles.blog_created_date}>
                                 <FiCalendar />
-                                <span>{item.date}</span>
+                                <span>{item.createdDate}</span>
                             </p>
-                            <span className={styles.blog_grid_category}>{item.category[0]}</span>
+                            <span className={styles.blog_grid_category}>{item.categoryName}</span>
                         </div>
                         <div className={styles.blog_grid_detail}>
                             <h2>{item.title}</h2>
                             <p className={styles.blog_grid_desc}>
-                                {item && item.description
-                                    ? item.description.length > 120
-                                        ? `${item.description.slice(0, 120)}...`
-                                        : item.description
+                                {item && item.content
+                                    ? item.content.length > 120
+                                        ? `${item.content.slice(0, 120)}...`
+                                        : item.content
                                     : 'Default Description'}
                             </p>
                             <div className={styles.blog_auth}>
                                 <p>
                                     <FiUser />
-                                    {item.author}
+                                    {item.authorName}
                                 </p>
                                 <p>
-                                    <BiComment /> <span>{item.comments}</span>
+                                    <BiComment/> <span>{item.viewCount}</span>
                                 </p>
                             </div>
                         </div>

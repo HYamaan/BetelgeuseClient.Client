@@ -1,13 +1,12 @@
-
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import styles from './cart.module.css'
 import Image from 'next/image'
-import {useSelector} from "react-redux";
 import {FaRegTrashAlt} from "react-icons/fa";
 import {GoDotFill} from "react-icons/go";
 import {Rating} from "@mui/material";
+
 const Cart = () => {
-    const cartSelector =useSelector((state)=>state.shoppingBasket.cart);
+    "const cartSelector =useSelector((state)=>state.shoppingBasket.cart);"
     const [couponCode, setCouponCode] = useState('');
     const [couponCodeOpen,setCouponCodeOpen]=useState(false);
 
