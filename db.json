@@ -1665,6 +1665,22 @@
       ]
     },
     {
+      "text": "Articles",
+      "icon": "fa-regular fa-newspaper",
+      "submenu": [
+        {
+          "id": "400bcb30-2d6e-4a20-adbc-c025d97ef34e",
+          "text": "New Article",
+          "componentName": "NewArticles"
+        },
+        {
+          "id": "b23572ef-241d-48e9-9689-a2292ca810dd",
+          "text": "My Articles",
+          "componentName": "MyArticles"
+        }
+      ]
+    },
+    {
       "id": "j0k1l2m3n4-o5p6q7r8",
       "icon": "fa-solid fa-bell",
       "text": "Notifications",

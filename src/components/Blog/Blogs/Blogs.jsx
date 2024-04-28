@@ -17,31 +17,36 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
         }
     };
     const handleClickBlogPage =  (url)=>{
-        console.log("router",router.query.hasOwnProperty("category"))
-        console.log("url", url);
          router.push( "blog/" + url);
+    }
+    const handleClickCategoriesPosts = (categoryUrl) => {
+        if (categoryUrl === null) {
+            router.push("/blog");
+        } else {
+            router.push(`/blog?category=${categoryUrl}`);
+        }
     }
 
     useEffect(() => {
-        const filteredBlogs = categoriesActive === 'all'
-            ? blogsData
-            : blogsData.filter(item => item.category[0].toLowerCase() === categoriesActive);
-
-        setBlogs(filteredBlogs);
-    }, [categoriesActive, blogsData]);
-    useEffect(() => {
         const categoryFromRouter = router.query && router.query.category;
-
-        if (categoryFromRouter) {
-            setCategoriesActive(()=>categoryFromRouter);
-
-            const filteredBlogs = categoryFromRouter === 'all'
-                ? blogsData
-                : blogsData.filter(item => item.category[0].toLowerCase() === categoryFromRouter);
-
-            setBlogs(filteredBlogs);
+        const findValue = categories.find(x => x.categoryID === categoryFromRouter)
+        if (findValue) {
+            setCategoriesActive(findValue.name);
         }
-    }, [router.query,router.query.category, blogsData]);
+        setBlogs(blogsData);
+    }, [blogsData]);
+    // useEffect(() => {
+    //     const categoryFromRouter = router.query && router.query.category;
+    //
+    //     if (categoryFromRouter) {
+    //         setCategoriesActive(()=>categoryFromRouter);
+    //
+    //         const filteredBlogs = categoryFromRouter === 'all'
+    //             ? blogsData
+    //             : blogsData.filter(item => item.category[0].toLowerCase() === categoryFromRouter);
+    //         setBlogs(filteredBlogs);
+    //     }
+    // }, [router.query,router.query.category, blogsData]);
 
     return <>
         <div className={styles.banner}>
@@ -65,6 +70,7 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
                 <p className={`${categoriesActive === 'all' && styles.active}`}
                     onClick={() => {
                     setCategoriesActive('all');
+                        handleClickCategoriesPosts(null);
                 }}>All</p>
                 {categories.map((item, index) =>{
                     return <p
@@ -72,6 +78,7 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
                         className={`${categoriesActive === item.name && styles.active}`}
                         onClick={() => {
                             setCategoriesActive(item.name);
+                            handleClickCategoriesPosts(item.categoryID)
                         }}
                     >
                         {item.name}
@@ -79,7 +86,7 @@ const Blogs = ({ blogsData, categories ,blogsLength}) => {
                 })}
             </div>
             <div className={styles.carts}>
-                {blogs.map((item) => (
+                {blogs?.map((item) => (
                     <div key={item.id} className={styles.cart} onClick={() => {
                         handleClickBlogPage(item.id)
                     }}>

@@ -11,6 +11,7 @@ export default BlogDetailPage;
 export async function getServerSideProps({params}) {
     const url =params.slug[0];
     const blog = await axios.get(`${process.env.LOCAL_URL}/api/blog/getBlogById?Id=${url}`);
+
     if (blog.status !== 200) {
         return {
             notFound: true

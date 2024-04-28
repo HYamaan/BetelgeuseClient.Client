@@ -1,0 +1,22 @@
+
+.section p:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.section p {
+    margin-bottom: .3rem;
+}
+
+
+.wysiwyg {
+    min-height: 200px;
+    height: 200px;
+    margin-bottom: 43.05px;
+}
+
+@media (max-width: 992px) {
+    .section {
+        width: 100%;
+        padding: 1rem;
+    }
+}
