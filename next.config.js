@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 const nextConfig = {
-  reactStrictMode: true,
+    reactStrictMode: false,
   env: {
     API_SERVER1: process.env.API_SERVER1,
     API_SERVER: process.env.API_SERVER,
@@ -14,15 +14,6 @@ const nextConfig = {
   },
   webpack: (config, { isServer }) => {
     config.resolve.alias['@'] = path.join(__dirname, 'src');
-    return config;
-  },
-  middleware: (config) => {
-    // Auth middleware dosyasını import et
-    const {middleware} = require('./src/middleware/authMiddleware.js');
-
-    // Middleware'i Next.js'e ekle
-    config.middleware.push(middleware);
-
     return config;
   },
 }

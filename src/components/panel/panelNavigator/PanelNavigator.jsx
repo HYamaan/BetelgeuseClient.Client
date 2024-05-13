@@ -1,26 +1,56 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import styles from "./panelNavigator.module.css";
 import {FiMenu} from "react-icons/fi";
 import {IoCloseOutline} from "react-icons/io5";
+import {useRouter} from "next/router";
 
 const PanelNavigator = (props) => {
+    const router = useRouter();
     const {menuItems, openPanelName, setOpenPanelName} = props;
     const [mobilShowPanelNav, setMobilShowPanelNav] = useState(false);
-    const [subMenuOpen, setSubMenuOpen] = useState(0);
+    const [subMenuOpen, setSubMenuOpen] = useState(null);
     const [subMenuActive, setSubMenuActive] = useState(null);
 
+    useEffect(() => {
+        function findItemByComponentName(componentName) {
+            for (const item of menuItems) {
+                if (item.url === componentName) {
+                    setSubMenuOpen(item.id)
+                    return item; // componentName'e eşleşen öğeyi döndür
+                }
+                if (item.submenu) {
+                    const subItem = item.submenu.find(sub => sub.url === componentName);
+                    if (subItem) {
+                        setSubMenuOpen(item.id)
+                        setSubMenuActive(subItem.url)
+                        return subItem;
+                    }
+                }
+            }
+            return null;
+        }
+
+        findItemByComponentName(props.slug[0])
+
+    }, []);
+
+
     const handleMenuItemClick = (menuItem, index) => {
-        setSubMenuOpen(index)
+        setSubMenuOpen(menuItem.id);
+        console.log("menuItem-------------------------------", menuItem)
         setSubMenuActive(null);
         if (menuItem?.componentName) {
             setOpenPanelName(menuItem.componentName)
+            router.push(menuItem.url)
         }
     };
     const handleSubMenuClick = (subMenuItem, index) => {
-        setSubMenuActive(index)
+        setSubMenuActive(subMenuItem.url)
         if (subMenuItem?.componentName) {
             setOpenPanelName(subMenuItem.componentName)
+            router.push(subMenuItem.url)
+            console.log(subMenuItem)
         }
     }
 
@@ -65,25 +95,27 @@ const PanelNavigator = (props) => {
                     {menuItems.map((menuItem, index) => {
                         return (
                             <li key={index} className={`${styles.sidenav__item} `}>
-                                <div onClick={() => handleMenuItemClick(menuItem, index)}
-                                     className={`${styles.sidenav__item__title} ${subMenuOpen === index ? styles.active : ""}`}>
+                                <div onClick={() => handleMenuItemClick(menuItem)}
+                                     className={`${styles.sidenav__item__title} ${subMenuOpen === menuItem.id ? styles.active : ""}`}>
                                 <span>
                                     <i className={menuItem.icon}></i>
                                 </span>
                                     <p>{menuItem.text}</p>
                                 </div>
                                 <div className={`${styles.sidenav__item__submenu__open} 
-                            ${(menuItem.submenu && index === subMenuOpen) ? styles.active : ""}`}>
+                            ${(menuItem.submenu && menuItem.id === subMenuOpen) ? styles.active : ""}`}>
                                     {menuItem.submenu && (
                                         <ul className={styles.sidenav__item__submenu}>
-                                            {menuItem.submenu.map((subMenuItem, subIndex) => (
-                                                <li key={subIndex}
-                                                    onClick={() => handleSubMenuClick(subMenuItem, subIndex)}
-                                                    className={`${subIndex === subMenuActive ? styles.active : null}`}
-                                                >
-                                                    {subMenuItem.text}
-                                                </li>
-                                            ))}
+                                            {menuItem.submenu.map((subMenuItem, subIndex) => {
+
+                                                    return <li key={subIndex}
+                                                               onClick={() => handleSubMenuClick(subMenuItem, subMenuItem.url)}
+                                                               className={`${subMenuItem.url === subMenuActive ? styles.active : null}`}
+                                                    >
+                                                        {subMenuItem.text}
+                                                    </li>
+                                                }
+                                            )}
                                         </ul>
                                     )}
                                 </div>

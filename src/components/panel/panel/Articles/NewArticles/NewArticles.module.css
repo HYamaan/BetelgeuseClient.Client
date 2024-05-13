@@ -7,11 +7,24 @@
     margin-bottom: .3rem;
 }
 
-
+.input_width {
+    width: 50%;
+}
 .wysiwyg {
-    min-height: 200px;
-    height: 200px;
-    margin-bottom: 43.05px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.marginTop {
+    margin-top: 1.5rem !important;
+}
+
+.marginBottom {
+    margin-bottom: -.5rem !important;
+}
+
+.uploadImage {
+    margin-right: 0 !important;
 }
 
 @media (max-width: 992px) {

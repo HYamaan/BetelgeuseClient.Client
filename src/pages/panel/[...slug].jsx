@@ -4,21 +4,22 @@ import Panel from "@/components/panel/panel/Panel";
 import styles from './panel.module.css'
 import {fetchPanelNavigation} from "@/lib/fetch";
 
-const PanelPage = ({menuItems}) => {
+
+const PanelPage = ({menuItems, slug}) => {
     const [openPanelName, setOpenPanelName] = useState(menuItems[0].componentName);
-    useEffect(() => {
-        console.log("openPanelName", openPanelName)
-    }, [openPanelName]);
+
+
     return <section className={styles.PanelSection}>
         <section className={styles.PanelSection__sideBar}>
             <PanelNavigator
                 menuItems={menuItems}
                 setOpenPanelName={setOpenPanelName}
                 openPanelName={openPanelName}
+                slug={slug}
             />
         </section>
         <section className={styles.PanelSection__sidePanel}>
-            <Panel openPanelName={openPanelName}/>
+            <Panel openPanelName={openPanelName} slug={slug}/>
         </section>
 
     </section>
@@ -26,12 +27,14 @@ const PanelPage = ({menuItems}) => {
 
 export default PanelPage;
 
-export async function getServerSideProps() {
+export async function getServerSideProps({params}) {
     const menuItems = await fetchPanelNavigation();
-
+    const {slug} = params;
+    console.log("slug___", slug)
     return {
         props: {
-            menuItems,
+            slug,
+            menuItems
         },
     };
 }

@@ -1088,460 +1088,49 @@
       "comments": 10
     }
   ],
-  "blogsDetail": [
-    {
-        "id": "1aeb937a-3a8b-48ac-81cb-2c81a9027b13",
-        "url":"become-a-straight-a-student",
-        "date": "30 Jun 2024",
-        "category": ["Development"],
-        "title": "Become a Straight-A Student",
-        "author": "Admin",
-        "authorImage":"/assets/image/instructor/demo_instructor.jpg",
-        "blogPost": [
-          {
-            "src": "/assets/image/background/blog-detail.png"
-          },
-          {
-            "p": "your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be"
-          },
-          {
-            "p": "A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination."
-          },
-          {
-            "h2": "Exploring Generative AI in Content Creation"
-          },
-          {
-            "p": "If you choose to use a digital calendar, I recommend Google Calendar."
-          },
-          {
-            "p": "(b) Schedule a fixed time every week where you review your upcoming events over the next two months. Mark down when you’ll start preparing for that Math exam, working on that History project, or writing that English paper."
-          },
-          {
-            "p": "(d) Next, note your commitments for the coming week, e.g. extracurricular activities, family gatherings, extra classes. On your calendar, highlight the blocks of time you’ll have for schoolwork."
-          },
-          {
-            "p": "This planning process might sound time-consuming, but it’ll typically take just 15 minutes every week."
-          },
-          {
-            "p": "This is a wise investment of time as a student, because the rest of your week will become far more productive."
-          },
-          {
-            "p": "This way, you’ll be studying smart, not just hard!"
-          },
-          {
-            "h2": "Rule #2: Be organized."
-          },
-          {
-            "p": "Ever had trouble finding fore you finally asked to borrow them from your friend."
-          },
-          {
-            "p": "Many students tell me that they keep all their notes and assignments in one big pile, and only sort them out before their exams!"
-          },
-          {
-            "p": "Being organized – it’s easier said than done, I know."
-          }
-        ],
-        "comments": [
-        {
-          "userName": "John Doe",
-          "userDegree": "User",
-          "commentDate": {
-            "date": "4 Mar 2022",
-            "time": "12:07"
-          },
-          "commentText": "Thank you for this excellent article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "Jane Smith",
-          "userDegree": "Moderator",
-          "commentDate": {
-            "date": "5 Mar 2022",
-            "time": "15:30"
-          },
-          "commentText": "Great content! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    },
-    {
-      "id": "2d1ae9bd-cf2e-4a7f-9e36-1c987abac8c5",
-      "url": "introduction-to-machine-learning",
-      "date": "15 Sep 2024",
-      "category": ["Technology"],
-      "title": "Introduction to Machine Learning",
-      "description": "Explore the basics of machine learning and understand its applications in various domains.",
-      "author": "JohnDoe",
-      "authorImage":"/assets/image/instructor/demo_instructor.jpg",
-      "blogPost": [
-        {
-          "src": "/assets/image/background/blog-detail.png"
-        },
-        {
-          "p": "your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be"
-        },
-        {
-          "p": "A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination."
-        },
-        {
-          "h2": "The Art of Effective Note-Taking"
-        },
-        {
-          "p": "Note-taking is a crucial skill for academic success. Experiment with different methods such as the Cornell method, mind mapping, or the outline technique to find what works best for you."
-        },
-        {
-          "p": "During lectures, focus on key concepts and main ideas. Use abbreviations and symbols to streamline your notes. After class, review and organize your notes to reinforce your understanding of the material."
-        },
-        {
-          "p": "Consider creating a digital notebook for easy access and organization. A well-organized set of notes is a powerful resource for exam preparation and long-term retention."
-        },
-        {
-          "h2": "Rule #6: Collaborate and Share."
-        },
-        {
-          "p": "Collaboration fosters a rich learning environment. Engage with classmates, form study groups, and share insights and resources. Collaborative learning not only enhances your understanding but also builds a supportive academic community."
-        },
-        {
-          "p": "Utilize online platforms and discussion forums to connect with students beyond your immediate circle. Sharing perspectives and collaborating on projects can lead to a more comprehensive and enjoyable learning experience."
-        }
-      ],
-    "comments": [
-        {
-          "userName": "John Doe",
-          "userDegree": "User",
-          "commentDate": {
-            "date": "4 Mar 2022",
-            "time": "12:07"
-          },
-          "commentText": "Thank you for this excellent article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "Jane Smith",
-          "userDegree": "Moderator",
-          "commentDate": {
-            "date": "5 Mar 2022",
-            "time": "15:30"
-          },
-          "commentText": "Great content! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    },
-    {
-      "id": "3f9655ef-4c56-42cf-a167-bb6139720f0c",
-      "url": "tips-for-a-healthy-lifestyle",
-      "imageSrc": "/assets/image/background/blogs/blog3.jpg",
-      "date": "02 Jan 2025",
-      "category": ["Health"],
-      "title": "Tips for a Healthy Lifestyle",
-      "description": "Discover simple yet effective tips for maintaining a healthy lifestyle and improving overall well-being.",
-      "author": "WellnessGuru",
-      "blogPost": [
-        {
-          "src": "/assets/image/background/blogs/blog3.jpg"
-        },
-        {
-          "p": "your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be"
-        },
-        {
-          "p": "A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination."
-        },
-        {
-          "h2": "The Power of Mindful Learning"
-        },
-        {
-          "p": "Mindful learning involves being fully present and engaged in the learning process. Instead of rushing through tasks, take the time to understand and absorb the material."
-        },
-        {
-          "p": "Practice active listening during lectures, take meaningful notes, and ask questions to deepen your understanding. Mindful learning not only enhances retention but also fosters a genuine passion for knowledge."
-        },
-        {
-          "p": "Incorporate mindfulness techniques into your study routine, such as meditation or deep-breathing exercises. A focused and calm mind is a powerful tool for academic success."
-        },
-        {
-          "h2": "Rule #5: Seek Feedback."
-        },
-        {
-          "p": "Feedback is a valuable tool for improvement. Don't be afraid to seek feedback from professors, peers, or mentors. Constructive criticism helps you identify strengths and areas for growth."
-        },
-        {
-          "p": "Actively participate in class discussions, submit drafts for review, and engage in collaborative projects. Embrace feedback as a guide for refining your skills and becoming a more resilient learner."
-        }
-      ],
-    "comments": [
-        {
-          "userName": "Alice Johnson",
-          "userDegree": "Reader",
-          "commentDate": {
-            "date": "10 Apr 2022",
-            "time": "09:15"
-          },
-          "commentText": "I appreciate the insights shared in this article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "Bob Miller",
-          "userDegree": "Administrator",
-          "commentDate": {
-            "date": "12 Apr 2022",
-            "time": "18:45"
-          },
-          "commentText": "Impressive content! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    },
-    {
-      "id": "48cf6e14-6cb3-4f25-839f-7c9b18e0c5e1",
-      "url": "exploring-hidden-gems",
-      "imageSrc": "/assets/image/background/blogs/blog4.jpg",
-      "date": "18 Mar 2025",
-      "category": ["Travel"],
-      "title": "Exploring Hidden Gems",
-      "description": "Embark on a journey to discover hidden gems and lesser-known travel destinations around the world.",
-      "author": "TravelExplorer",
-      "blogPost": [
-        {
-          "src": "/assets/image/background/blogs/blog4.jpg"
-        },
-        {
-          "p": "your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be"
-        },
-        {
-          "p": "A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination."
-        },
-        {
-          "h2": "Mastering Time Management in College"
-        },
-        {
-          "p": "College life can be hectic, but effective time management is the key to success. Create a weekly schedule that includes dedicated study hours, social activities, and relaxation time."
-        },
-        {
-          "p": "Utilize tools like productivity apps and planners to stay organized. Break down larger tasks into smaller, manageable steps, and prioritize deadlines to avoid last-minute stress."
-        },
-        {
-          "p": "Balancing academics and social life is essential. Join clubs, attend events, and build a network that enriches your college experience. Remember, a well-managed schedule leads to a more fulfilling college journey."
-        },
-        {
-          "h2": "Rule #4: Embrace Challenges."
-        },
-        {
-          "p": "Challenges are opportunities for growth. Don't shy away from difficult subjects or challenging projects. Embrace them as chances to develop resilience, problem-solving skills, and a deeper understanding of your chosen field."
-        },
-        {
-          "p": "Seek support from professors, peers, and resources available on campus. The more challenges you overcome, the more confident and prepared you'll become for future endeavors."
-        }
-      ],
-      "comments": [
-        {
-          "userName": "User1",
-          "userDegree": "Beginner",
-          "commentDate": {
-            "date": "20 Apr 2022",
-            "time": "08:45"
-          },
-          "commentText": "This article is great! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "User2",
-          "userDegree": "Intermediate",
-          "commentDate": {
-            "date": "22 Apr 2022",
-            "time": "12:30"
-          },
-          "commentText": "I learned a lot from this article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "User3",
-          "userDegree": "Advanced",
-          "commentDate": {
-            "date": "25 Apr 2022",
-            "time": "16:15"
-          },
-          "commentText": "Excellent content! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "User4",
-          "userDegree": "Expert",
-          "commentDate": {
-            "date": "28 Apr 2022",
-            "time": "20:00"
-          },
-          "commentText": "I appreciate the depth of information in this article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "User5",
-          "userDegree": "Master",
-          "commentDate": {
-            "date": "30 Apr 2022",
-            "time": "22:45"
-          },
-          "commentText": "In-depth and insightful! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    },
-    {
-      "id": "5b5c0c65-4fb7-4e29-a40a-93f61e00403d",
-      "url": "gourmet-delights-culinary-adventures",
-      "imageSrc": "/assets/image/background/blogs/blog5.jpg",
-      "date": "07 Jul 2025",
-      "category": ["Food"],
-      "title": "Gourmet Delights: Culinary Adventures",
-      "description": "Indulge in a culinary adventure as we explore the world of gourmet delights and unique food experiences.",
-      "author": "FoodieAdventurer",
-      "blogPost": [
-        {
-          "src": "/assets/image/background/blogs/blog5.jpg"
-        },
-        {
-          "p": "your notes or assignments when you needed them? You probably ended up wasting precious time looking for them, be"
-        },
-        {
-          "p": "A strong academic record can open doors for you down the road. More importantly, through the process of becoming a straight-A student, you’ll learn values like hard work, discipline and determination."
-        },
-        {
-          "h2": "Harnessing the Power of Technology in Education"
-        },
-        {
-          "p": "Technology plays a pivotal role in modern education. Embrace digital tools and resources to enhance your learning experience. Explore educational apps, online platforms, and interactive multimedia to supplement your studies."
-        },
-        {
-          "p": "Stay organized with note-taking apps, utilize online collaboration tools, and leverage e-books and online resources. Technology can streamline your workflow and provide access to a wealth of information at your fingertips."
-        },
-        {
-          "p": "However, it's essential to maintain a balance. Limit screen time, take breaks, and prioritize face-to-face interactions for a well-rounded and effective learning approach."
-        },
-        {
-          "h2": "Rule #8: Cultivate a Growth Mindset."
-        },
-        {
-          "p": "Adopting a growth mindset is fundamental to academic success. View challenges as opportunities to learn and grow, rather than obstacles. Embrace the belief that intelligence and abilities can be developed through dedication and effort."
-        },
-        {
-          "p": "Celebrate the process of learning, not just the final grades. Embrace setbacks as part of the journey and use them to fuel your determination. A growth mindset fosters resilience, curiosity, and a lifelong love for learning."
-        }
-      ],
-      "comments": [
-        {
-          "userName": "Commenter1",
-          "userDegree": "Novice",
-          "commentDate": {
-            "date": "10 May 2022",
-            "time": "09:30"
-          },
-          "commentText": "I enjoyed reading this article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "Commenter2",
-          "userDegree": "Intermediate",
-          "commentDate": {
-            "date": "12 May 2022",
-            "time": "14:15"
-          },
-          "commentText": "The content provided valuable insights. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        },
-        {
-          "userName": "Commenter3",
-          "userDegree": "Expert",
-          "commentDate": {
-            "date": "15 May 2022",
-            "time": "18:00"
-          },
-          "commentText": "Well-written and informative! Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    },
-    {
-      "id": "6e0c71f8-09a7-4f22-84fb-6e1b8f6abefc",
-      "imageSrc": "/assets/image/background/blogs/blog6.jpg",
-      "date": "22 Oct 2025",
-      "category": [
-        "Science"
-      ],
-      "title": "The Wonders of the Cosmos",
-      "url": "the-wonders-of-the-cosmos",
-      "description": "Unravel the mysteries of the cosmos and explore the fascinating world of astronomy and space exploration.",
-      "author": "SpaceEnthusiast",
-      "blogPost": [
-        {
-          "src": "/assets/image/background/blogs/blog6.jpg"
-        },
-        {
-          "p": "Have you ever found yourself desperately searching for your notes or assignments when you needed them? Chances are, you ended up wasting precious time in the process. Being organized and efficient in your academic pursuits is a key aspect of success."
-        },
-        {
-          "p": "A robust academic record not only opens doors for your future but also instills values such as hard work, discipline, and determination. In the journey to becoming a straight-A student, you'll find that the process itself teaches valuable life skills."
-        },
-        {
-          "h2": "Harnessing the Power of Technology in Education"
-        },
-        {
-          "p": "Modern education is heavily influenced by technology. To enhance your learning experience, embrace digital tools and resources. Explore educational apps, online platforms, and interactive multimedia to supplement your studies."
-        },
-        {
-          "p": "Stay organized with note-taking apps, utilize online collaboration tools, and leverage e-books and online resources. Technology can streamline your workflow and provide access to a wealth of information at your fingertips."
-        },
-        {
-          "p": "However, it's crucial to maintain a balance. Limit screen time, take breaks, and prioritize face-to-face interactions for a well-rounded and effective learning approach."
-        },
-        {
-          "h2": "Rule #8: Cultivate a Growth Mindset"
-        },
-        {
-          "p": "Adopting a growth mindset is fundamental to academic success. Rather than viewing challenges as obstacles, see them as opportunities to learn and grow. Embrace the belief that intelligence and abilities can be developed through dedication and effort."
-        },
-        {
-          "p": "Celebrate the process of learning, not just the final grades. Embrace setbacks as part of the journey and use them to fuel your determination. A growth mindset fosters resilience, curiosity, and a lifelong love for learning."
-        }
-      ],
-      "comments": [
-        {
-          "userName": "John Doe",
-          "userDegree": "User",
-          "commentDate": {
-            "date": "4 Mar 2022",
-            "time": "12:07"
-          },
-          "commentText": "Thank you for this excellent article. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad adipisci autem deserunt dolorem in ipsum itaque iure officiis possimus, quae quaerat quod repudiandae. Esse excepturi hic nemo tenetur totam?",
-          "userImageSrc": "/assets/image/instructor/demo_instructor.jpg"
-        }
-      ]
-    }
-  ],
   "userPanelNavigation": [
     {
       "id": "a5f065b2-2061",
       "icon": "fa-solid fa-gauge",
       "text": "Dashboard",
-      "componentName": "DashboardPanel"
+      "componentName": "DashboardPanel",
+      "url": "dashboard"
     },
     {
+      "id": "e9d47fb1-3a81",
+      "icon": "fa-solid fa-calendar-alt",
+      "text": "Upload Courses",
+      "submenu": [
+        {
+          "id": "faaab2c3-4d5e",
+          "text": "New",
+          "componentName": "NewCourses",
+          "url": "webinar/new"
+        }
+      ]
+    },
+    {
+      "id": "g7c3e2b3-ae52",
       "text": "Courses",
       "icon": "fa-solid fa-book",
       "submenu": [
         {
           "id": "d1a6e8f0-7c6e",
           "text": "My purchases",
-          "componentName": "Purchases"
+          "componentName": "Purchases",
+          "url": "purchase"
         },
         {
           "id": "c8e2a7fb-912c",
           "text": "My comments",
-          "componentName": "MyComments"
+          "componentName": "MyComments",
+          "url": "comments"
         },
         {
           "id": "d1a6e8f0-716e",
           "text": "Favorites",
-          "componentName": "Favorites"
+          "componentName": "Favorites",
+          "url": "favorites"
         }
       ]
     },
@@ -1553,130 +1142,160 @@
         {
           "id": "f0a1b2c3-4d5e",
           "text": "Following courses",
-          "componentName": "FollowingCourses"
+          "componentName": "FollowingCourses",
+          "url": "following-courses"
         }
       ]
     },
     {
+      "id": "g7c3e2b4-be52",
       "text": "Assignments",
       "icon": "fa-solid fa-tasks",
       "submenu": [
         {
           "id": "g7c3e2b4-ae52",
           "text": "My Assignments",
-          "componentName": "MyAssignments"
+          "componentName": "MyAssignments",
+          "url": "my-assignments"
         }
       ]
     },
     {
+      "id": "gdc3e2b4-ae52",
       "text": "Meeting",
       "icon": "fa-solid fa-calendar-check",
       "submenu": [
         {
           "id": "i1a2b3c4-5e6f",
           "text": "My reservation",
-          "componentName": "Reservations"
+          "componentName": "Reservations",
+          "url": "reservations"
         }
       ]
     },
     {
+      "id": "g7cdfe2b4-ae52",
       "text": "Certificates",
       "icon": "fa-solid fa-certificate",
       "submenu": [
         {
           "id": "n1o2p3q4-r5s6t7",
           "text": "Achievements",
-          "componentName": "Achievements"
+          "componentName": "Achievements",
+          "url": "achievements"
         },
         {
           "id": "u8v9w0x1-y2z3a4",
-          "text": "Certificate Validation"
+          "text": "Certificate Validation",
+          "componentName": "CertificateValidation",
+          "url": "certificate-validation"
         },
         {
           "id": "b5c6d7e8-f9g0h1",
           "text": "Completion Certificates",
-          "componentName": "CompletionCertificates"
+          "componentName": "CompletionCertificates",
+          "url": "completion-certificates"
         }
       ]
     },
     {
+      "id": "g7ssd3e2b4-ae52",
       "text": "Store",
       "icon": "fa-solid fa-shopping-cart",
       "submenu": [
         {
           "id": "q1r2s3t4-u5v6w7x8",
           "text": "My purchases",
-          "componentName": "MyPurchases"
+          "componentName": "MyPurchases",
+          "url": "my-purchases"
         }
       ]
     },
     {
+      "id": "g7cfde2b4-ae52",
       "text": "Financial",
       "icon": "fa-solid fa-dollar-sign",
       "submenu": [
         {
           "id": "o5p6q7r8-s9t0u1v2",
           "text": "Financial summary",
-          "componentName": "FinancialSummary"
+          "componentName": "FinancialSummary",
+          "url": "financial-summary"
         },
         {
           "id": "w3x4y5z6-a1b2c3d4",
           "text": "Payout",
-          "componentName": "Payout"
+          "componentName": "Payout",
+          "url": "payout"
         }
       ]
     },
     {
+      "id": "g7c3e2df4-ae52",
       "text": "Support",
       "icon": "fa-solid fa-life-ring",
       "submenu": [
         {
           "id": "k1l2m3n4-o5p6q7r8",
           "text": "New",
-          "componentName": "NewSupport"
+          "componentName": "NewSupport",
+          "url": "new-support"
         },
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
           "text": "Courses Support",
-          "componentName": "CoursesSupport"
+          "componentName": "CoursesSupport",
+          "url": "courses-support"
         }
       ]
     },
     {
+      "id": "g7ag3e2b4-ae52",
       "text": "Forums",
       "icon": "fa-solid fa-comments",
       "submenu": [
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
-          "text": "New Topic"
+          "text": "New Topic",
+          "componentName": "NewTopic",
+          "url": "new-topic"
         },
         {
           "id": "b2c3d4e5-f6g7h8i9",
-          "text": "My Topic"
+          "text": "My Topic",
+          "componentName": "MyTopic",
+          "url": "my-topic"
         },
         {
           "id": "j0k1l2m3n4-o5p6q7r8",
-          "text": "My Posts"
+          "text": "My Posts",
+          "componentName": "MyPosts",
+          "url": "my-posts"
         },
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
-          "text": "Bookmarks"
+          "text": "Bookmarks",
+          "componentName": "Bookmarks",
+          "url": "bookmarks"
         }
       ]
     },
     {
+      "id": "g7c3esdb4-ae52",
       "text": "Articles",
       "icon": "fa-regular fa-newspaper",
       "submenu": [
         {
           "id": "400bcb30-2d6e-4a20-adbc-c025d97ef34e",
           "text": "New Article",
-          "componentName": "NewArticles"
+          "componentName": "NewArticles",
+          "url": "new-article"
         },
         {
           "id": "b23572ef-241d-48e9-9689-a2292ca810dd",
           "text": "My Articles",
-          "componentName": "MyArticles"
+          "componentName": "MyArticles",
+          "url": "my-articles"
         }
       ]
     },
@@ -1684,18 +1303,22 @@
       "id": "j0k1l2m3n4-o5p6q7r8",
       "icon": "fa-solid fa-bell",
       "text": "Notifications",
-      "componentName": "Notifications"
+      "componentName": "Notifications",
+      "url": "notifications"
     },
     {
       "id": "s9t0u1v2w3-x4y5z6a1",
       "icon": "fa-solid fa-cogs",
       "text": "Settings",
-      "componentName": "SettingSections"
+      "componentName": "SettingSections",
+      "url": "settings"
     },
     {
       "id": "b2c3d4e5-f6g7h8i9",
       "icon": "fa-solid fa-sign-out-alt",
-      "text": "Log out"
+      "text": "Log out",
+      "componentName": "LogOut",
+      "url": "/auth/login"
     }
   ],
   "purchasesCourse": [

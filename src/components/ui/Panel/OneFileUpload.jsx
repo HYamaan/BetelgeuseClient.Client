@@ -11,6 +11,7 @@ const OneFileUpload = (props) => {
 
     function handleMultipleChange(event) {
         const selectedFile = event.target.files[0];
+        console.log("selectedFile", selectedFile);
         const allowedExtensions = ['.png', '.jpeg', '.jpg'];
         const fileName = selectedFile.name.toLowerCase();
         const isValidFiles = allowedExtensions.some(ext => fileName.endsWith(ext));
@@ -30,9 +31,11 @@ const OneFileUpload = (props) => {
                    <BiCloudUpload/>
                     </span>
 
-            <div className={`${panelCss.date_picker} ${panelCss.file_picker} ${panelCss.FilePickerOptionelWidth}`}>
+            <div
+                className={`${panelCss.date_picker} ${panelCss.file_picker} ${panelCss.FilePickerOptionelWidth} ${props?.className}`}>
                 <div className={panelCss.file_list}>
                     {file.name}
+                    {!file.name && props.isDefaultValue}
                 </div>
             </div>
             <input type="file"

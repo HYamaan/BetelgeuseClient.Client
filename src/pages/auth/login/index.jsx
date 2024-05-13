@@ -1,4 +1,3 @@
-"use client"
 import styles from "./../authPage.module.css"
 import React from 'react';
 import Image from 'next/image'
@@ -10,6 +9,8 @@ import {loginSchema} from "@/schema/loginSchema";
 import {useFormik} from "formik";
 import axios from "axios";
 import {useRouter} from "next/router";
+import {fetchPanelNavigation} from "@/lib/fetch";
+
 
 const LoginPage = () => {
     const router = useRouter();
@@ -29,7 +30,8 @@ const LoginPage = () => {
 
             const response = await axios.post(`/api/auth/login`, loginData);
             if (response.status === 200) {
-                router.push("/panel");
+                router.push("/panel/dashboard");
+                console.log("response", response);
             } else {
                 console.error('Giriş başarısız');
             }

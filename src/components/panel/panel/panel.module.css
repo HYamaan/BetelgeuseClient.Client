@@ -245,6 +245,20 @@
     max-width: 12rem;
 }
 
+.after_inline {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.after_inline::after {
+    content: "";
+    flex: 1 0 20px;
+    height: 2px;
+    background-color: #f1f1f1;
+    margin-left: 10px;
+}
+
 @media (max-width: 992px) {
     .specific_date {
         width: 100%;

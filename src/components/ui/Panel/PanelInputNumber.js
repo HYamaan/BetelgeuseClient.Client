@@ -1,22 +1,22 @@
 import React from 'react';
 import panelCss from "@/components/panel/panel/panel.module.css";
 
-const PanelInput = (props) => {
+const PanelInputNumber = (props) => {
     const {setInput} = props;
 
     if (props.isDefaultValue) {
-        return <input type="text"
+        return <input type="number"
                       className={panelCss.specific_input}
                       onChange={(e) => setInput(e.target.value)}
                       defaultValue={props.isDefaultValue}
         />
     } else {
-        return <input type="text"
+        return <input type="number"
                       className={panelCss.specific_input}
                       onChange={(e) => setInput(e.target.value)}
+                      disabled={props.isDisabled}
         />
     }
-
 };
 
-export default PanelInput;
+export default PanelInputNumber;

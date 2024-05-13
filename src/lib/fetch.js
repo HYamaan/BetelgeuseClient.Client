@@ -60,14 +60,6 @@ export const fetchBlogsCategory = async () => {
     }
 };
 
-export const fetchBlogDetail= async (url) => {
-    try {
-        const response = await axios.get(`${process.env.API_SERVER1}/blogsDetail`);
-        return response.data.filter(item=>item.url === url);
-    } catch (error) {
-        throw new Error('Error fetching courses');
-    }
-};
 export const fetchPanelNavigation = async () => {
     try {
         const response = await axios.get(`${process.env.API_SERVER1}/userPanelNavigation`);
