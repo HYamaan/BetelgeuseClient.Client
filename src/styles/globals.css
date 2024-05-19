@@ -61,6 +61,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--panel-bg);
 }
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
 .slick-prev{
   left: -46px !important;
   color: var(--secondary-color);

@@ -9,7 +9,7 @@ import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import {useMediaQuery} from "react-responsive";
 import {fetchPanelMeetingsInstructor} from "@/lib/fetch";
 import PanelSelect from "@/components/ui/Panel/Select";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 
 const Reservations = () => {
     const isTabletOrMobile = useMediaQuery({query: '(max-width: 992px)'})

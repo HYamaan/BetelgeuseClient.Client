@@ -113,6 +113,16 @@
     color: var(--color-grey-4);
 }
 
+.specific_inputw2 {
+    width: 50%;
+    border: 1px solid var(--color-grey-6);
+    border-radius: 6px;
+    outline: none;
+    padding: .555rem .9rem;
+    font-size: .8rem;
+    color: var(--color-grey-4);
+}
+
 .specific_date_show {
     display: flex;
     justify-content: center;

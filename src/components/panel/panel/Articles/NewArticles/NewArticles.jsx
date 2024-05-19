@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import styles from "@/components/panel/panel/Articles/NewArticles/NewArticles.module.css"
 import panelCss from "@/components/panel/panel/panel.module.css";
-import PanelInput from "@/components/ui/Panel/Input";
+import PanelInput from "@/components/ui/Panel/Input/Input";
 import OneFileUpload from "@/components/ui/Panel/OneFileUpload";
 import axios from "axios";
 import WYSIWYG from "@/components/ui/WYSIWYG/WYSIWYG";

@@ -12,8 +12,8 @@ const OneFileUpload = (props) => {
     function handleMultipleChange(event) {
         const selectedFile = event.target.files[0];
         console.log("selectedFile", selectedFile);
-        const allowedExtensions = ['.png', '.jpeg', '.jpg'];
-        const fileName = selectedFile.name.toLowerCase();
+        const allowedExtensions = ['.png', '.jpeg', '.jpg', ".svg"];
+        const fileName = selectedFile?.name.toLowerCase();
         const isValidFiles = allowedExtensions.some(ext => fileName.endsWith(ext));
         console.log("selectedFile", selectedFile)
         if (!isValidFiles) {

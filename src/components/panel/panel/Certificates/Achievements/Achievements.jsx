@@ -8,9 +8,9 @@ import {useMediaQuery} from "react-responsive";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import {HiDotsVertical} from "react-icons/hi";
 import {fetchPanelAchievements} from "@/lib/fetch";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 import PanelSelect from "@/components/ui/Panel/Select";
-import PanelInput from "@/components/ui/Panel/Input";
+import PanelInput from "@/components/ui/Panel/Input/Input";
 
 const Achievements = () => {
     const isTabletOrMobile = useMediaQuery({query: '(max-width: 992px)'})

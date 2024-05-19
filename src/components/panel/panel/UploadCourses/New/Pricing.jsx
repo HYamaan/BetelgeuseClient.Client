@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import styles from "@/components/panel/panel/UploadCourses/New/New.module.css";
 import panelCss from "@/components/panel/panel/panel.module.css";
-import PanelInputNumber from "@/components/ui/Panel/PanelInputNumber";
+import PanelInputNumber from "@/components/ui/Panel/Input/PanelInputNumber";
 import {Checkbox} from "@mui/material";
 import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
-import PanelInput from "@/components/ui/Panel/Input";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelInput from "@/components/ui/Panel/Input/Input";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 import {HiDotsVertical} from "react-icons/hi";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 

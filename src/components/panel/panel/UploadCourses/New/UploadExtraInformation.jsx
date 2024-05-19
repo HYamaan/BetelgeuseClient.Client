@@ -3,11 +3,13 @@ import {useCookies} from "react-cookie";
 import axios from "axios";
 import styles from "@/components/panel/panel/UploadCourses/New/New.module.css";
 import panelCss from "@/components/panel/panel/panel.module.css";
-import PanelInput from "@/components/ui/Panel/Input";
+import PanelInput from "@/components/ui/Panel/Input/Input";
 import {Checkbox} from "@mui/material";
 import {useSelector} from "react-redux";
-import PanelInputNumber from "@/components/ui/Panel/PanelInputNumber";
+import PanelInputNumber from "@/components/ui/Panel/Input/PanelInputNumber";
 import {setCourseId} from "@/redux/features/CourseInformation/courseInformation";
+import {CourseLevel} from "@/enum/CourseLevel";
+import {Languages} from "@/enum/Languages";
 
 
 const UploadExtraInformation = () => {
@@ -173,47 +175,36 @@ const UploadExtraInformation = () => {
                     <div className={styles.category_filters}>
                         <div className={styles.category_filter}>
                             <div className={styles.category_filters_title}>Level</div>
-                            <div className={styles.category_filters_item}>
-                                <label>Filter 1</label>
-                                <input
-                                    type="checkbox"
-                                    value={1}
-                                    onChange={handleChangeLevel}
-                                    checked={selectedLevel === '1'}
-                                    disabled={selectedLevel !== null && selectedLevel !== '1'}
-                                />
-                            </div>
-                            <div className={styles.category_filters_item}>
-                                <label>Filter 2</label>
-                                <input
-                                    type="checkbox"
-                                    value={2}
-                                    onChange={handleChangeLevel}
-                                    checked={selectedLevel === '2'}
-                                    disabled={selectedLevel !== null && selectedLevel !== '2'}
-                                />
-                            </div>
-                            <div className={styles.category_filters_item}>
-                                <label>Filter 3</label>
-                                <input
-                                    type="checkbox"
-                                    value={3}
-                                    onChange={handleChangeLevel}
-                                    checked={selectedLevel === '3'}
-                                    disabled={selectedLevel !== null && selectedLevel !== '3'}
-                                />
-                            </div>
+                            {
+                                Object.keys(CourseLevel).map(level => (
+                                    <div className={styles.category_filters_item} key={level}>
+                                        <label>{level}</label>
+                                        <input
+                                            type="checkbox"
+                                            value={CourseLevel[level]}
+                                            onChange={handleChangeLevel}
+                                            checked={selectedLevel === CourseLevel[level].toString()}
+                                            disabled={selectedLevel !== null && selectedLevel !== CourseLevel[level].toString()}
+                                        />
+                                    </div>
+                                ))
+
+                            }
                         </div>
                         <div className={styles.category_filter}>
                             <div className={styles.category_filters_title}>Language</div>
-                            <div className={styles.category_filters_item}>
-                                <label>Turkish</label>
-                                <input type="checkbox" value="1" onChange={handleCheckboxChangeLanguage}/>
-                            </div>
-                            <div className={styles.category_filters_item}>
-                                <label>English</label>
-                                <input type="checkbox" value="2" onChange={handleCheckboxChangeLanguage}/>
-                            </div>
+                            {
+                                Object.keys(Languages).map(language => (
+                                    <div className={styles.category_filters_item} key={language}>
+                                        <label>{language}</label>
+                                        <input
+                                            type="checkbox"
+                                            value={Languages[language]}
+                                            onChange={handleCheckboxChangeLanguage}
+                                        />
+                                    </div>
+                                ))
+                            }
                         </div>
 
                     </div>

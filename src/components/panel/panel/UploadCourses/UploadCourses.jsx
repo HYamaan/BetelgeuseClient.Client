@@ -15,6 +15,7 @@ import UploadExtraInformation from "@/components/panel/panel/UploadCourses/New/U
 import {useRouter} from "next/router";
 import Pricing from "@/components/panel/panel/UploadCourses/New/Pricing";
 import Faq from "@/components/panel/panel/UploadCourses/New/Faq";
+import Content from "@/components/panel/panel/UploadCourses/New/Content";
 
 const UploadCourses = ({slug}) => {
     const router = useRouter();
@@ -42,7 +43,7 @@ const UploadCourses = ({slug}) => {
         {
             "id": 3,
             "text": "Content",
-            "imageSrc": "/assets/image/icons/graduate.svg",
+            "imageSrc": "/assets/image/icons/folder.svg",
             url: "content"
         },
         {
@@ -87,7 +88,7 @@ const UploadCourses = ({slug}) => {
         {currentPath === '' && <New/>}
         {currentPath === 'extra-information' && <UploadExtraInformation/>}
         {currentPath === 'pricing' && <Pricing/>}
-        {/*{openSection === 3 && <Education/>}*/}
+        {currentPath === "content" && <Content/>}
         {currentPath === "faq" && <Faq/>}
         {/*{openSection === 5 && <Skills/>}*/}
         {/*{openSection === 6 && <IdentityFinancial/>}*/}
