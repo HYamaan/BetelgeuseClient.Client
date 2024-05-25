@@ -8,7 +8,7 @@ import {useMediaQuery} from "react-responsive";
 import {HiDotsVertical} from "react-icons/hi";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import {fetchPanelAssignments} from "@/lib/fetch";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 import PanelSelect from "@/components/ui/Panel/Select";
 
 const MyAssignments = () => {

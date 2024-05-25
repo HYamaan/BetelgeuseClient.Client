@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import styles from './CoursesSUpport.module.css';
 import panelCss from "@/components/panel/panel/panel.module.css";
 import {LazyLoadImage} from "react-lazy-load-image-component";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 import PanelSelect from "@/components/ui/Panel/Select";
-import PanelTextArea from "@/components/ui/Panel/PanelTextArea";
+import PanelTextArea from "@/components/ui/Panel/Input/PanelTextArea";
 import MultipleFileUpload from "@/components/ui/Panel/MultipleFileUpload";
 
 const CoursesSupport = () => {

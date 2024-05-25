@@ -2,7 +2,8 @@ import {createSlice} from '@reduxjs/toolkit'
 import Cookies from 'js-cookie';
 
 const initialState = {
-    authToken: null
+    authToken: null,
+    refreshToken: null
 };
 export const authTokenSlice = createSlice({
     name: 'authToken',
@@ -10,16 +11,11 @@ export const authTokenSlice = createSlice({
     reducers: {
         setAuthToken: (state, action) => {
             state.authToken = action.payload;
-            Cookies.set('authToken', action.payload);
-            console.log("AuthTokenReduxState", state.authToken);
-            console.log("AuthTokenCookies", Cookies.get('authToken'));
         },
-        removeAuthToken: (state, action) => {
-            if (!state.authToken) {
-                Cookies.remove('authToken');
-            }
+        setRefreshToken: (state, action) => {
+            state.refreshToken = action.payload;
         }
     }
 });
-export const {setAuthToken} = authTokenSlice.actions;
+export const {setAuthToken, setRefreshToken} = authTokenSlice.actions;
 export default authTokenSlice.reducer;

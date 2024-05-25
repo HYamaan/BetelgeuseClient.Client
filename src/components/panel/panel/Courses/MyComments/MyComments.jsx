@@ -11,8 +11,8 @@ import {useRouter} from "next/router";
 import {fetchPanelCommentsCourse} from "@/lib/fetch";
 import moment from "moment/moment";
 import {useMediaQuery} from "react-responsive";
-import PanelInput from "@/components/ui/Panel/Input";
-import PanelDatePicker from "@/components/ui/Panel/PanelDatePicker";
+import PanelInput from "@/components/ui/Panel/Input/Input";
+import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 
 const MyComments = () => {
     const router = useRouter();

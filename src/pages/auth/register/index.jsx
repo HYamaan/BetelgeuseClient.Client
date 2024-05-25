@@ -9,10 +9,29 @@ import {FaRegEnvelope, FaUserAlt} from "react-icons/fa";
 import {BiSolidLockAlt} from "react-icons/bi";
 import {useFormik} from "formik";
 import styles from "@/pages/auth/authPage.module.css";
+import axios from "axios";
+import {useRouter} from "next/router";
 
 const RegisterPage = () => {
+    const router = useRouter();
+
+    const handleClickLoginPage = () => {
+        router.push("/auth/login");
+    }
     const onSubmit = async (values, actions) => {
-        actions.preventDefault();
+        const registerData = {
+            fullName: values.fullName,
+            email: values.email,
+            password: values.password,
+            confirmPassword: values.confirmPassword
+        }
+        const response = await axios.post(`/api/auth/register`, registerData);
+        if (response.status === 200) {
+            router.push("/auth/login");
+        } else {
+            console.error('Giriş başarısız');
+        }
+
     }
 
     const RegisterFormik = useFormik({
@@ -95,12 +114,11 @@ const RegisterPage = () => {
                                 onBlur={RegisterFormik.handleBlur}
                             />
                         })}
-                        <input type="submit" value="Login"  className={styles.button}/>
+                        <input type="submit" value="Sign Up" className={styles.button}/>
                     </form>
-                    <p className={styles.forgot_password}>Forgot password?</p>
                     <p className={styles.dont_have_account}>
                         Already you have an account?
-                        <span className={styles.login_page_signup}>Log in</span>
+                        <span className={styles.login_page_signup} onClick={handleClickLoginPage}>Login</span>
                     </p>
                 </div>
             </div>

@@ -113,6 +113,16 @@
     color: var(--color-grey-4);
 }
 
+.specific_inputw2 {
+    width: 50%;
+    border: 1px solid var(--color-grey-6);
+    border-radius: 6px;
+    outline: none;
+    padding: .555rem .9rem;
+    font-size: .8rem;
+    color: var(--color-grey-4);
+}
+
 .specific_date_show {
     display: flex;
     justify-content: center;
@@ -243,6 +253,20 @@
     font-weight: 400;
     color: var(--color-grey-3);
     max-width: 12rem;
+}
+
+.after_inline {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.after_inline::after {
+    content: "";
+    flex: 1 0 20px;
+    height: 2px;
+    background-color: #f1f1f1;
+    margin-left: 10px;
 }
 
 @media (max-width: 992px) {

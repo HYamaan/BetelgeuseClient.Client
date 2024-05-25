@@ -4,7 +4,7 @@ import {LazyLoadImage} from "react-lazy-load-image-component";
 import moment from "moment";
 
 
-const DashboardPanel = () => {
+const DashboardPanel = ({slug}) => {
     const getFormattedCurrentDate = () => moment(new Date()).format("MMMM YYYY");
     const noticeBoard = [
         {

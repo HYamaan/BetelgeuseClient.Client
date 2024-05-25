@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 const nextConfig = {
-  reactStrictMode: true,
+    reactStrictMode: false,
   env: {
+    API_SERVER1: process.env.API_SERVER1,
     API_SERVER: process.env.API_SERVER,
     LOCAL_URL: process.env.LOCAL_URL,
       GOOGLE_RECAPTCHA_V2_SITE_KEY: process.env.GOOGLE_RECAPTCHA_V2_SITE_KEY,

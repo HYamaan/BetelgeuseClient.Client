@@ -5,10 +5,9 @@ import {Avatar} from "@mui/material";
 import {deepPurple} from "@mui/material/colors";
 import {useFormik} from "formik";
 import {BlogDetailCommentSchema} from "@/schema/BlogDetailCommentSchema";
-import {HiOutlineDotsVertical} from "react-icons/hi";
-import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import Banner from "@/components/Blog/Banner/Banner";
 import {useRouter} from "next/router";
+
 const BlogDetail = ({blogDetail}) => {
     const router =useRouter();
     const [dotInformationPopup,setDotInformationPopup]=useState(false);
@@ -20,7 +19,6 @@ const BlogDetail = ({blogDetail}) => {
         router.push('/'+ router.asPath.split('/')[1])
     }
     const handleClickCategoriesPosts = (categoryUrl) => {
-        console.log("category",categoryUrl)
         const url =categoryUrl.toLowerCase();
         const currentPath = router.asPath.split('/');
         const basePath = currentPath[1];
@@ -42,34 +40,35 @@ const BlogDetail = ({blogDetail}) => {
 
     return<>
         <Banner
-            date={blogDetail[0].date}
-            author={blogDetail[0].author}
-            title={blogDetail[0].title}
-            category={blogDetail[0].category[0]}
+            date={blogDetail.createdDate}
+            author={blogDetail.author.userName}
+            title={blogDetail.title}
+            category={blogDetail.blogCategory.name}
             handleClickCategoriesPosts={handleClickCategoriesPosts}
         />
         <section className="w-[80%] mx-auto px-[2.4rem] mt-[4rem]">
             <div className={styles.blogSection}>
                 <div className={styles.blogContainer} >
                     <div className={styles.blogPost}>
-                        {blogDetail[0].blogPost.map((item, index) => {
-                            const itemKey = Object.keys(item)[0];
-                            const ItemComponent = itemKey || 'div';
+                        <div dangerouslySetInnerHTML={{__html: blogDetail.description}}/>
+                        {/*{blogDetail[0].blogPost.map((item, index) => {*/}
+                        {/*    const itemKey = Object.keys(item)[0];*/}
+                        {/*    const ItemComponent = itemKey || 'div';*/}
 
-                            if (item.src) {
-                                return (
-                                    <LazyLoadImage
-                                        key={index}
-                                        src={item.src}
-                                        className={styles.blogDetailImage}
-                                    />
-                                );
-                            } else if (item[itemKey]) {
-                                return <ItemComponent key={index}>{item[itemKey]}</ItemComponent>;
-                            } else {
-                                return null;
-                            }
-                        })}
+                        {/*    if (item.src) {*/}
+                        {/*        return (*/}
+                        {/*            <LazyLoadImage*/}
+                        {/*                key={index}*/}
+                        {/*                src={item.src}*/}
+                        {/*                className={styles.blogDetailImage}*/}
+                        {/*            />*/}
+                        {/*        );*/}
+                        {/*    } else if (item[itemKey]) {*/}
+                        {/*        return <ItemComponent key={index}>{item[itemKey]}</ItemComponent>;*/}
+                        {/*    } else {*/}
+                        {/*        return null;*/}
+                        {/*    }*/}
+                        {/*})}*/}
                     </div>
                     <div className={styles.blogComments}>
                         <h4 className={styles.blogComments_title}>Comments<span>(1)</span></h4>
@@ -83,62 +82,65 @@ const BlogDetail = ({blogDetail}) => {
                     />
                             <input type="submit" value="Post comment"  className={styles.button_dark}/>
                         </form>
-                        {
-                            blogDetail[0].comments.map((item,index)=>(
-                                <div className={`${styles.box} my-5`} key={index}>
-                                    <div className={styles.comment_user_info}>
-                                        <div className={styles.comment_user}>
-                                            <Avatar
-                                                src={item.userImageSrc}
-                                                alt="demo Onstructor"
-                                                sx={{bgcolor: deepPurple.A700}}
-                                            />
-                                            <div className={styles.comment_user_description}>
-                                                <p className={styles.comment_user_name}>{item.userName}</p>
-                                                <p className={styles.comment_user_degree}>{item.userDegree}</p>
-                                            </div>
-                                        </div>
-                                        <div className={styles.comment_date}>
-                                            <div >
-                                                <span>{item.commentDate.date}</span> | <span>{item.commentDate.time}</span>
-                                            </div>
-                                            <HiOutlineDotsVertical onClick={()=>{setDotInformationPopup(!dotInformationPopup)}}/>
+                        {/*{*/}
+                        {/*    blogDetail[0].comments.map((item,index)=>(*/}
+                        {/*        <div className={`${styles.box} my-5`} key={index}>*/}
+                        {/*            <div className={styles.comment_user_info}>*/}
+                        {/*                <div className={styles.comment_user}>*/}
+                        {/*                    <Avatar*/}
+                        {/*                        src={item.userImageSrc}*/}
+                        {/*                        alt="demo Onstructor"*/}
+                        {/*                        sx={{bgcolor: deepPurple.A700}}*/}
+                        {/*                    />*/}
+                        {/*                    <div className={styles.comment_user_description}>*/}
+                        {/*                        <p className={styles.comment_user_name}>{item.userName}</p>*/}
+                        {/*                        <p className={styles.comment_user_degree}>{item.userDegree}</p>*/}
+                        {/*                    </div>*/}
+                        {/*                </div>*/}
+                        {/*                <div className={styles.comment_date}>*/}
+                        {/*                    <div >*/}
+                        {/*                        <span>{item.commentDate.date}</span> | <span>{item.commentDate.time}</span>*/}
+                        {/*                    </div>*/}
+                        {/*                    <HiOutlineDotsVertical onClick={()=>{setDotInformationPopup(!dotInformationPopup)}}/>*/}
 
-                                            <div  className={`${styles.dotInformationPopup} ${dotInformationPopup ? styles.visible : ''}`}>
-                                                {dotInformationPopup && (
-                                                    <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-                                                        <div className={styles.dot_info}>
-                                                            <p>Reply</p>
-                                                            <p>Report</p>
-                                                        </div>
-                                                    </OutsideClickHandler>
-                                                )}
-                                            </div>
+                        {/*                    <div  className={`${styles.dotInformationPopup} ${dotInformationPopup ? styles.visible : ''}`}>*/}
+                        {/*                        {dotInformationPopup && (*/}
+                        {/*                            <OutsideClickHandler onOutsideClick={handleOutsideClick}>*/}
+                        {/*                                <div className={styles.dot_info}>*/}
+                        {/*                                    <p>Reply</p>*/}
+                        {/*                                    <p>Report</p>*/}
+                        {/*                                </div>*/}
+                        {/*                            </OutsideClickHandler>*/}
+                        {/*                        )}*/}
+                        {/*                    </div>*/}
 
-                                        </div>
-                                    </div>
-                                    <div className={styles.user_comment}>{item.commentText}</div>
-                                </div>
-                            ))
-                        }
+                        {/*                </div>*/}
+                        {/*            </div>*/}
+                        {/*            <div className={styles.user_comment}>{item.commentText}</div>*/}
+                        {/*        </div>*/}
+                        {/*    ))*/}
+                        {/*}*/}
                     </div>
                 </div>
                 <div className={styles.infoSection}>
                     <div className={`${styles.instructor} ${styles.box}`}>
                         <Avatar
-                            src={blogDetail[0].authorImage}
-                            alt={blogDetail[0].title.split(" ")[0]}
+                            src={blogDetail.author.image}
+                            alt={blogDetail.author.username}
                             sx={{bgcolor: deepPurple.A700}}
                         />
-                        <div className={styles.instructor_title}>{blogDetail[0].author}</div>
+                        <div className={styles.instructor_title}>{blogDetail.author.username}</div>
                         <div className={styles.instructor_subTitle}>Author</div>
                         <div className="button_dark w-full text-center mt-4">Author Posts</div>
                     </div>
                     <div className={`${styles.box} ${styles.categories}`}>
                         <h2>Categories</h2>
-                        {
-                            blogDetail[0].category.map((item,index)=>(<p key={index} onClick={()=>{handleClickCategoriesPosts(item)}}>{item}</p>))
-                        }
+                        <p onClick={() => {
+                            handleClickCategoriesPosts(blogDetail.blogCategory.categoryID)
+                        }}>{blogDetail.blogCategory.name}</p>
+                        {/*{*/}
+                        {/*    blogDetail[0].category.map((item,index)=>(<p key={index} onClick={()=>{handleClickCategoriesPosts(item)}}>{item}</p>))*/}
+                        {/*}*/}
                     </div>
                     <div className={`${styles.box} ${styles.recentPost}`}>
                         <h2>Recent posts</h2>

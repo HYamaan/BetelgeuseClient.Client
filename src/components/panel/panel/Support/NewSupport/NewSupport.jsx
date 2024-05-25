@@ -2,9 +2,9 @@ import React, {useState, useEffect, useRef} from 'react';
 import styles from "./NewSupport.module.css"
 import panelCss from "@/components/panel/panel/panel.module.css";
 
-import PanelInput from "@/components/ui/Panel/Input";
+import PanelInput from "@/components/ui/Panel/Input/Input";
 import PanelSelect from "@/components/ui/Panel/Select";
-import PanelTextArea from "@/components/ui/Panel/PanelTextArea";
+import PanelTextArea from "@/components/ui/Panel/Input/PanelTextArea";
 import MultipleFileUpload from "@/components/ui/Panel/MultipleFileUpload";
 import axios from "axios";
 

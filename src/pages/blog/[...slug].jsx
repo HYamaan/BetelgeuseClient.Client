@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogDetail from "@/components/Blog/BlogDetail/BlogDetail";
-import {fetchBlogDetail} from "@/lib/fetch";
+import axios from "axios";
 
 const BlogDetailPage = ({blogDetail}) => {
     return <BlogDetail  blogDetail={blogDetail}/>
@@ -10,16 +10,19 @@ const BlogDetailPage = ({blogDetail}) => {
 export default BlogDetailPage;
 export async function getServerSideProps({params}) {
     const url =params.slug[0];
-    const blogDetail=await fetchBlogDetail(url);
+    const blog = await axios.get(`${process.env.LOCAL_URL}/api/blog/getBlogById?Id=${url}`);
+
+    if (blog.status !== 200) {
+        return {
+            notFound: true
+        }
+    }
+    const blogDetail = blog.data.data;
+    console.log("blogDetail", blogDetail);
     if(blogDetail){
         return{
             props:{blogDetail}
         }
-    }else{
-        console.error(`Course not found for guid: ${url}`);
-        return {
-            notFound: true,
-        };
     }
 
 }
