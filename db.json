@@ -1094,18 +1094,27 @@
       "icon": "fa-solid fa-gauge",
       "text": "Dashboard",
       "componentName": "DashboardPanel",
-      "url": "dashboard"
+      "url": "dashboard",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true
     },
     {
       "id": "e9d47fb1-3a81",
       "icon": "fa-solid fa-calendar-alt",
       "text": "Upload Courses",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": false,
       "submenu": [
         {
           "id": "faaab2c3-4d5e",
           "text": "New",
           "componentName": "NewCourses",
-          "url": "webinar/new"
+          "url": "webinar/new",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1113,24 +1122,36 @@
       "id": "g7c3e2b3-ae52",
       "text": "Courses",
       "icon": "fa-solid fa-book",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "d1a6e8f0-7c6e",
           "text": "My purchases",
           "componentName": "Purchases",
-          "url": "purchase"
+          "url": "purchase",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "c8e2a7fb-912c",
           "text": "My comments",
           "componentName": "MyComments",
-          "url": "comments"
+          "url": "comments",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "d1a6e8f0-716e",
           "text": "Favorites",
           "componentName": "Favorites",
-          "url": "favorites"
+          "url": "favorites",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1138,12 +1159,18 @@
       "id": "e9d47fb1-3a89",
       "icon": "fa-solid fa-calendar-alt",
       "text": "Upcoming Courses",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "f0a1b2c3-4d5e",
           "text": "Following courses",
           "componentName": "FollowingCourses",
-          "url": "following-courses"
+          "url": "following-courses",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1151,12 +1178,18 @@
       "id": "g7c3e2b4-be52",
       "text": "Assignments",
       "icon": "fa-solid fa-tasks",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "g7c3e2b4-ae52",
           "text": "My Assignments",
           "componentName": "MyAssignments",
-          "url": "my-assignments"
+          "url": "my-assignments",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1164,12 +1197,18 @@
       "id": "gdc3e2b4-ae52",
       "text": "Meeting",
       "icon": "fa-solid fa-calendar-check",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "i1a2b3c4-5e6f",
           "text": "My reservation",
           "componentName": "Reservations",
-          "url": "reservations"
+          "url": "reservations",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1177,24 +1216,36 @@
       "id": "g7cdfe2b4-ae52",
       "text": "Certificates",
       "icon": "fa-solid fa-certificate",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "n1o2p3q4-r5s6t7",
           "text": "Achievements",
           "componentName": "Achievements",
-          "url": "achievements"
+          "url": "achievements",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "u8v9w0x1-y2z3a4",
           "text": "Certificate Validation",
           "componentName": "CertificateValidation",
-          "url": "certificate-validation"
+          "url": "certificate-validation",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "b5c6d7e8-f9g0h1",
           "text": "Completion Certificates",
           "componentName": "CompletionCertificates",
-          "url": "completion-certificates"
+          "url": "completion-certificates",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1202,12 +1253,18 @@
       "id": "g7ssd3e2b4-ae52",
       "text": "Store",
       "icon": "fa-solid fa-shopping-cart",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "q1r2s3t4-u5v6w7x8",
           "text": "My purchases",
           "componentName": "MyPurchases",
-          "url": "my-purchases"
+          "url": "my-purchases",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1215,18 +1272,27 @@
       "id": "g7cfde2b4-ae52",
       "text": "Financial",
       "icon": "fa-solid fa-dollar-sign",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "o5p6q7r8-s9t0u1v2",
           "text": "Financial summary",
           "componentName": "FinancialSummary",
-          "url": "financial-summary"
+          "url": "financial-summary",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "w3x4y5z6-a1b2c3d4",
           "text": "Payout",
           "componentName": "Payout",
-          "url": "payout"
+          "url": "payout",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1234,18 +1300,27 @@
       "id": "g7c3e2df4-ae52",
       "text": "Support",
       "icon": "fa-solid fa-life-ring",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "k1l2m3n4-o5p6q7r8",
           "text": "New",
           "componentName": "NewSupport",
-          "url": "new-support"
+          "url": "new-support",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
           "text": "Courses Support",
           "componentName": "CoursesSupport",
-          "url": "courses-support"
+          "url": "courses-support",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1253,30 +1328,45 @@
       "id": "g7ag3e2b4-ae52",
       "text": "Forums",
       "icon": "fa-solid fa-comments",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
           "text": "New Topic",
           "componentName": "NewTopic",
-          "url": "new-topic"
+          "url": "new-topic",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "b2c3d4e5-f6g7h8i9",
           "text": "My Topic",
           "componentName": "MyTopic",
-          "url": "my-topic"
+          "url": "my-topic",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "j0k1l2m3n4-o5p6q7r8",
           "text": "My Posts",
           "componentName": "MyPosts",
-          "url": "my-posts"
+          "url": "my-posts",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "s9t0u1v2w3-x4y5z6a1",
           "text": "Bookmarks",
           "componentName": "Bookmarks",
-          "url": "bookmarks"
+          "url": "bookmarks",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1284,18 +1374,27 @@
       "id": "g7c3esdb4-ae52",
       "text": "Articles",
       "icon": "fa-regular fa-newspaper",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true,
       "submenu": [
         {
           "id": "400bcb30-2d6e-4a20-adbc-c025d97ef34e",
           "text": "New Article",
           "componentName": "NewArticles",
-          "url": "new-article"
+          "url": "new-article",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         },
         {
           "id": "b23572ef-241d-48e9-9689-a2292ca810dd",
           "text": "My Articles",
           "componentName": "MyArticles",
-          "url": "my-articles"
+          "url": "my-articles",
+          "accessibleToAdmin": true,
+          "accessibleToModerators": true,
+          "accessibleToStudents": true
         }
       ]
     },
@@ -1304,21 +1403,30 @@
       "icon": "fa-solid fa-bell",
       "text": "Notifications",
       "componentName": "Notifications",
-      "url": "notifications"
+      "url": "notifications",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true
     },
     {
       "id": "s9t0u1v2w3-x4y5z6a1",
       "icon": "fa-solid fa-cogs",
       "text": "Settings",
       "componentName": "SettingSections",
-      "url": "settings"
+      "url": "settings",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true
     },
     {
       "id": "b2c3d4e5-f6g7h8i9",
       "icon": "fa-solid fa-sign-out-alt",
       "text": "Log out",
       "componentName": "LogOut",
-      "url": "/auth/login"
+      "url": "/auth/login",
+      "accessibleToAdmin": true,
+      "accessibleToModerators": true,
+      "accessibleToStudents": true
     }
   ],
   "purchasesCourse": [

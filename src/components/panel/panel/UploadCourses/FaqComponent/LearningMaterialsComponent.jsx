@@ -15,6 +15,7 @@ import {nanoid} from 'nanoid';
 import FetchUpdateFaqTypeOrder from "@/lib/fetch/fetchUpdateFaqTypeOrder";
 import {AccordionType} from "@/enum/AccordionType";
 import {Languages} from "@/enum/Languages";
+import {toast} from "react-toastify";
 
 const LearningMaterialsComponent = () => {
     const [cookies, setCookie] = useCookies();
@@ -162,12 +163,17 @@ const LearningMaterialsComponent = () => {
             });
             if (result.data.succeeded) {
                 setLearningMaterials(LearningMaterials.filter(faq => faq.id !== faqId));
+                console.log("FAQ option successfully deleted.");
             }
         } catch (error) {
             console.error("Error deleting FAQ option:", error);
+
             if (error.response && error.response.status === 401) {
                 await refreshToken();
                 handleClickDelete(faqId);
+                toast.warn("Please retry deleting the FAQ option.");
+            }else{
+                toast.error("Error deleting FAQ option.");
             }
         }
     };
