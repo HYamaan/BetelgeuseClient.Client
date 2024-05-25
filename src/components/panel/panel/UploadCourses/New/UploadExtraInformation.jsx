@@ -7,7 +7,8 @@ import PanelInput from "@/components/ui/Panel/Input/Input";
 import {Checkbox} from "@mui/material";
 import {useSelector} from "react-redux";
 import PanelInputNumber from "@/components/ui/Panel/Input/PanelInputNumber";
-import {setCourseId} from "@/redux/features/CourseInformation/courseInformation";
+import {toast} from "react-toastify";
+
 import {CourseLevel} from "@/enum/CourseLevel";
 import {Languages} from "@/enum/Languages";
 
@@ -69,8 +70,10 @@ const UploadExtraInformation = () => {
             }
         }).then(response => {
             console.log('Success:', response);
+            toast.success('Extra information uploaded successfully');
         }).catch(error => {
             console.error('Error:', error.response);
+            toast.error('Error uploading extra information');
         });
     }
 

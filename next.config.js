@@ -11,6 +11,7 @@ const nextConfig = {
       GOOGLE_RECAPTCHA_V3_SITE_KEY: process.env.GOOGLE_RECAPTCHA_V3_SITE_KEY,
       GOOGLE_RECAPTCHA_V3_SECRET_KEY: process.env.GOOGLE_RECAPTCHA_V3_SECRET_KEY,
       GOOGLE_RECAPTCHA_SITEVERIFY_URL: process.env.GOOGLE_RECAPTCHA_SITEVERIFY_URL,
+      JWT_TOKEN_SECRET:process.env.JWT_TOKEN_SECRET
   },
   webpack: (config, { isServer }) => {
     config.resolve.alias['@'] = path.join(__dirname, 'src');

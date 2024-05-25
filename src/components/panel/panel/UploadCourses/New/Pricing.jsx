@@ -8,6 +8,7 @@ import PanelInput from "@/components/ui/Panel/Input/Input";
 import PanelDatePicker from "@/components/ui/Panel/Input/PanelDatePicker";
 import {HiDotsVertical} from "react-icons/hi";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
+import { toast } from 'react-toastify';
 
 import {v4 as uuidv4} from 'uuid';
 import {useSelector} from "react-redux";
@@ -123,8 +124,10 @@ const Pricing = () => {
             }
         }).then(response => {
             console.log('Success:', response);
+            toast.success('Pricing information has been saved successfully.')
         }).catch(error => {
             console.error('Error:', error.response.data);
+            toast.error('An error occurred while saving the pricing information.')
         });
     };
 
