@@ -5,6 +5,9 @@ import PanelInput from "@/components/ui/Panel/Input/Input";
 import OneFileUpload from "@/components/ui/Panel/OneFileUpload";
 import WYSIWYG from "@/components/ui/WYSIWYG/WYSIWYG";
 
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import axios from "axios";
 import {useCookies} from "react-cookie";
 import {useDispatch} from "react-redux";
@@ -50,9 +53,12 @@ const New = () => {
             }
         }).then(response => {
             console.log('Success:', response.data);
+            toast.success("Course created successfully")
             dispatch(setCourseId(response.data.data))
+
         }).catch(error => {
             console.error('Error:', error.response.data);
+            toast.error("An error occurred while creating the course")
         });
     }
 
