@@ -1,31 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styles from './footer.module.css'
 import {GiStripedSun} from "react-icons/gi";
 import {FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter} from "react-icons/fa";
 import {FooterSchema} from "@/schema/footerSchema";
 import {useFormik} from "formik";
-import LocalFooterData from '@/data/FooterData.json'
+import {useQuery} from "react-query";
+import {fetchFooter} from "@/lib/fetch";
 
 const Footer = () => {
-    const [footerData, setFooterData] = useState([]);
-    useEffect(() => {
-        // Simulating API call
-        const fetchData = async () => {
-            try {
-                // Uncomment the following line when fetching from an API
-                // const response = await fetch('https://api.example.com/footerdata');
-                // const data = await response.json();
-
-                // Simulating API response
-                const data = LocalFooterData;
-                setFooterData(data);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-
-        fetchData();
-    }, []); // Empty dependency array ensures the effect runs only once, similar to componentDidMount
+    const { data:footerData } = useQuery('footer', fetchFooter);
 
     const onSubmit = async (values, actions) => {
         actions.preventDefault();
@@ -88,7 +71,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className={styles.contents}>
-                        {footerData.map((section, index) => (
+                        {footerData?.map((section, index) => (
                             <div key={index}>
                                 <h4>{section.title}</h4>
                                 <div className={styles.title_contents}>
@@ -100,7 +83,21 @@ const Footer = () => {
                                 </div>
                             </div>
                         ))}
-
+                    </div>
+                    <div className={styles.socialMediaSection_mobil}>
+                        <span className={styles.contact_with_us}>Follow us</span>
+                        <div>
+                            <FaFacebookF/>
+                        </div>
+                        <div>
+                            <FaInstagram/>
+                        </div>
+                        <div>
+                            <FaTwitter/>
+                        </div>
+                        <div>
+                            <FaLinkedinIn/>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.footer_bottom}>

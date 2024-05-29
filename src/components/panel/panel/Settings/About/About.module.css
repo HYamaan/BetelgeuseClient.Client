@@ -1,0 +1,25 @@
+.row {
+    width: 50%;
+    max-width: 50%;
+}
+
+.row h1 {
+    margin-bottom: .7rem;
+}
+
+.row h2 {
+    margin: .5rem 0 .3rem 0;
+    font-size: .85rem;
+}
+
+.info {
+    color: var(--color-grey-1);
+    font-size: .75rem;
+}
+
+@media (max-width: 992px) {
+    .row {
+        width: 100%;
+        max-width: 100%;
+    }
+}

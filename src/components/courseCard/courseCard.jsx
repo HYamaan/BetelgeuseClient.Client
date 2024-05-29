@@ -6,6 +6,7 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 import {FaCircle, FaClosedCaptioning, FaHeart, FaMinus, FaPlayCircle, FaPlus, FaRegClock, FaStar} from "react-icons/fa";
 import Link from "next/link";
 import {LuClock} from "react-icons/lu";
+import {useRouter} from "next/router";
 
 const xJson = {
     "s1": "Have the skills to start making money on the side, as a casual freelancer, or full time as a work-from-home freelancer",
@@ -16,9 +17,14 @@ const xJson = {
     "s6": "Fully understand how to use Custom Post Types and Advanced Custom Fields in WordPress"
 }
 const CourseCardComponent = () => {
+    const router=useRouter();
     const [cardHover, setCardHover] = useState(false);
     const [cardAddToBasket, setAddToBasket] = useState(false);
     const [cardLike, setCardLike] = useState(false);
+
+    const handleClickRouteUrl= async ()=>{
+        await router.push('#')
+    }
 
 
     const courseCard = <>
@@ -139,7 +145,7 @@ const CourseCardComponent = () => {
              onMouseLeave={() => setCardHover(false)}
         >
            {courseCard}
-            <div className={styles.course_popover}>
+            <div className={styles.course_popover} onClick={handleClickRouteUrl}>
                 {
                     cardHover && (
                         <div className={`${styles.webui_popover}`}>

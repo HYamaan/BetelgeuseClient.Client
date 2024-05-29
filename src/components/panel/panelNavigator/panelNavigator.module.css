@@ -1,0 +1,306 @@
+.panel__nav__mobil {
+    display: none;
+    visibility: hidden;
+    width: 100%;
+}
+
+.panel__nav {
+    display: block;
+    visibility: visible;
+}
+
+.userInformation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.userInformation__image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.userInformation__title {
+    font-size: .85rem;
+    line-height: 1.5;
+    text-align: center !important;
+    font-weight: 600;
+}
+
+.userInformation_mobil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+}
+
+.userInformation__image_mobil {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+}
+
+.userInformation__title_mobil {
+    font-size: .7rem;
+    line-height: 1.5;
+    text-align: center !important;
+    font-weight: 600;
+}
+
+.userInformation__menu_mobil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .2rem;
+    font-size: .7rem;
+    border-radius: 10px;
+    padding: .4rem .2rem;
+    color: rgba(52, 52, 52, 0.5);
+    border: 1px solid rgba(52, 52, 52, 0.1) !important;
+}
+
+.userCourse__count {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.4rem auto 0 auto;
+    width: 100%;
+}
+
+.userCourse__count p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 1.4rem;
+}
+
+.userCourse__count p:first-child {
+    border-right: 1px solid var(--color-grey-2);
+    height: 100%;
+}
+
+.userCourse__count_number {
+    font-size: .9rem;
+    font-weight: bold;
+    pointer-events: none;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.userCourse__count_title {
+    font-size: .65rem;
+    color: var(--color-grey-3);
+}
+
+.side__nav__section {
+    margin-top: 1.7rem;
+}
+
+.sidenav__item {
+    padding-top: .2rem;
+}
+
+.sidenav__item__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8rem;
+    color: var(--color-card);
+    cursor: pointer;
+}
+
+.sidenav__item__title span {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.sidenav__item__title span i {
+    font-size: 1.3rem;
+}
+
+.sidenav__item__title p {
+    font-size: .8rem;
+    margin-bottom: 2px;
+}
+
+.sidenav__item__submenu__open {
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
+}
+
+.sidenav__item__submenu__open.active {
+    height: 110px;
+}
+
+.sidenav__item__submenu {
+    height: 100%;
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 1.29;
+    color: #818894;
+    margin-bottom: .7rem;
+    position: relative;
+    padding: 5px 0 10px 34px;
+    z-index: 11;
+}
+
+.sidenav__item__submenu::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    z-index: 10;
+    left: 12.2px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--color-card);
+}
+
+.sidenav__item__submenu li {
+    cursor: pointer;
+    position: relative;
+}
+
+.sidenav__item__submenu li:not(:first-child) {
+    margin-top: .2rem;
+}
+
+.sidenav__item__submenu li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    width: 11px;
+    height: 11px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 3px #ffffff;
+    background-color: var(--color-card);
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+.sidenav__item__title.active,
+.sidenav__item__submenu li.active {
+    color: var(--color--saphireBlue) !important;
+    font-weight: bold;
+}
+
+.sidenav__item__submenu li.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    width: 11px;
+    height: 11px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    border: solid 3px #ffffff;
+    background-color: var(--color--saphireBlue); /* Change to the desired variable */
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+}
+
+.exit {
+    display: none;
+    visibility: hidden;
+}
+
+@media (max-width: 992px) {
+    .panel__nav__mobil {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        visibility: visible;
+        z-index: 500;
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+        background-color: var(--color-white-1);
+    }
+
+    .panel__nav {
+        display: none;
+        visibility: hidden;
+        padding: 15px 20px 10px 20px;
+    }
+
+    .panel__nav__show_mobil {
+        top: 0;
+        display: unset;
+        visibility: visible;
+        background-color: var(--color-white-1);
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 2000;
+        overflow: auto;
+        transition: all .5s ease-in-out;
+    }
+
+    .exit {
+        display: flex;
+        justify-content: flex-end;
+        visibility: visible;
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .userInformation {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .userInformation__image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .userInformation__title {
+        font-size: .95rem;
+    }
+
+    .userCourse__count {
+        justify-content: flex-start;
+        margin: 1.4rem 0;
+        width: 100%;
+    }
+
+    .userCourse__count p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 1.4rem;
+    }
+
+    .userCourse__count p:first-child {
+        border-right: 1px solid var(--color-grey-2);
+    }
+
+    .userCourse__count_number {
+        font-size: 1rem;
+    }
+
+    .userCourse__count_title {
+        font-size: .8rem;
+    }
+
+    .side__nav__section {
+        margin-top: 0;
+    }
+
+    .sidenav__item__title p {
+        font-size: .9rem;
+    }
+}

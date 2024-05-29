@@ -1,0 +1,112 @@
+.webinar_progress {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem;
+    box-shadow: 0 12px 23px 0 rgba(62, 73, 84, 0.1);
+    border-radius: .625rem;
+    background-color: var(--color-white-1);
+    margin-bottom: 1.75rem;
+}
+
+.progress_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;;
+
+    width: fit-content;
+}
+
+.progress_item:first-child {
+    padding-right: 1.5rem;
+}
+
+.progress_item:not(:first-child) {
+    border-left: 1px solid var(--color-grey-6);
+    padding: 0 1.5rem;
+}
+
+.progress_icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    transition: all .3s ease;
+    padding: .625rem;
+    color: var(--color-card);
+}
+
+.progress_icon.active {
+    background: rgb(98, 76, 235);
+    background: -moz-linear-gradient(135deg, rgba(98, 76, 235, 0.1) 9%, rgba(132, 40, 201, 0.6223739495798319) 50%, rgba(140, 27, 171, 1) 100%);
+    background: -webkit-linear-gradient(135deg, rgba(98, 76, 235, 0.1) 9%, rgba(132, 40, 201, 0.6223739495798319) 50%, rgba(140, 27, 171, 1) 100%);
+    background: linear-gradient(135deg, rgba(98, 76, 235, 0.1) 9%, rgba(132, 40, 201, 0.6223739495798319) 50%, rgba(140, 27, 171, 1) 100%);
+}
+
+.progress_icon_title {
+    font-size: 1.1rem;
+    color: var(--color-card);
+    font-weight: 600;
+    transition: all 3s ease;
+}
+
+.progress_icon_title span {
+    margin-left: .625rem;
+
+}
+
+.image_cover {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 50%;
+    object-position: 50% 50%;
+}
+
+.buttonsSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-grey-6);
+}
+
+.buttonsSection__col {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.buttonsSection__col div {
+    padding: 0.5rem 1.4rem;
+}
+
+.button_close {
+    width: 10rem;
+}
+
+.button_save {
+    width: 5rem;
+}
+
+@media (max-width: 992px) {
+    .webinar_progress {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+    }
+
+    .buttonsSection {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

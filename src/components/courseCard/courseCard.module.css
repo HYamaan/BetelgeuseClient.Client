@@ -244,6 +244,7 @@
     top: 5rem;
     transform: translateY(0%);
     opacity: 0;
+    cursor: pointer;
 }
 .course_card:hover .course_popover{
     transition:all .4s ease-out;

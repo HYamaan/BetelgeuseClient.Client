@@ -4,7 +4,7 @@ import CourseDescription from "../../components/course/CourseDescription";
 import CourseVideo from "../../components/course/CourseVideo";
 import CourseBread from "../../components/course/CourseBread";
 import useDisableBodyScroll from "../../hooks/useDisableBodyScroll";
-import CourseJson from "../../data/Course.json"
+import {fetchCourses} from "@/lib/fetch";
 
 const Course = ({courseHeader, willLearnJson, reviews, courses,guid}) => {
     const [allStudentReview, setAllStudentReview] = useState(false);
@@ -50,7 +50,9 @@ const Course = ({courseHeader, willLearnJson, reviews, courses,guid}) => {
 export default Course;
 export async function getServerSideProps({params}) {
     const courseUrl =params.slug[0];
-    const foundCourse = CourseJson.course.find(value => value.url === courseUrl);
+    const courseData=await fetchCourses();
+    const foundCourse = courseData.find(value => value.url === courseUrl);
+
     if (foundCourse !== undefined && foundCourse !== null) {
         console.log("burada",courseUrl)
         const { courseHeader, willLearnJson, reviews, courses,guid} = foundCourse;
@@ -63,7 +65,4 @@ export async function getServerSideProps({params}) {
             notFound: true,
         };
     }
-
-
-
 }

@@ -68,38 +68,6 @@
     gap: .4rem;
     margin-top: 1.5rem;
 }
-.button_dark{
-    background-color: var(--color--saphireBlue);
-    color: var(--color-white-2);
-    padding:.6rem 1.6rem;
-    border-radius: 10px;
-    border:1px solid var(--color--saphireBlue);
-    font-size: .9rem;
-    font-weight: 500;
-    box-shadow: 0 5px 16px 1px rgba(117, 79, 254, 0.7);
-    cursor: pointer;
-}
-.button_dark:hover{
-    transition: all .4s ease-in-out;
-    box-shadow: 0 5px 16px 1px rgba(96, 52, 254, 0.7);
-    background-color: var(--color--saphireBlueDark);
-}
-.button_light{
-    color: var(--color--saphireBlue);
-    padding:.6rem 1.6rem;
-    border:1px solid var(--color--saphireBlue);
-    border-radius: 10px;
-    font-size: .9rem;
-    font-weight: 500;
-    cursor: pointer;
-    box-shadow: unset;
-}
-.button_light:hover{
-    transition: all .4s ease-in-out;
-    color: var(--color-white-2);
-    background-color: var(--color--saphireBlue);
-    box-shadow: 0 5px 16px 1px rgba(117, 79, 254, 0.7);
-}
 @keyframes dot-animation {
     0% {
         transform: translateY(0);

@@ -1,14 +1,15 @@
 import React from 'react';
 import styles from './PopulerCategories.module.css'
-import MostPopularCategories from '@/data/MostPopularCategories.json'
+import {useQuery} from "react-query";
+import { fetchMostPopularCategories} from "@/lib/fetch";
 
 const TopCategories = () => {
-
+    const { data:MostPopularCategories } = useQuery('mostPopularCategories', fetchMostPopularCategories);
     return (
         <section className={styles.Categories_Section}>
             <h1 className={styles.top_courses}>Most Popular Categorys</h1>
             <div className={styles.mostPopularCategories}>
-                {MostPopularCategories.map((item, index) => {
+                {MostPopularCategories?.map((item, index) => {
                     const {title,iconClass,quantity}=item;
                    return <div className={styles.Categories_Cart} key={index}>
                         <p className={styles.icon_content}>
