@@ -86,7 +86,7 @@ const ResetPasswordFormik = ({userId, token}) => {
                     <p className={styles.login_title}>Reset password<span className={styles.login_title_marker}>!</span>
                     </p>
                     <p className={styles.login_description}>Explore, learn, and grow with us. Enjoy a seamless and
-                        enriching educational journey. Let's begin!</p>
+                        enriching educational journey. Let&#39;s begin!</p>
 
                     <form onSubmit={ResetPasswordFormik.handleSubmit}>
                         {ResetPasswordInput.map((input) => (

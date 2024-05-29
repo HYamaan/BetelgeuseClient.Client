@@ -15,6 +15,7 @@ import {nanoid} from 'nanoid';
 import FetchUpdateFaqTypeOrder from "@/lib/fetch/fetchUpdateFaqTypeOrder";
 import {AccordionType} from "@/enum/AccordionType";
 import {Languages} from "@/enum/Languages";
+import {toast} from "react-toastify";
 
 const FaqComponent = () => {
     const [cookies, setCookie] = useCookies();
@@ -135,14 +136,17 @@ const FaqComponent = () => {
                 });
                 toggleContent(findIndex)
                 console.log("FAQ successfully submitted.");
+                toast.success("FAQ successfully submitted.")
             } else {
                 console.error("Failed to submit FAQ:", response.data.message);
+                toast.error("Failed to submit FAQ.")
             }
         } catch (error) {
             console.error("Error submitting FAQ:", error);
             if (error.response && error.response.status === 401) {
                 await refreshToken();  // Token yenileme işlemini deneyin
                 alert("Please retry submitting the FAQ.");
+                toast.warn("Please retry submitting the FAQ.")
 
             }
         }
@@ -163,9 +167,11 @@ const FaqComponent = () => {
             });
             if (result.data.succeeded) {
                 setFaqs(faqs.filter(faq => faq.id !== faqId));
+                toast.success("FAQ option deleted successfully.");
             }
         } catch (error) {
             console.error("Error deleting FAQ option:", error);
+            toast.error("Failed to delete FAQ option.")
             if (error.response && error.response.status === 401) {
                 await refreshToken();
                 handleClickDelete(faqId);

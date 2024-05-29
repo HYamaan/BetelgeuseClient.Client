@@ -68,6 +68,23 @@ export const fetchPanelNavigation = async () => {
         throw new Error('Error fetching courses');
     }
 };
+
+export const fetchAdminPanelNavigation = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER1}/adminPanelNavigation`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
+export const fetchModeratorPanelNavigation = async () => {
+    try {
+        const response = await axios.get(`${process.env.API_SERVER1}/moderatorPanelNavigation`);
+        return response.data;
+    } catch (error) {
+        throw new Error('Error fetching courses');
+    }
+};
 export const fetchPanelPurchasesCourse = async (startIndex, endIndex) => {
     try {
         const response = await axios.get(`${process.env.API_SERVER1}/purchasesCourse`);

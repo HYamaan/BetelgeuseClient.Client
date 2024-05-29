@@ -12,6 +12,7 @@ import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
 import {OutsideClickHandler} from "@/hooks/boxOutSideClick";
 import {HiDotsVertical} from "react-icons/hi";
 import PanelInput from "@/components/ui/Panel/Input/Input";
+import {toast} from "react-toastify";
 
 const RequirementComponent = () => {
     const [cookies, setCookie] = useCookies();
@@ -129,15 +130,18 @@ const RequirementComponent = () => {
                 });
                 toggleContent(findIndex)
                 console.log("FAQ successfully submitted.");
+                toast.success("FAQ successfully submitted.")
             } else {
                 console.error("Failed to submit FAQ:", response.data.message);
+                toast.error("Failed to submit FAQ.")
             }
         } catch (error) {
             console.error("Error submitting FAQ:", error);
             if (error.response && error.response.status === 401) {
                 await refreshToken();  // Token yenileme işlemini deneyin
-                alert("Please retry submitting the FAQ.");
-
+                toast.warn("Please retry submitting the FAQ.")
+            }else{
+                toast.error("Failed to submit FAQ.")
             }
         }
     };
@@ -156,9 +160,11 @@ const RequirementComponent = () => {
             });
             if (result.data.succeeded) {
                 setRequirements(Requirements.filter(faq => faq.id !== requirementId));
+                toast.success("FAQ option deleted successfully.")
             }
         } catch (error) {
             console.error("Error deleting FAQ option:", error);
+            toast.error("Failed to delete FAQ option.")
             if (error.response && error.response.status === 401) {
                 await refreshToken();
                 handleClickDelete(requirementId);

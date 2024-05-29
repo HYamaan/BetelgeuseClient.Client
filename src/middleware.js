@@ -1,5 +1,5 @@
 import {NextResponse} from 'next/server';
-import * as cookie from "cookie";
+
 
 export async function middleware(request) {
     const url = request.nextUrl.clone(); // Mevcut URL'i klonla
@@ -7,7 +7,10 @@ export async function middleware(request) {
 
     const refreshToken = getCookie(request, 'refreshToken');
     const accessToken = getCookie(request, 'accessToken');
-    if (!refreshToken) {
+
+    const decodedAccessToken = decodeJwt(accessToken);
+
+    if (!refreshToken && !accessToken) {
         if (url.pathname !== '/auth/login') {
             url.href = `${process.env.LOCAL_URL}/auth/login`;
             return NextResponse.redirect(url);
@@ -15,8 +18,12 @@ export async function middleware(request) {
         return response;
     }
 
+    if (decodedAccessToken && url.pathname !== '/auth/login') {
+        return NextResponse.next();
+    }
+    console.log("refreshToken: ", refreshToken);
+    console.log("accessToken: ", accessToken);
     const validationResponse = await validateRefreshToken(refreshToken);
-    console.log("validationResponse", validationResponse)
     if (!validationResponse || !validationResponse.success) {
         clearTokens(response);
         url.href = `${process.env.LOCAL_URL}/auth/login`;
@@ -29,17 +36,36 @@ export async function middleware(request) {
         setCookies(res, validationResponse);
         return res;
     }
-
-    if (url.pathname === '/panel/dashboard') {
-        url.href = `${process.env.LOCAL_URL}/panel/dashboard`;
-        const res = NextResponse.rewrite(url);
-        setCookies(res, validationResponse);
-        return res;
+    console.log("BURADA")
+    if (url.pathname === '/panel') {
+        console.log("BURADA;;;;;;;;;;;;;;;")
+        url.pathname = '/panel/dashboard';
+        return NextResponse.redirect(url);
     }
 
-    return response;
+    if (url.pathname.startsWith('/panel')) {
+        setCookies(response, validationResponse);
+        return response;
+    }
 
+
+    return response;
 }
+
+function decodeJwt(token) {
+    try {
+        const base64Url = token.split('.')[1]; // Token'ın payload bölümünü al
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(Buffer.from(base64, 'base64').toString().split('').map((c) => {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        return JSON.parse(jsonPayload);
+    } catch (error) {
+        console.error('Error decoding JWT:', error);
+        return null;
+    }
+}
+
 
 function setCookies(res, validationResponse) {
     res.cookies.set("accessToken", validationResponse.accessToken, {
@@ -87,5 +113,5 @@ async function validateRefreshToken(token) {
 }
 
 export const config = {
-    matcher: ['/auth/login', '/panel/dashboard'] // Middleware'in hangi yollar için çalışacağını belirle
+    matcher: ['/auth/login', '/panel'] // Middleware'in hangi yollar için çalışacağını belirle
 };
